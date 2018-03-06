@@ -1,0 +1,6 @@
+Elena Busch
+Mar 6 2018
+
+These are the current necessary files to test a DNN for pT assignment.
+The data the main macro uses is /storage1/users/eb8/Gridsearch_data.
+The folder Data_Generation has the necessary macros to recreate this data.
