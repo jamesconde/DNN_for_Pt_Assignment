@@ -1,6 +1,13 @@
+Elena Busch
+Mar 6 2018
+
 Run root to csv file to convert the root data. Open file to specify source data and parameters taken.
 
 Then run the csv to npy file to preare for upload to keras. Open file to make sure correct .csv file is specified.
 
 NOTE: Could be useful to write a shell script to do this all at once
+ 
+The source data used is:/home/elb8/EMTF_pT_Assign/EMTFPtAssign2017/PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC.root
+More information about this dataset can be found: https://github.com/ElenaBusch1/EMTFPtAssign2017
+
  

@@ -3,6 +3,8 @@ Mar 6 2018
 
 These C files will generate folders of images which can be used by a CNN for pT assignment. 
 All tests done in the development of these files can be found in: /storage1/users/eb8/Archives/CNN_Image_Development.zip
+The source data is: /home/elb8/EMTF_pT_Assign/EMTFPtAssign2017/PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC.root
+More information about this data can be found: https://github.com/ElenaBusch1/EMTFPtAssign2017
 
 Run the code with:
 root -l -b PtRegression_to_CNN_Histogram_227_x_227_plus_th.C
