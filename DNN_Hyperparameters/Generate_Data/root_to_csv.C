@@ -35,7 +35,8 @@ void root_to_csv()
      Float_t dTh_23;
      Float_t dTh_34;
      Float_t theta;
-     
+     Float_t trig_val;     
+
      myTree->SetBranchAddress("GEN_pt",&GEN_pt);
      myTree->SetBranchAddress("theta",&theta);
      myTree->SetBranchAddress("dPhi_12",&dPhi_12);
@@ -45,12 +46,18 @@ void root_to_csv()
      myTree->SetBranchAddress("dTh_23",&dTh_23);
      myTree->SetBranchAddress("dTh_34",&dTh_34);
      
-     ofstream output("PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC.csv");
-     output<< "GEN_pt" << "," << "theta" << "," << "dPhi_12" << "," << "dPhi_23" << "," << "dPhi_34" << "," << "dTh_12" << "," << "dTh_23" << "," << "dTh_34" << endl;
-     Long64_t numEvents = 10;
+     ofstream output("/storage1/users/eb8/Gridsearch_Data/PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.csv");
+     //output<< "GEN_pt" << "," << "theta" << "," << "dPhi_12" << "," << "dPhi_23" << "," << "dPhi_34" << "," << "dTh_12" << "," << "dTh_23" << "," << "dTh_34" << endl;
+     Long64_t numEvents = 1000000;
      for (Long64_t iEntry = 0;iEntry<numEvents;iEntry++){
-       myTree->GetEntry(iEntry*100);
-       output<< GEN_pt << "," << theta << "," << dPhi_12 << "," << dPhi_23 << "," << dPhi_34 << "," << dTh_12 << "," << dTh_23 << "," << dTh_34 << endl;
+       //myTree->GetEntry(iEntry*100);
+	myTree->GetEntry(iEntry);
+	if( GEN_pt>20){
+		trig_val = 1.0;
+	}else{
+		trig_val = 0.0;
+	}
+       	output<< trig_val << "," << theta << "," << dPhi_12 << "," << dPhi_23 << "," << dPhi_34 << "," << dTh_12 << "," << dTh_23 << "," << dTh_34 << endl;
      }
       
 }
