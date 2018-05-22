@@ -1,0 +1,34 @@
+--------------------------------
+    Definitions of Constants    
+--------------------------------
+Directory: /storage1/users/eb8/Gridsearch_Data/
+Data: PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_10th.npy
+Seed value: 42
+Feature number: 7
+Number of loops: 1
+Number of epochs: 1
+Batch Size: 10000
+********************************
+********************************
+Best: 0.908444 using {'nb_epoch': 5, 'batch_size': 1}
+0.902444 (0.006801) with: {'nb_epoch': 1, 'batch_size': 1}
+0.906778 (0.003446) with: {'nb_epoch': 2, 'batch_size': 1}
+0.908444 (0.004076) with: {'nb_epoch': 5, 'batch_size': 1}
+0.908000 (0.001963) with: {'nb_epoch': 10, 'batch_size': 1}
+0.906556 (0.005711) with: {'nb_epoch': 20, 'batch_size': 1}
+0.904000 (0.003399) with: {'nb_epoch': 1, 'batch_size': 10}
+0.903667 (0.004530) with: {'nb_epoch': 2, 'batch_size': 10}
+0.907444 (0.005322) with: {'nb_epoch': 5, 'batch_size': 10}
+0.901222 (0.005405) with: {'nb_epoch': 10, 'batch_size': 10}
+0.906000 (0.000720) with: {'nb_epoch': 20, 'batch_size': 10}
+0.883000 (0.007483) with: {'nb_epoch': 1, 'batch_size': 100}
+0.884667 (0.004815) with: {'nb_epoch': 2, 'batch_size': 100}
+0.885667 (0.009479) with: {'nb_epoch': 5, 'batch_size': 100}
+0.896222 (0.004157) with: {'nb_epoch': 10, 'batch_size': 100}
+0.895444 (0.004086) with: {'nb_epoch': 20, 'batch_size': 100}
+0.711222 (0.024344) with: {'nb_epoch': 1, 'batch_size': 1000}
+0.704222 (0.022684) with: {'nb_epoch': 2, 'batch_size': 1000}
+0.702778 (0.022992) with: {'nb_epoch': 5, 'batch_size': 1000}
+0.714667 (0.006739) with: {'nb_epoch': 10, 'batch_size': 1000}
+0.722667 (0.020135) with: {'nb_epoch': 20, 'batch_size': 1000}
+Elapsed Time = 395 secondsX Feature Count: 7

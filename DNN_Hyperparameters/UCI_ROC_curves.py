@@ -51,19 +51,19 @@ if not os.path.exists('./roc_info/'):
 overall_start_time = time.time()
 
 #Open the log file
-#!!! Always check/change your log file name and location
-file = open('./logs/logFile_gridsearch_1m_small_redo.txt', 'w')
+#!!! Always check your log file name and location
+file = open('./logs/logFile_gridsearch_1m_kclassify.txt', 'w')
 
 # Define Constants
-#!!! Always check which data you're using
+#!!! Always double check which data you are using
 data_directory = '/storage1/users/eb8/Gridsearch_Data/'
 data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
 #test_data_sample = 'not1000_test.npy'
 scaler = 'maxabs'
 feature = 7
 number_of_loops = 1							#Total number of loops, is incremented later for functions who's index start at 0
-number_of_epochs = 1							#Just what it says, number of epochs never re-indexed
-set_batch_size = 10000							#Select batch size
+number_of_epochs = 5							#Just what it says, number of epochs never re-indexed
+set_batch_size = 100							#Select batch size
 
 # Fix random seed for reproducibility
 seed = 42
@@ -109,21 +109,40 @@ globals.input_scale = X_train.shape[1]
 
 loop_start_time = time.time()
 
-model = KerasClassifier(build_fn=create_model, nb_epoch=1, batch_size=10000, verbose=0) 
+#model = create_model()
+#model = KerasClassifier(build_fn=create_model_neurons, nb_epoch=5, batch_size=100, verbose=0)
+
+#!!! Use this to modify which model you are testing
+model = KerasClassifier(build_fn=create_model, nb_epoch=5, batch_size=100, verbose=0)
+
+history = model.fit(X_train,Y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
+#plot_accuracy(history,1,show_toggle=True, save_toggle=False )
+#estimator = KerasRegressor(build_fn=create_model, epochs = 5, batch_size = 100, verbose = 0)
+
+model_predictions = model.predict(X_test)
+#model_class_predictions = model.predict_classes(X_test)
+
+#outfile_predict = open('./predictions/model_predictions_not1000_%02d.txt' % 1, 'w')
+#!!! Always check where your model results are being saved
+outfile_predict = open('./predictions/model_class_predictions_1m_kclassify.txt', 'w')
+outfile_truth = open('./predictions/model_class_true_1m_kclassify.txt', 'w')
+#numpy.savetxt(outfile_predict, model_predictions)
+numpy.savetxt(outfile_predict, model_predictions)
+numpy.savetxt(outfile_truth, Y_test)
+plot_ROC(Y_test,model_predictions,1,show_toggle = True, save_toggle=True) 
 #model = KerasClassifier(build_fn=create_model_neurons, nb_epoch=1, batch_size=10000, verbose=0)
 #model = KerasClassifier(build_fn=create_model_opt, nb_epoch=1, batch_size=10000, verbose=0)
 #model = KerasClassifier(build_fn=create_model_activation, nb_epoch=1, batch_size=10000, verbose=0)
 
 
 # define the grid search parameters
-#!!! Change these to vary the grid search
-batch_size = [1,100,1000]
-nb_epoch = [1,2,5]
+#batch_size = [1, 100, 1000]
+#nb_epoch = [1,2,5]
 #batch_size = [1]
 #nb_epoch = [1, 5, 10, 50]
-param_grid = dict(batch_size=batch_size, nb_epoch=nb_epoch)
-grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
-grid_result = grid.fit(X_train, Y_train)
+#param_grid = dict(batch_size=batch_size, nb_epoch=nb_epoch)
+#grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
+#grid_result = grid.fit(X_train, Y_train)
 
 ### define the grid search parameters
 ##neurons = [1,5,10,50,100,500,1000,5000,10000]
@@ -145,14 +164,14 @@ grid_result = grid.fit(X_train, Y_train)
 #grid_result = grid.fit(X_train, Y_train)
 
 # summarize results
-print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
-file.write("Best: %f using %s\n" % (grid_result.best_score_, grid_result.best_params_))
-means = grid_result.cv_results_['mean_test_score']
-stds = grid_result.cv_results_['std_test_score']
-params = grid_result.cv_results_['params']
-for mean, stdev, param in zip(means, stds, params):
-   	print("%f (%f) with: %r" % (mean, stdev, param))
-	file.write("%f (%f) with: %r\n" % (mean, stdev, param))
+#print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+#file.write("Best: %f using %s\n" % (grid_result.best_score_, grid_result.best_params_))
+#means = grid_result.cv_results_['mean_test_score']
+#stds = grid_result.cv_results_['std_test_score']
+#params = grid_result.cv_results_['params']
+#for mean, stdev, param in zip(means, stds, params):
+#   	print("%f (%f) with: %r" % (mean, stdev, param))
+#	file.write("%f (%f) with: %r\n" % (mean, stdev, param))
 
 
 overall_end_time = time.time()

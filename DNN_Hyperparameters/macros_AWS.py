@@ -56,7 +56,8 @@ def create_model():
         input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
         # Compile model
         input_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-        return input_model
+        #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+	return input_model
 
 def create_model_UCI_27D_default():
 	#random_normal = RandomNormal(mean=0.0, stddev=0.1, seed=8675309)

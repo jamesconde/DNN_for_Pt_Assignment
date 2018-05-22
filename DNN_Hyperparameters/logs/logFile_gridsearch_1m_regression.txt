@@ -1,0 +1,12 @@
+--------------------------------
+    Definitions of Constants    
+--------------------------------
+Directory: /storage1/users/eb8/Gridsearch_Data/
+Data: PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_regression.npy
+Seed value: 42
+Feature number: 7
+Number of loops: 1
+Number of epochs: 5
+Batch Size: 100
+********************************
+********************************
