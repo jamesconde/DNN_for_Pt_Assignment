@@ -1,0 +1,24 @@
+2018-06-06 16:18:45.039188: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 6774807390653999242
+]
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+Seed value is 44
+MaxAbs
+
+
+
+AUC: 0.935677
+Done
+('True negative total is ', 40290, 'out of', 100000)
+('True positive total is ', 53444)
+('False negative total is ', 2883)
+('False positive total is ', 3383)
+('Any missed ones? ', 0)

@@ -1,0 +1,12 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 72, in <module>
+    numpy.random.seed(seed)
+  File "mtrand.pyx", line 680, in mtrand.RandomState.seed
+ValueError: Seed must be between 0 and 2**32 - 1
+('True negative total is ', 39756, 'out of', 100000)
+('True positive total is ', 53813)
+('False negative total is ', 2507)
+('False positive total is ', 3924)
+('Any missed ones? ', 0)

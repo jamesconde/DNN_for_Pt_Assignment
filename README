@@ -1,0 +1,14 @@
+Elena Busch
+Mar 6 2018
+
+These are the current necessary files to test a DNN for pT assignment.
+The data the main macro uses is /storage1/users/eb8/Gridsearch_data.
+The folder Generate_Data has the necessary macros to recreate this data.
+
+May 22 2018
+
+UCI_hyperparameters_test_Keras2_BONNER.py lets you run a classifier grid search. This was developed from the code found in https://github.com/jrorie/UCI_Paper_Studies/tree/master/templates .
+Key lines to modify in this program are marked with comments containing !!!.
+
+UCI_ROC_curves.py lets you test one DNN classifier, and examine the individual results using compare_truth.py. It was developed from 1D_UCI_model_default.py in https://github.com/jrorie/UCI_Paper_Studies/tree/master/templates .
+Key lines to modying are marked with comments containing !!!. 

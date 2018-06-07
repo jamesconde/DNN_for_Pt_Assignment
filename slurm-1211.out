@@ -1,0 +1,2 @@
+/var/spool/slurmd/job01211/slurm_script: line 3: syntax error near unexpected token `('
+/var/spool/slurmd/job01211/slurm_script: line 3: `sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))'

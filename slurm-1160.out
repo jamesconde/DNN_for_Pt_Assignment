@@ -1,0 +1,4 @@
+1.8.0
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+2.1.5

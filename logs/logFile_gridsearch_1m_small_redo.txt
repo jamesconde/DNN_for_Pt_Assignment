@@ -1,0 +1,23 @@
+--------------------------------
+    Definitions of Constants    
+--------------------------------
+Directory: /storage1/users/eb8/Gridsearch_Data/
+Data: PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy
+Seed value: 42
+Feature number: 7
+Number of loops: 1
+Number of epochs: 1
+Batch Size: 10000
+********************************
+********************************
+Best: 0.935329 using {'nb_epoch': 5, 'batch_size': 100}
+0.929952 (0.001787) with: {'nb_epoch': 1, 'batch_size': 1}
+0.930602 (0.001861) with: {'nb_epoch': 2, 'batch_size': 1}
+0.931140 (0.001755) with: {'nb_epoch': 5, 'batch_size': 1}
+0.934601 (0.000354) with: {'nb_epoch': 1, 'batch_size': 100}
+0.935121 (0.000305) with: {'nb_epoch': 2, 'batch_size': 100}
+0.935329 (0.000382) with: {'nb_epoch': 5, 'batch_size': 100}
+0.927410 (0.003520) with: {'nb_epoch': 1, 'batch_size': 1000}
+0.927177 (0.001483) with: {'nb_epoch': 2, 'batch_size': 1000}
+0.928317 (0.001754) with: {'nb_epoch': 5, 'batch_size': 1000}
+Elapsed Time = 14787 secondsX Feature Count: 7

@@ -1,0 +1,16 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+42
+MaxAbs
+
+
+
+AUC: 0.914374
+Done
+('True negative total is ', 41784, 'out of', 100000)
+('True positive total is ', 49073)
+('False negative total is ', 7374)
+('False positive total is ', 1769)
+('Any missed ones? ', 0)

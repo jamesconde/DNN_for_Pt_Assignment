@@ -1,0 +1,14 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 59
+    input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
+    ^
+IndentationError: unexpected indent
+('True negative total is ', 42405, 'out of', 100000)
+('True positive total is ', 46483)
+('False negative total is ', 9964)
+('False positive total is ', 1148)
+('Any missed ones? ', 0)

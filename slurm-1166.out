@@ -1,0 +1,20 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+MaxAbs
+
+
+
+AUC: 0.898561
+Done
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py", line 3, in <module>
+    predicts = np.loadtxt('/home/rice/jmc32/DNN_for_Pt_Assignment/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt')
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/numpy/lib/npyio.py", line 917, in loadtxt
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/numpy/lib/_datasource.py", line 260, in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/numpy/lib/_datasource.py", line 616, in open
+    raise IOError("%s not found." % path)
+IOError: /home/rice/jmc32/DNN_for_Pt_Assignment/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt not found.
