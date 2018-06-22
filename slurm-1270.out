@@ -1,0 +1,134 @@
+Using TensorFlow backend.
+MaxAbs
+
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperparameters_Test_file.py", line 135, in <module>
+    grid_result = grid.fit(X_train, Y_train)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/model_selection/_search.py", line 639, in fit
+    cv.split(X, y, groups)))
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 789, in __call__
+    self.retrieve()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 740, in retrieve
+    raise exception
+sklearn.externals.joblib.my_exceptions.JoblibValueError: JoblibValueError
+___________________________________________________________________________
+Multiprocessing exception:
+...........................................................................
+/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperparameters_Test_file.py in <module>()
+    130 ### define the grid search parameters
+    131 neurons = numpy.arange(50,200)
+    132 #neurons = [1,5,10]
+    133 param_grid = dict(neurons=neurons)
+    134 grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
+--> 135 grid_result = grid.fit(X_train, Y_train)
+    136 
+    137 ## define the grid search parameters
+    138 #optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']
+    139 #param_grid = dict(optimizer=optimizer)
+
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/model_selection/_search.py in fit(self=GridSearchCV(cv=None, error_score='raise',
+     ...ain_score='warn',
+       scoring=None, verbose=0), X=array([[ 0.7       ,  0.07352941, -0.01476378, ....  0.        ,
+        -0.125     ,  0.625     ]]), y=array([0., 1., 0., ..., 1., 1., 1.]), groups=None, **fit_params={})
+    634                                   return_train_score=self.return_train_score,
+    635                                   return_n_test_samples=True,
+    636                                   return_times=True, return_parameters=False,
+    637                                   error_score=self.error_score)
+    638           for parameters, (train, test) in product(candidate_params,
+--> 639                                                    cv.split(X, y, groups)))
+        cv.split = <bound method KFold.split of KFold(n_splits=3, random_state=None, shuffle=False)>
+        X = array([[ 0.7       ,  0.07352941, -0.01476378, ....  0.        ,
+        -0.125     ,  0.625     ]])
+        y = array([0., 1., 0., ..., 1., 1., 1.])
+        groups = None
+    640 
+    641         # if one choose to see train score, "out" will contain train score info
+    642         if self.return_train_score:
+    643             (train_score_dicts, test_score_dicts, test_sample_counts, fit_time,
+
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=Parallel(n_jobs=-1), iterable=<generator object <genexpr>>)
+    784             if pre_dispatch == "all" or n_jobs == 1:
+    785                 # The iterable was consumed all at once by the above for loop.
+    786                 # No need to wait for async callbacks to trigger to
+    787                 # consumption.
+    788                 self._iterating = False
+--> 789             self.retrieve()
+        self.retrieve = <bound method Parallel.retrieve of Parallel(n_jobs=-1)>
+    790             # Make sure that we get a last message telling us we are done
+    791             elapsed_time = time.time() - self._start_time
+    792             self._print('Done %3i out of %3i | elapsed: %s finished',
+    793                         (len(self._output), len(self._output),
+
+---------------------------------------------------------------------------
+Sub-process traceback:
+---------------------------------------------------------------------------
+ValueError                                         Thu Jun  7 17:20:38 2018
+PID: 26218Python 2.7.15: /home/rice/jmc32/anaconda2/envs/tensorflow/bin/python
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=<sklearn.externals.joblib.parallel.BatchedCalls object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        func = <function _fit_and_score>
+        args = (<keras.wrappers.scikit_learn.KerasClassifier object>, memmap([[ 0.7       ,  0.07352941, -0.01476378, ... 0.        ,
+         -0.125     ,  0.625     ]]), memmap([0., 1., 0., ..., 1., 1., 1.]), {'score': <function _passthrough_scorer>}, memmap([300000, 300001, 300002, ..., 899997, 899998, 899999]), memmap([     0,      1,      2, ..., 299997, 299998, 299999]), 0, {'neurons': 50})
+        kwargs = {'error_score': 'raise', 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': 'warn'}
+        self.items = [(<function _fit_and_score>, (<keras.wrappers.scikit_learn.KerasClassifier object>, memmap([[ 0.7       ,  0.07352941, -0.01476378, ... 0.        ,
+         -0.125     ,  0.625     ]]), memmap([0., 1., 0., ..., 1., 1., 1.]), {'score': <function _passthrough_scorer>}, memmap([300000, 300001, 300002, ..., 899997, 899998, 899999]), memmap([     0,      1,      2, ..., 299997, 299998, 299999]), 0, {'neurons': 50}), {'error_score': 'raise', 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': 'warn'})]
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator=<keras.wrappers.scikit_learn.KerasClassifier object>, X=memmap([[ 0.7       ,  0.07352941, -0.01476378, ... 0.        ,
+         -0.125     ,  0.625     ]]), y=memmap([0., 1., 0., ..., 1., 1., 1.]), scorer={'score': <function _passthrough_scorer>}, train=memmap([300000, 300001, 300002, ..., 899997, 899998, 899999]), test=memmap([     0,      1,      2, ..., 299997, 299998, 299999]), verbose=0, parameters={'neurons': 50}, fit_params={}, return_train_score='warn', return_parameters=False, return_n_test_samples=True, return_times=True, error_score='raise')
+    439                       for k, v in fit_params.items()])
+    440 
+    441     test_scores = {}
+    442     train_scores = {}
+    443     if parameters is not None:
+--> 444         estimator.set_params(**parameters)
+        estimator.set_params = <bound method KerasClassifier.set_params of <keras.wrappers.scikit_learn.KerasClassifier object>>
+        parameters = {'neurons': 50}
+    445 
+    446     start_time = time.time()
+    447 
+    448     X_train, y_train = _safe_split(estimator, X, y, train)
+
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py in set_params(self=<keras.wrappers.scikit_learn.KerasClassifier object>, **params={'neurons': 50})
+    108             **params: Dictionary of parameter names mapped to their values.
+    109 
+    110         # Returns
+    111             self
+    112         """
+--> 113         self.check_params(params)
+        self.check_params = <bound method KerasClassifier.check_params of <keras.wrappers.scikit_learn.KerasClassifier object>>
+        params = {'neurons': 50}
+    114         self.sk_params.update(params)
+    115         return self
+    116 
+    117     def fit(self, x, y, **kwargs):
+
+...........................................................................
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py in check_params(self=<keras.wrappers.scikit_learn.KerasClassifier object>, params={'neurons': 50})
+     84                 if has_arg(fn, params_name):
+     85                     break
+     86             else:
+     87                 if params_name != 'nb_epoch':
+     88                     raise ValueError(
+---> 89                         '{} is not a legal parameter'.format(params_name))
+        params_name = 'neurons'
+     90 
+     91     def get_params(self, **params):
+     92         """Gets parameters for this estimator.
+     93 
+
+ValueError: neurons is not a legal parameter
+___________________________________________________________________________

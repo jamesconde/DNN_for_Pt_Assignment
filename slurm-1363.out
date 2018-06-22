@@ -1,0 +1,67 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-06-12 17:56:09.524821: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-12 17:56:10.334507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:10.814492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:11.304950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0e:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:11.816197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:11:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:12.344633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:12.884287: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:13.427163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:1c:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:13.987807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:22:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 17:56:14.032259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-12 17:56:16.952612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-12 17:56:16.952942: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-12 17:56:16.952957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y Y Y Y Y 
+2018-06-12 17:56:16.952963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y Y Y Y Y 
+2018-06-12 17:56:16.952970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y Y Y Y Y 
+2018-06-12 17:56:16.952976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N Y Y Y Y 
+2018-06-12 17:56:16.952983: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   Y Y Y Y N Y Y Y 
+2018-06-12 17:56:16.952989: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   Y Y Y Y Y N Y Y 
+2018-06-12 17:56:16.952995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   Y Y Y Y Y Y N Y 
+2018-06-12 17:56:16.953001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   Y Y Y Y Y Y Y N 
+2018-06-12 17:56:16.956359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15127 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 6.0)
+2018-06-12 17:56:17.149025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15127 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:0b:00.0, compute capability: 6.0)
+2018-06-12 17:56:17.335624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15127 MB memory) -> physical GPU (device: 2, name: Tesla P100-PCIE-16GB, pci bus id: 0000:0e:00.0, compute capability: 6.0)
+2018-06-12 17:56:17.521318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15127 MB memory) -> physical GPU (device: 3, name: Tesla P100-PCIE-16GB, pci bus id: 0000:11:00.0, compute capability: 6.0)
+2018-06-12 17:56:17.714957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 15127 MB memory) -> physical GPU (device: 4, name: Tesla P100-PCIE-16GB, pci bus id: 0000:16:00.0, compute capability: 6.0)
+2018-06-12 17:56:17.911184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 15127 MB memory) -> physical GPU (device: 5, name: Tesla P100-PCIE-16GB, pci bus id: 0000:19:00.0, compute capability: 6.0)
+2018-06-12 17:56:18.094720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 15127 MB memory) -> physical GPU (device: 6, name: Tesla P100-PCIE-16GB, pci bus id: 0000:1c:00.0, compute capability: 6.0)
+2018-06-12 17:56:18.293870: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 15127 MB memory) -> physical GPU (device: 7, name: Tesla P100-PCIE-16GB, pci bus id: 0000:22:00.0, compute capability: 6.0)
+Seed value is 46
+MaxAbs
+
+
+
+AUC: 0.932407
+Done
+('True negative total is ', 40854, 'out of', 100000)
+('True positive total is ', 52366)
+('False negative total is ', 3896)
+('False positive total is ', 2884)
+('Any missed ones? ', 0)

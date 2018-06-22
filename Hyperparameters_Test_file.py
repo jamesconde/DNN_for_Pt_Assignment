@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import os
 import numpy
 import pandas
@@ -56,7 +58,7 @@ file = open('./logs/logFile_gridsearch_1m_small_redo.txt', 'w')
 
 # Define Constants
 #!!! Always check which data you're using
-data_directory = '/storage1/users/eb8/Gridsearch_Data/'
+data_directory = '/home/rice/jmc32/Gridsearch_Data/'
 data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
 #test_data_sample = 'not1000_test.npy'
 scaler = 'maxabs'
@@ -66,7 +68,7 @@ number_of_epochs = 1							#Just what it says, number of epochs never re-indexed
 set_batch_size = 10000							#Select batch size
 
 # Fix random seed for reproducibility
-seed = 42
+seed = 17
 numpy.random.seed(seed)
 
 # Log Constants
@@ -126,7 +128,7 @@ grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
 grid_result = grid.fit(X_train, Y_train)
 
 ### define the grid search parameters
-##neurons = [1,5,10,50,100,500,1000,5000,10000]
+#neurons = numpy.arange(50,200)
 #neurons = [1,5,10]
 #param_grid = dict(neurons=neurons)
 #grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)

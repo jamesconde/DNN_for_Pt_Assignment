@@ -1,0 +1,32 @@
+Using TensorFlow backend.
+2018-06-12 13:36:22.640471: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-12 13:36:23.411088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 13:36:23.886735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 13:36:24.386817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0e:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 13:36:24.892761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:11:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 13:36:25.405054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-12 13:36:25.932311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+/var/spool/slurmd/job01347/slurm_script: line 5: 70607 Segmentation fault      (core dumped) python /home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py
+('True negative total is ', 40353, 'out of', 100000)
+('True positive total is ', 53405)
+('False negative total is ', 2922)
+('False positive total is ', 3320)
+('Any missed ones? ', 0)

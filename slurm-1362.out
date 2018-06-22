@@ -1,0 +1,54 @@
+Using TensorFlow backend.
+2018-06-12 16:49:16.447815: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-12 16:49:17.485623: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:18.174860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:18.921551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:19.706274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:20.536138: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:21.298607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:22.030168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:22.787085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-12 16:49:22.804170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-12 16:49:26.019258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-12 16:49:26.019588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-12 16:49:26.019875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-12 16:49:26.019884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-12 16:49:26.019890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-12 16:49:26.019896: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-12 16:49:26.019902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-12 16:49:26.019908: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-12 16:49:26.019914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-12 16:49:26.019920: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-12 16:49:26.022917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-12 16:49:26.203048: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-12 16:49:26.384073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-12 16:49:26.561884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14867 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-12 16:49:26.744526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14867 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-12 16:49:26.927902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14867 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-12 16:49:27.103237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14867 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-12 16:49:27.288632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14867 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+slurmstepd: error: *** JOB 1362 ON ainode12 CANCELLED AT 2018-06-12T18:49:08 DUE TO TIME LIMIT ***

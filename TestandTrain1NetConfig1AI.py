@@ -34,7 +34,7 @@ globals.init()
 # Bring in external macros
 import macros_AWS
 from macros_AWS import *
-print a
+
 
 # Create directory structure
 if not os.path.exists('./plots/'):
@@ -68,7 +68,7 @@ number_of_epochs = 5							#Just what it says, number of epochs never re-indexed
 set_batch_size = 100							#Select batch size
 
 # Fix random seed for reproducibility
-seed = 44
+seed = 46
 print 'Seed value is %d' % seed
 numpy.random.seed(seed)
 
@@ -93,18 +93,18 @@ totalset = numpy.load(data_directory + data_sample)
 dataset, testset = train_test_split(totalset, test_size = 0.1)
 
 # Split into input (X) and output (Y) variables
-X_train_prescale = dataset[:,1:]
-Y_train = dataset[:,0]
-X_test_prescale = testset[:,1:]
-Y_test = testset[:,0]
+x_train_prescale = dataset[:,1:]
+y_train = dataset[:,0]
+x_test_prescale = testset[:,1:]
+y_test = testset[:,0]
 
 
 # Scale
-X_train, X_test = scale_x(X_train_prescale, X_test_prescale, scaler)
+x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
 
 
 ## Pull the input layer dimension
-globals.input_scale = X_train.shape[1]
+globals.input_scale = x_train.shape[1]
 
 
 loop_start_time = time.time()
@@ -112,16 +112,16 @@ loop_start_time = time.time()
 #!!! Use this to modify which model you are testing
 model = KerasClassifier(build_fn=create_model, nb_epoch=5, batch_size=100, verbose=0)
 
-history = model.fit(X_train,Y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
+history = model.fit(x_train,y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
 
-model_predictions = model.predict(X_test)
+model_predictions = model.predict(x_test)
 
 #!!! Always check where your model results are being saved
 outfile_predict = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt', 'w')
 outfile_truth = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt', 'w')
 numpy.savetxt(outfile_predict, model_predictions)
-numpy.savetxt(outfile_truth, Y_test)
-plot_ROC(Y_test,model_predictions,1,show_toggle = True, save_toggle=True) 
+numpy.savetxt(outfile_truth, y_test)
+plot_ROC(y_test,model_predictions,1,show_toggle = True, save_toggle=True) 
 
 
 overall_end_time = time.time()
@@ -129,4 +129,4 @@ overall_elapsed_time = overall_end_time-overall_start_time
 print "Done"
 file.write('Elapsed Time = %d seconds' % overall_elapsed_time)
 file.write('X Feature Count: %d\n'     % globals.input_scale) 
-file.close()
+file.close

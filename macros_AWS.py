@@ -3,6 +3,7 @@ import numpy
 import pandas
 import time
 import sys                                      #to write out stuff printed to screen
+from hyperopt import Trials, STATUS_OK,tpe
 import pickle
 import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
@@ -27,9 +28,11 @@ from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import maxabs_scale, robust_scale, minmax_scale
 from sklearn.model_selection import GridSearchCV
 
+from hyperas import optim
+from hyperas.distributions import choice, uniform
+
 import globals
 
-a=3
 
 def scale_x(X_train_prescale, X_test_prescale, scaler):
 	if scaler=='none':
@@ -49,14 +52,83 @@ def scale_x(X_train_prescale, X_test_prescale, scaler):
                 X_test  = minmax_scale(X_test_prescale)				
 	return X_train, X_test
 
+#from TestandTrain1NetConfig1AI.py import x_train_prescale, y_train,x_test_prescale,y_test
+
+#def create_model():
+    	#model = Sequential()
+    	#model.add(Dense(512, input_shape=(784,)))
+    	#model.add(Activation('relu'))
+    	#model.add(Dropout({{uniform(0, 1)}}))
+    	#model.add(Dense({{choice([256, 512, 1024])}}))
+    	#model.add(Activation({{choice(['relu', 'sigmoid'])}}))
+    	#model.add(Dropout({{uniform(0, 1)}}))
+
+    	# If we choose 'four', add an additional fourth layer
+    	#if {{choice(['three', 'four'])}} == 'four':
+        #	model.add(Dense(100))
+        #	model.add({{choice([Dropout(0.5), Activation('linear')])}})
+        #	model.add(Activation('relu'))
+
+    	#	model.add(Dense(10))
+    	#	model.add(Activation('softmax'))
+
+    	#model.compile(loss='categorical_crossentropy',
+        #          optimizer={{choice(['rmsprop', 'adam', 'sgd'])}},
+        #          metrics=['accuracy'])
+
+    	#model.fit(x_train, y_train,
+        #      	batch_size={{choice([64, 128])}},
+        #      	nb_epoch=1,
+        #      	verbose=2,
+        #      	validation_data=(x_test, y_test))
+    	#score, acc = model.evaluate(x_test, y_test, verbose=0)
+    	#print('Test accuracy:', acc)
+    	#return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+
+    	#if __name__ == '__main__':
+       	#	trials = Trials()
+       	#	best_run, best_model = optim.minimize(model=model,
+        #                                  data=data,
+        #                                  algo=tpe.suggest,
+        #                                  max_evals=5,
+        #                                  trials=trials)
+    	#for trial in trials:
+        #	print(trial)
+    	#x_train, y_train, x_test, y_test = data()
+    	#print("Evalutation of best performing model:")
+    	#print(best_model.evaluate(x_test, y_test))
+
+#	input_model = Sequential()
+#	n1=1000
+#	n2=10
+	#n3=10
+	#n4=100
+	#n5=50
+#	print "n1 is %d" %n1
+#	print "n2 is %d" %n2
+	#print "n3 is %d" %n3
+	#print "n4 is %d" %n4
+	#print "n5 is %d" %n5
+	#print "n6 is 4"
+ #       input_model.add(Dense(n1, input_dim=globals.input_scale, kernel_initializer='uniform', activation='relu')) #Input layer
+  #      input_model.add(Dense(n2, kernel_initializer='uniform', activation='relu'))		  		      #Hidden Layer 02
+        #input_model.add(Dense(n3, kernel_initializer='uniform', activation='relu'))               		      #Hidden Layer 03
+        #input_model.add(Dense(n4, kernel_initializer='uniform', activation='relu'))                                  #Hidden Layer 04
+	#input_model.add(Dense(n5, kernel_initializer='uniform', activation='relu'))                                  #Hidden Layer 05
+       	#input_model.add(Dense(4, kernel_initializer='uniform', activation='relu'))                                  #Hidden Layer 06
+	
+#	input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
+        #Compile model
+ #       input_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+        #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+#	return input_model
+
 def create_model():
         input_model = Sequential()
         input_model.add(Dense(100, input_dim=globals.input_scale, kernel_initializer='uniform', activation='relu')) #Input layer
         input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))		  		      #Hidden Layer 02
         input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))               		      #Hidden Layer 03
-        input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))                                  #Hidden Layer 04
-	input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))                                  #Hidden Layer 05
-        input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
+	input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
         # Compile model
         input_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
         #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
@@ -215,3 +287,4 @@ def plot_ROC(y_test_data, predictions, x, show_toggle, save_toggle):
         numpy.save('./roc_info/tpr_not1000_%02d' %x, tpr)
         plt.close()
 	return roc_auc 
+

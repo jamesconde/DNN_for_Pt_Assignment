@@ -1,0 +1,9 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 31, in <module>
+    from UCI_hyperparameters_test_Keras2_BONNER.py import neurons 
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 105, in <module>
+    X_train, X_test = scale_x(X_train_prescale, X_test_prescale, scaler)
+NameError: name 'scale_x' is not defined

@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import os
 import numpy
 import pandas
@@ -56,7 +58,7 @@ file = open('./logs/logFile_gridsearch_1m_small_redo.txt', 'w')
 
 # Define Constants
 #!!! Always check which data you're using
-data_directory = '/storage1/users/eb8/Gridsearch_Data/'
+data_directory = '/home/rice/jmc32/Gridsearch_Data/'
 data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
 #test_data_sample = 'not1000_test.npy'
 scaler = 'maxabs'
@@ -66,7 +68,7 @@ number_of_epochs = 1							#Just what it says, number of epochs never re-indexed
 set_batch_size = 10000							#Select batch size
 
 # Fix random seed for reproducibility
-seed = 42
+seed = 58
 numpy.random.seed(seed)
 
 # Log Constants
@@ -117,17 +119,19 @@ model = KerasClassifier(build_fn=create_model, nb_epoch=1, batch_size=10000, ver
 
 # define the grid search parameters
 #!!! Change these to vary the grid search
-batch_size = [1,100,1000]
-nb_epoch = [1,2,5]
+batch_size = range(90,100)
+nb_epoch = range(1,10)
 #batch_size = [1]
 #nb_epoch = [1, 5, 10, 50]
 param_grid = dict(batch_size=batch_size, nb_epoch=nb_epoch)
-grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=1)
 grid_result = grid.fit(X_train, Y_train)
+
+print "Batch size range %d %d  and number of epochs %s %s" %(batch_size[0],batch_size[len[batch_size]],nb_epoch[0],nb_epoch[len[nb[epoch]]])
 
 ### define the grid search parameters
 ##neurons = [1,5,10,50,100,500,1000,5000,10000]
-#neurons = [1,5,10]
+neurons = [100]
 #param_grid = dict(neurons=neurons)
 #grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
 #grid_result = grid.fit(X_train, Y_train)

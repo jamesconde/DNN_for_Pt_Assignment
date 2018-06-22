@@ -1,0 +1,1002 @@
+Using TensorFlow backend.
+MaxAbs
+
+2018-06-08 16:30:49.342753: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:49.635823: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:49.735348: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:49.991320: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:50.229576: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:50.605791: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:50.845750: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:51.043315: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:51.188625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.33GiB
+2018-06-08 16:30:51.276530: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:51.732054: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:51.893375: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:52.198830: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:52.337267: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:52.631147: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:52.810072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 14.92GiB
+2018-06-08 16:30:52.830513: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:53.002739: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:53.302314: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:53.470453: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:53.663323: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:53.979660: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:54.064265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 14.51GiB
+2018-06-08 16:30:54.176372: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:54.461409: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:54.717125: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:54.950279: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:55.141047: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:55.200157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.33GiB
+2018-06-08 16:30:55.259005: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:55.439859: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:55.633762: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:55.939072: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:56.365609: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:56.632043: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:56.896563: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:57.302033: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:57.464019: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:57.562976: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:30:57.598546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 14.06GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:30:57.798615: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:30:58.001974: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:58.232274: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:30:58.523037: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:30:59.279102: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:30:59.426955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 14.93GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:30:59.568977: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:30:59.964410: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:00.196331: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:00.958048: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:00.971561: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.64GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:01.267105: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:01.983318: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:02.493770: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:02.577343: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 14.54GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:02.702317: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:02.793881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.61GiB
+2018-06-08 16:31:02.954227: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:03.654090: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:03.654706: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:03.654723: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:03.655534: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:03.655602: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:03.655615: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:04.046655: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:04.288367: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:04.288451: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:04.288463: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:04.288572: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:04.288608: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:04.288617: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:04.335313: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:04.746355: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:04.860220: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:05.505859: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:05.587676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.61GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:05.679052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:05.909230: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:05.909308: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:05.909320: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:05.909483: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:05.909519: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:05.909528: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+2018-06-08 16:31:06.596695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.60GiB
+2018-06-08 16:31:06.642241: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:07.249376: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:07.249449: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:07.249460: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:07.249626: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:07.249675: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:07.249699: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:07.395036: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:07.401324: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:07.612841: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:07.854483: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.19GiB
+2018-06-08 16:31:08.247692: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:08.290600: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:09.424514: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:09.453245: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:09.609775: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:09.710886: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:09.711011: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:09.711023: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:09.711215: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:09.711258: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:09.711267: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:10.472621: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:10.693765: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:10.819168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.54GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:11.422747: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:11.665990: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:11.748186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 13.12GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:11.861324: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:12.443168: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:12.867658: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:13.143821: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 12.71GiB
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/multiprocessing/pool.py", line 328, in _handle_workers
+    pool._maintain_pool()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/multiprocessing/pool.py", line 232, in _maintain_pool
+    self._repopulate_pool()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/multiprocessing/pool.py", line 225, in _repopulate_pool
+    w.start()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/multiprocessing/process.py", line 130, in start
+    self._popen = Popen(self)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/multiprocessing/forking.py", line 121, in __init__
+    self.pid = os.fork()
+OSError: [Errno 11] Resource temporarily unavailable
+
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:13.630836: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 12.31GiB
+2018-06-08 16:31:13.644518: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:13.782983: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:13.783068: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:13.783079: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:13.783261: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:13.783304: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:13.783313: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:13.814070: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:14.072772: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:14.542346: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:15.520813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 11.91GiB
+2018-06-08 16:31:15.560932: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:15.753848: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:15.753930: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:15.753941: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:15.754137: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:15.754174: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:15.754183: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:15.972548: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:16.765519: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:17.189506: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:17.953747: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:18.155413: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:18.226094: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:19.075167: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:19.225117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 14.89GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:19.522874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 12.71GiB
+2018-06-08 16:31:19.706640: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:20.041204: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:20.214819: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint: Try decreasing the value of OMP_NUM_THREADS.
+2018-06-08 16:31:20.893667: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:21.105145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 12.32GiB
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:21.166568: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:21.716567: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:21.716648: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:21.716659: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:21.716830: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:21.716865: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:21.716874: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+2018-06-08 16:31:21.798152: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:31:22.252375: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+2018-06-08 16:31:22.907399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 11.92GiB
+2018-06-08 16:31:23.334607: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUresult(304)
+2018-06-08 16:31:23.334697: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: ainode12
+2018-06-08 16:31:23.334709: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: ainode12
+2018-06-08 16:31:23.334901: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.111.0
+2018-06-08 16:31:23.334938: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.111.0
+2018-06-08 16:31:23.334946: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.111.0
+2018-06-08 16:31:23.682873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 11.53GiB
+2018-06-08 16:31:24.020383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 14.86GiB
+2018-06-08 16:31:25.121387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 11.11GiB
+2018-06-08 16:31:25.705581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 10.71GiB
+2018-06-08 16:31:25.996726: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 14.45GiB
+2018-06-08 16:31:26.099732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 10.33GiB
+2018-06-08 16:31:26.602379: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 10.32GiB
+2018-06-08 16:31:27.303826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 9.92GiB
+2018-06-08 16:31:28.316852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 9.53GiB
+2018-06-08 16:31:29.294279: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 9.54GiB
+2018-06-08 16:31:30.391400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 9.13GiB
+2018-06-08 16:31:31.599952: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 8.72GiB
+2018-06-08 16:31:32.025217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 13.96GiB
+2018-06-08 16:31:32.620448: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 13.95GiB
+2018-06-08 16:31:32.658275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 8.32GiB
+2018-06-08 16:31:33.220647: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 7.93GiB
+2018-06-08 16:31:34.111947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 13.53GiB
+2018-06-08 16:31:37.937666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 13.13GiB
+2018-06-08 16:31:42.284400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 12.73GiB
+2018-06-08 16:31:42.833182: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 7.46GiB
+2018-06-08 16:31:43.405317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 12.33GiB
+2018-06-08 16:31:44.406297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 7.06GiB
+2018-06-08 16:31:44.451343: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.26GiB
+2018-06-08 16:31:45.180098: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 6.67GiB
+2018-06-08 16:31:45.184088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 11.49GiB
+2018-06-08 16:31:45.768956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 11.09GiB
+2018-06-08 16:31:46.303710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 10.71GiB
+2018-06-08 16:31:46.779893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 14.84GiB
+2018-06-08 16:31:46.838469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 10.32GiB
+2018-06-08 16:31:47.403211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 10.29GiB
+2018-06-08 16:31:48.462334: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 9.93GiB
+2018-06-08 16:31:48.679300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 6.26GiB
+2018-06-08 16:31:49.675645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 9.53GiB
+2018-06-08 16:31:50.795793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 5.86GiB
+2018-06-08 16:31:51.223668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 9.13GiB
+2018-06-08 16:31:52.778457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 8.71GiB
+2018-06-08 16:31:54.032649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 13.95GiB
+2018-06-08 16:31:54.123795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 7.93GiB
+2018-06-08 16:31:54.207595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 5.46GiB
+2018-06-08 16:31:54.657812: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 13.92GiB
+2018-06-08 16:31:54.793842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 7.93GiB
+2018-06-08 16:31:55.637374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 5.07GiB
+2018-06-08 16:31:56.485977: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 13.53GiB
+2018-06-08 16:31:57.418673: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 4.68GiB
+2018-06-08 16:32:00.014332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 4.28GiB
+2018-06-08 16:32:01.005397: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 13.13GiB
+2018-06-08 16:32:02.614223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 3.89GiB
+2018-06-08 16:32:05.789623: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 12.34GiB
+2018-06-08 16:32:05.843972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 7.46GiB
+2018-06-08 16:32:06.033295: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 3.49GiB
+2018-06-08 16:32:07.015142: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 12.32GiB
+2018-06-08 16:32:07.437517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 7.03GiB
+2018-06-08 16:32:08.291313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 6.67GiB
+2018-06-08 16:32:08.516697: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 3.10GiB
+2018-06-08 16:32:08.688007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.22GiB
+2018-06-08 16:32:08.858469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 11.09GiB
+2018-06-08 16:32:09.447101: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 10.69GiB
+2018-06-08 16:32:09.991923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 10.32GiB
+2018-06-08 16:32:10.497678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 10.29GiB
+2018-06-08 16:32:11.098475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 14.82GiB
+2018-06-08 16:32:11.131389: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 9.93GiB
+2018-06-08 16:32:11.766423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 6.25GiB
+2018-06-08 16:32:12.156915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 9.54GiB
+2018-06-08 16:32:13.437530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 9.49GiB
+2018-06-08 16:32:13.916408: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 5.86GiB
+2018-06-08 16:32:14.957716: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 9.08GiB
+2018-06-08 16:32:16.546726: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 8.32GiB
+2018-06-08 16:32:17.334305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 5.46GiB
+2018-06-08 16:32:17.852131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 7.93GiB
+2018-06-08 16:32:18.425311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 13.91GiB
+2018-06-08 16:32:18.556575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 7.92GiB
+2018-06-08 16:32:18.703766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 5.07GiB
+2018-06-08 16:32:19.061748: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 13.54GiB
+2018-06-08 16:32:20.514089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 4.67GiB
+2018-06-08 16:32:20.946766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 13.53GiB
+2018-06-08 16:32:23.100044: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 4.28GiB
+2018-06-08 16:32:25.539055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 13.13GiB
+2018-06-08 16:32:25.693767: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 3.89GiB
+2018-06-08 16:32:29.048399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 3.49GiB
+2018-06-08 16:32:29.494628: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 7.43GiB
+2018-06-08 16:32:30.067678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 12.34GiB
+2018-06-08 16:32:31.074631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 6.66GiB
+2018-06-08 16:32:31.326186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 11.92GiB
+2018-06-08 16:32:31.622945: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 3.10GiB
+2018-06-08 16:32:32.048443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 6.66GiB
+2018-06-08 16:32:33.189902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 10.69GiB
+2018-06-08 16:32:33.190537: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:33.621733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 14.87GiB
+2018-06-08 16:32:33.622760: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:33.693606: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 10.32GiB
+2018-06-08 16:32:33.693967: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:34.237824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 10.29GiB
+2018-06-08 16:32:34.238753: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:34.697577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 9.93GiB
+2018-06-08 16:32:34.698006: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:35.279732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 6.25GiB
+2018-06-08 16:32:35.280298: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:35.285372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 9.89GiB
+2018-06-08 16:32:35.285695: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:35.786095: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:35.848386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 14.86GiB
+2018-06-08 16:32:35.849587: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.023092: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.087258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 9.53GiB
+2018-06-08 16:32:36.099727: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.154154: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 6: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.453295: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.853755: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 5.86GiB
+2018-06-08 16:32:36.854128: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:36.989420: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:37.028785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 9.14GiB
+2018-06-08 16:32:37.029575: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:37.396863: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:37.406012: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:37.732250: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 6: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:37.947352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 8.74GiB
+2018-06-08 16:32:37.947919: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:38.835944: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 8.32GiB
+2018-06-08 16:32:38.836308: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:38.902343: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 5.43GiB
+2018-06-08 16:32:38.902676: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:39.488762: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 7.96GiB
+2018-06-08 16:32:39.489082: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:39.625321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 5.04GiB
+2018-06-08 16:32:39.625830: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:39.807881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 7.96GiB
+2018-06-08 16:32:39.808226: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:39.975533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 13.68GiB
+2018-06-08 16:32:39.978198: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:40.296043: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 4.67GiB
+2018-06-08 16:32:40.296425: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:40.301070: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 13.68GiB
+2018-06-08 16:32:40.302020: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:40.905979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 13.68GiB
+2018-06-08 16:32:40.907009: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:41.078740: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 4.28GiB
+2018-06-08 16:32:41.080062: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:41.774083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 3.88GiB
+2018-06-08 16:32:41.774452: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.066137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 13.28GiB
+2018-06-08 16:32:42.067216: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.316004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 3.49GiB
+2018-06-08 16:32:42.316358: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.374267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 7.16GiB
+2018-06-08 16:32:42.374661: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.426138: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 12.50GiB
+2018-06-08 16:32:42.427155: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.448559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 6.78GiB
+2018-06-08 16:32:42.449111: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.451809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 3.10GiB
+2018-06-08 16:32:42.452468: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 3: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.477963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 12.50GiB
+2018-06-08 16:32:42.479034: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 5: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:42.500396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 6.78GiB
+2018-06-08 16:32:42.500777: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 4: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:46.869818: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 6: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+2018-06-08 16:32:51.034485: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 7: Internal: failed call to cuDevicePrimaryCtxRetain: CUresult(304)
+slurmstepd: error: *** JOB 1303 ON ainode12 CANCELLED AT 2018-06-09T00:30:58 DUE TO TIME LIMIT ***

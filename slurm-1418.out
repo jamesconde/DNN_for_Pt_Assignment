@@ -1,0 +1,21 @@
+Using TensorFlow backend.
+Seed value is 46
+MaxAbs
+
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 115, in <module>
+    history = model.fit(x_train,y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 209, in fit
+    return super(KerasClassifier, self).fit(x, y, **kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 140, in fit
+    self.model = self.build_fn(**self.filter_sk_params(self.build_fn))
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 128, in create_model
+    input_model.add(Dense({{uniform(0,1)}}, input_dim=globals.input_scale, kernel_initializer='uniform', activation='relu')) #Input layer
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/hyperopt/pyll_utils.py", line 21, in wrapper
+    raise TypeError('require string label')
+TypeError: require string label
+('True negative total is ', 40830, 'out of', 100000)
+('True positive total is ', 52408)
+('False negative total is ', 3854)
+('False positive total is ', 2908)
+('Any missed ones? ', 0)

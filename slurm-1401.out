@@ -1,0 +1,15 @@
+Using TensorFlow backend.
+Seed value is 46
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 34, in <module>
+    from TestandTrain1NetConfig1AI.py import X_train_prescale, Y_train,X_test_prescale,Y_test
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 103, in <module>
+    x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+NameError: name 'scale_x' is not defined
+('True negative total is ', 40837, 'out of', 100000)
+('True positive total is ', 52471)
+('False negative total is ', 3791)
+('False positive total is ', 2901)
+('Any missed ones? ', 0)

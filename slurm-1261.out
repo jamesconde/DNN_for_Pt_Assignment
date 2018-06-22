@@ -1,0 +1,3 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+slurmstepd: error: *** JOB 1261 ON ainode08 CANCELLED AT 2018-06-07T17:05:24 DUE TO TIME LIMIT ***

@@ -1,0 +1,12 @@
+Using TensorFlow backend.
+MaxAbs
+
+Test batch sizes 25-2000 and epochs from 1-150
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 218, in <module>
+    from UCI_hyperparameters_test_Keras2_BONNER.py import neurons
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 123, in <module>
+    batch_size = range[25,2000]
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'

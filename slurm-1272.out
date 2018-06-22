@@ -1,0 +1,22 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/GPU_Check.py", line 1, in <module>
+    import tensorfow as tf 
+ImportError: No module named tensorfow
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-06-07 17:47:41.077486: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+3
+Seed value is 44
+MaxAbs
+
+
+
+AUC: 0.934113
+Done
+('True negative total is ', 39937, 'out of', 100000)
+('True positive total is ', 53723)
+('False negative total is ', 2604)
+('False positive total is ', 3736)
+('Any missed ones? ', 0)

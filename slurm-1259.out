@@ -1,0 +1,261 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+MaxAbs
+
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57829' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57829' (I am process '57838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57829' (I am process '57831')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57829' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57834')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57847')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57851')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57831')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57828')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57834')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57854' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57833')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57839' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57839' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57839' (I am process '57837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57843' (I am process '57850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57843' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57843' (I am process '57841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57845')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57851' (I am process '57852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57851' (I am process '57849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57851' (I am process '57853')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57831')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57833')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57847')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57834' (I am process '57828')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57831' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57831' (I am process '57836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57848' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57833' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57828')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57845')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57831')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57839' (I am process '57852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57838' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57833')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57843' (I am process '57850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57843' (I am process '57849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57828' (I am process '57831')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57828' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57845')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57837' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57847')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57836' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57849' (I am process '57841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57850' (I am process '57840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57850' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57850' (I am process '57845')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57831' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57831' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57850' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57850' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57841' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57833')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57847' (I am process '57838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57840' (I am process '57846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57832')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57845' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57840' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57840' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57852' (I am process '57833')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57846' (I am process '57835')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57848' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57844' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57844' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57830')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57846' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57835' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57830' (I am process '57839')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57842' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57842' (I am process '57829')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '57839' (I am process '57844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/rice/jmc32/.theano/compiledir_Linux-4.4--generic-x86_64-with-debian-stretch-sid-x86_64-2.7.15-64/lock_dir
+slurmstepd: error: *** JOB 1259 ON ainode07 CANCELLED AT 2018-06-07T16:50:54 DUE TO TIME LIMIT ***

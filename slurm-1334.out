@@ -1,0 +1,63 @@
+Using TensorFlow backend.
+2018-06-11 13:55:56.609397: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-11 13:55:57.627385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:55:58.302793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:55:58.970030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:55:59.664618: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:56:00.360439: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:56:01.073113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:56:01.819298: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:56:02.576199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-11 13:56:02.593316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-11 13:56:05.808009: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-11 13:56:05.808352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-11 13:56:05.808372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-11 13:56:05.808379: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-11 13:56:05.808385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-11 13:56:05.808392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-11 13:56:05.808398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-11 13:56:05.808404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-11 13:56:05.808410: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-11 13:56:05.808416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-11 13:56:05.811622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-11 13:56:05.984893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-11 13:56:06.170667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-11 13:56:06.341457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14867 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-11 13:56:06.518150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14867 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-11 13:56:06.707566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14867 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-11 13:56:06.883249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14867 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-11 13:56:07.058125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14867 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+MaxAbs
+
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 218, in <module>
+    from UCI_hyperparameters_test_Keras2_BONNER.py import neurons
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 130, in <module>
+    print "Batch size range %d and number of epochs %s" %(batch_size,nb_epoch)
+TypeError: %d format: a number is required, not list

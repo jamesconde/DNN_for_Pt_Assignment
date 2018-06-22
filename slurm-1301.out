@@ -1,0 +1,65 @@
+Using TensorFlow backend.
+2018-06-08 16:24:45.540446: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-08 16:24:46.603677: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:47.282180: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:47.945972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:48.646026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:49.339542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:50.068263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:50.808127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:51.556145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-08 16:24:51.573303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-08 16:24:54.836079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-08 16:24:54.836465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-08 16:24:54.836485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-08 16:24:54.836492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-08 16:24:54.836498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-08 16:24:54.836504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-08 16:24:54.836510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-08 16:24:54.836516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-08 16:24:54.836522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-08 16:24:54.836528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-08 16:24:54.839980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.028533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.193718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.354448: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14867 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.527237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14867 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.712364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14867 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-08 16:24:55.889687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14867 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-08 16:24:56.080267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14867 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+[[22. 28.]
+ [49. 64.]]
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 22, in <module>
+    from sklearn.preprocessing import RobustScaler
+ImportError: No module named sklearn.preprocessing
+('True negative total is ', 40171, 'out of', 100000)
+('True positive total is ', 53580)
+('False negative total is ', 2747)
+('False positive total is ', 3502)
+('Any missed ones? ', 0)

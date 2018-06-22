@@ -1,0 +1,15 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 35, in <module>
+    import macros_AWS
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 218, in <module>
+    from UCI_hyperparameters_test_Keras2_BONNER.py import neurons
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/UCI_hyperparameters_test_Keras2_BONNER.py", line 130
+    print "Batch size range %d and number of epochs %s" %(batch_size[0],batch_size[len[batch_size]],nb_epoch[0],nb_epoch[len[nb[epoch]])
+                                                                                                                                       ^
+SyntaxError: invalid syntax
+('True negative total is ', 40353, 'out of', 100000)
+('True positive total is ', 53405)
+('False negative total is ', 2922)
+('False positive total is ', 3320)
+('Any missed ones? ', 0)

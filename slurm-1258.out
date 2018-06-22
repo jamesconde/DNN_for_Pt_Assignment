@@ -1,0 +1,8 @@
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperparameters_Test_file.py", line 90, in <module>
+    totalset = numpy.load(data_directory + data_sample) 
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/numpy/lib/npyio.py", line 372, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: '/storage1/users/eb8/Gridsearch_Data/PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'

@@ -1,0 +1,24 @@
+Argument expected for the -c option
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/GPU_Check.py", line 2, in <module>
+    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+NameError: name 'tf' is not defined
+Using Theano backend.
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+3
+Seed value is 44
+MaxAbs
+
+
+
+AUC: 0.935677
+Done
+('True negative total is ', 40290, 'out of', 100000)
+('True positive total is ', 53444)
+('False negative total is ', 2883)
+('False positive total is ', 3383)
+('Any missed ones? ', 0)

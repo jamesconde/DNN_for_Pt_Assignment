@@ -1,0 +1,16 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-06-19 16:54:40.132685: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Seed value is 46
+MaxAbs
+
+
+
+AUC: 0.932126
+Done
+('True negative total is ', 40590, 'out of', 100000)
+('True positive total is ', 52674)
+('False negative total is ', 3588)
+('False positive total is ', 3148)
+('Any missed ones? ', 0)

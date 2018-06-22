@@ -1,0 +1,274 @@
+[sysinfo] HOSTNAME: ainode11
+[sysinfo] MODEL: ProLiant XL270d Gen9
+[sysinfo] Serial Number: 2M280103VQ
+[sysinfo] OS: Ubuntu xenial 16.04
+[sysinfo] Proc 1: Intel(R) Corporation, Xeon, Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz, 18 cores, 18 enabled, 36 threads
+[sysinfo] Proc 2: Intel(R) Corporation, Xeon, Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz, 18 cores, 18 enabled, 36 threads
+[sysinfo] TURBO: Turbo is OFF
+[sysinfo] HYPER-THREADING: Hyper-Threading ON
+[sysinfo] CPU Scaling Governor: not running
+[sysinfo] MEMORY [PROC 1 DIMM 1]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 2]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 3]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 4]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 5]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 6]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 7]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 1 DIMM 8]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 1]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 2]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 3]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 4]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 5]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 6]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 7]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY [PROC 2 DIMM 8]: rank 2,32 GB,DDR4,DIMM *Speed[2400 MHz] != Configured Clock Speed [2133 MHz]
+[sysinfo] MEMORY: 512 MB of system memory
+[sysinfo] DISK /dev/sda: 1 x 1920 GB 2.5 inch SSD disk model: MK001920GWHRU
+[sysinfo] GPU 0: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817027769
+[sysinfo] GPU 1: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817027260
+[sysinfo] GPU 2: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817028518
+[sysinfo] GPU 3: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817027211
+[sysinfo] GPU 4: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817028174
+[sysinfo] GPU 5: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817028155
+[sysinfo] GPU 6: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817028529
+[sysinfo] GPU 7: Tesla V100-PCIE-16GB, driver 384.111, SN# 0324817028641
+[sysinfo] GATEWAY: default via 10.100.0.5 dev eno1 onlink
+[sysinfo] DNS: www.google.com resolved
+[sysinfo] FIREWALL: /usr/sbin/ufw Status: inactive
+[sysinfo] SELINUX: selinux is disabled
+[sysinfo] NIS: ● nis.service - LSB: Start NIS client and server daemons. Loaded: loaded (/etc/init.d/nis; bad; vendor preset: enabled) Active: active (running) since Wed 2018-05-23 16:12:44 CDT; 2 weeks 1 days ago Docs: man:systemd-sysv-generator(8) Process: 2865 ExecStart=/etc/init.d/nis start (code=exited, status=0/SUCCESS) Tasks: 3 Memory: 588.0K CPU: 3.829s CGroup: /system.slice/nis.service └─2921 /usr/sbin/ypbind -no-dbus May 23 16:12:43 ainode11 systemd[1]: Starting LSB: Start NIS client and server daemons.... May 23 16:12:43 ainode11 nis[2865]: compare_truth.py execute1Net.sh executeHyper.sh Generate_Data globals.py globals.pyc GPU_Check GPU_Check.py hardtest.sh Hyperparameters_Test_file.py logFile_1m_kclassify.txt logFile_1m_redo_accuracy.txt logs macros_AWS.py macros_AWS.pyc macros.oc.py macros.py plots predictions README roc_info saved_models setting_backend setting_backend.py slurm-1128.out slurm-1129.out slurm-1130.out slurm-1131.out slurm-1132.out slurm-1134.out slurm-1135.out slurm-1136.out slurm-1153.out slurm-1154.out slurm-1155.out slurm-1156.out slurm-1157.out slurm-1160.out slurm-1162.out slurm-1165.out slurm-1166.out slurm-1167.out slurm-1168.out slurm-1170.out slurm-1171.out slurm-1172.out slurm-1174.out slurm-1178.out slurm-1179.out slurm-1180.out slurm-1181.out slurm-1182.out slurm-1183.out slurm-1184.out slurm-1185.out slurm-1186.out slurm-1187.out slurm-1188.out slurm-1191.out slurm-1192.out slurm-1193.out slurm-1194.out slurm-1195.out slurm-1196.out slurm-1197.out slurm-1198.out slurm-1199.out slurm-1200.out slurm-1201.out slurm-1202.out slurm-1203.out slurm-1204.out slurm-1205.out slurm-1206.out slurm-1207.out slurm-1209.out slurm-1211.out slurm-1214.out slurm-1215.out slurm-1216.out slurm-1219.out slurm-1220.out slurm-1223.out slurm-1226.out slurm-1227.out slurm-1230.out slurm-1232.out slurm-1256.out slurm-1258.out slurm-1259.out slurm-1261.out slurm-1262.out slurm-1263.out slurm-1264.out slurm-1265.out slurm-1266.out slurm-1267.out slurm-1268.out slurm-1269.out slurm-1270.out slurm-1271.out slurm-1272.out slurm-1273.out slurm-1279.out slurm-1280.out slurm-1281.out slurm-1282.out slurm-1283.out slurm-1284.out slurm-1285.out slurm-1286.out slurm-1287.out slurm-1288.out slurm-1293.out slurm-1295.out TestandTrain1NetConfig1AI.cp.py TestandTrain1NetConfig1AI.py test.sh testtf.only.sh UCI_hyperparameters_test_Keras2_BONNER.py UCI_ROC_curves.py Setting NIS domainname to: partner May 23 16:12:43 ainode11 nis[2865]: compare_truth.py execute1Net.sh executeHyper.sh Generate_Data globals.py globals.pyc GPU_Check GPU_Check.py hardtest.sh Hyperparameters_Test_file.py logFile_1m_kclassify.txt logFile_1m_redo_accuracy.txt logs macros_AWS.py macros_AWS.pyc macros.oc.py macros.py plots predictions README roc_info saved_models setting_backend setting_backend.py slurm-1128.out slurm-1129.out slurm-1130.out slurm-1131.out slurm-1132.out slurm-1134.out slurm-1135.out slurm-1136.out slurm-1153.out slurm-1154.out slurm-1155.out slurm-1156.out slurm-1157.out slurm-1160.out slurm-1162.out slurm-1165.out slurm-1166.out slurm-1167.out slurm-1168.out slurm-1170.out slurm-1171.out slurm-1172.out slurm-1174.out slurm-1178.out slurm-1179.out slurm-1180.out slurm-1181.out slurm-1182.out slurm-1183.out slurm-1184.out slurm-1185.out slurm-1186.out slurm-1187.out slurm-1188.out slurm-1191.out slurm-1192.out slurm-1193.out slurm-1194.out slurm-1195.out slurm-1196.out slurm-1197.out slurm-1198.out slurm-1199.out slurm-1200.out slurm-1201.out slurm-1202.out slurm-1203.out slurm-1204.out slurm-1205.out slurm-1206.out slurm-1207.out slurm-1209.out slurm-1211.out slurm-1214.out slurm-1215.out slurm-1216.out slurm-1219.out slurm-1220.out slurm-1223.out slurm-1226.out slurm-1227.out slurm-1230.out slurm-1232.out slurm-1256.out slurm-1258.out slurm-1259.out slurm-1261.out slurm-1262.out slurm-1263.out slurm-1264.out slurm-1265.out slurm-1266.out slurm-1267.out slurm-1268.out slurm-1269.out slurm-1270.out slurm-1271.out slurm-1272.out slurm-1273.out slurm-1279.out slurm-1280.out slurm-1281.out slurm-1282.out slurm-1283.out slurm-1284.out slurm-1285.out slurm-1286.out slurm-1287.out slurm-1288.out slurm-1293.out slurm-1295.out TestandTrain1NetConfig1AI.cp.py TestandTrain1NetConfig1AI.py test.sh testtf.only.sh UCI_hyperparameters_test_Keras2_BONNER.py UCI_ROC_curves.py Starting NIS services May 23 16:12:44 ainode11 nis[2865]: ...done. May 23 16:12:44 ainode11 systemd[1]: Started LSB: Start NIS client and server daemons..
+[sysinfo] NIS: domainname set to partner
+[sysinfo] NSSWITCH: passwd: compat
+[sysinfo] NSSWITCH: hosts: files mdns4_minimal [NOTFOUND=return] dns
+[sysinfo] NTP: ● ntp.service Loaded: not-found (Reason: No such file or directory) Active: inactive (dead)
+[sysinfo] TIMEZONE: TZ set to CDT
+[sysinfo] NFS: hpcgate-ib:/ml mounted
+[sysinfo] NFS: hpcgate-ib:/home mounted
+[sysinfo] NFS: hpcgate-ib:/apps mounted
+[sysinfo] NFS: hpcgate-ib:/scratch mounted
+[sysinfo] NFS: hpcgate-ib:/mops mounted
+[sysinfo] PASSWD: /etc/passwd configured for NIS
+[sysinfo] GROUP: /etc/group configured for NIS
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_window_scaling = 1
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_syncookies = 1
+[sysinfo] /etc/sysctl.conf: net.core.rmem_max = 16777216
+[sysinfo] /etc/sysctl.conf: net.core.wmem_max = 16777216
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_timestamps = 0
+[sysinfo] /etc/sysctl.conf: net.core.optmem_max = 524288
+[sysinfo] /etc/sysctl.conf: net.core.netdev_max_backlog = 200000
+[sysinfo] /etc/sysctl.conf: vm.dirty_background_ratio = 5
+[sysinfo] /etc/sysctl.conf: vm.dirty_ratio = 5
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_mem=16777216 16777216 16777216
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_rmem=4096 87830 16777216
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_wmem=4096 65536 16777216
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_sack = 0
+[sysinfo] /etc/sysctl.conf: net.core.netdev_max_backlog = 250000
+[sysinfo] /etc/sysctl.conf: net.core.rmem_default = 16777216
+[sysinfo] /etc/sysctl.conf: net.core.wmem_default = 16777216
+[sysinfo] /etc/sysctl.conf: net.core.optmem_max = 16777216
+[sysinfo] /etc/sysctl.conf: net.ipv4.tcp_low_latency = 1
+[sysinfo] /etc/security/limits.conf: *   soft   memlock  unlimited
+[sysinfo] /etc/security/limits.conf: *   hard   memlock  unlimited
+[sysinfo] /etc/security/limits.conf: *   soft   stack  unlimited
+[sysinfo] /etc/security/limits.conf: *   hard   stack  unlimited
+[sysinfo] /etc/security/limits.conf: *   soft   nofile 51200
+[sysinfo] /etc/security/limits.conf: *   hard   nofile 51200
+[sysinfo] TOOLS: expect NOT FOUND
+[sysinfo] TOOLS: collectl NOT FOUND
+[sysinfo] TOOLS: csh /bin/csh located
+[sysinfo] TOOLS: gcc /usr/bin/gcc located
+[sysinfo] TOOLS: cpp /usr/bin/cpp located
+[sysinfo] TOOLS: make /usr/bin/make located
+[sysinfo] TOOLS: ethtool /sbin/ethtool located
+[sysinfo] BIOS: /sbin/conrep version: 5.1.0.0
+[sysinfo] BIOS: IMD_ServerName ->   Line0 ainode11-ilo  Line0
+[sysinfo] BIOS: IPL_Order ->   Index0 00  Index0  Index1 03  Index1  Index2 02  Index2  Index3 ff  Index3  Index4 ff  Index4  Index5 ff  Index5  Index6 ff  Index6  Index7 ff  Index7  Index8 ff  Index8  Index9 ff  Index9  Index10 ff  Index10  Index11 ff  Index11  Index12 ff  Index12  Index13 ff  Index13  Index14 ff  Index14  Index15 ff  Index15
+[sysinfo] BIOS: IPL_Order_Size ->   Size0 03  Size0
+[sysinfo] BIOS: PCI_Devices ->  EMPTY_DELETE
+[sysinfo] BIOS: Controller_Order ->   Id0 10 3c 80 30  Id0  Slot0 00  Slot0  BusDev0 00 fa  BusDev0  Rest0 41  Rest0  Id1 10 3c 80 30  Id1  Slot1 00  Slot1  BusDev1 00 8c  BusDev1  Rest1 41  Rest1
+[sysinfo] BIOS: System_WOL ->  Enabled
+[sysinfo] BIOS: System_APIC ->  Full Table
+[sysinfo] BIOS: System_Mouse ->  Enabled
+[sysinfo] BIOS: System_CPU_Serial_Number ->  Disabled
+[sysinfo] BIOS: System_COMA ->  COM1
+[sysinfo] BIOS: System_COMA_IRQ ->  IRQ4
+[sysinfo] BIOS: System_COMB ->  Disabled
+[sysinfo] BIOS: System_COMB_IRQ ->  Undefined
+[sysinfo] BIOS: System_Virtual_Serial_Port ->  COM2
+[sysinfo] BIOS: System_Virtual_Serial_Port_IRQ ->  IRQ3
+[sysinfo] BIOS: System_LPT ->  Disabled
+[sysinfo] BIOS: System_LPT_IRQ ->  Undefined
+[sysinfo] BIOS: System_LPT_Mode ->  SPP
+[sysinfo] BIOS: System_USB_Control ->  Enabled
+[sysinfo] BIOS: System_USB_EHCI_Controller ->  Enabled
+[sysinfo] BIOS: Diskette_Write_Control ->  Writes_Enabled
+[sysinfo] BIOS: POST_F1_Prompt ->  Delayed
+[sysinfo] BIOS: Hyperthreading ->  Disabled
+[sysinfo] BIOS: NMI_Debug_Button ->  Enabled
+[sysinfo] BIOS: ACPI_Power_Button ->  Enabled
+[sysinfo] BIOS: CPU_Performance ->  Memory
+[sysinfo] BIOS: ASR ->  Enabled
+[sysinfo] BIOS: ASR_Timeout ->  10 Minutes
+[sysinfo] BIOS: Thermal_Shutdown ->  Enabled
+[sysinfo] BIOS: RBSU_Language ->  01
+[sysinfo] BIOS: BIOS_Console ->  Auto
+[sysinfo] BIOS: BIOS_Baud_Rate ->  115200
+[sysinfo] BIOS: BIOS_Type ->  VT100+
+[sysinfo] BIOS: EMS_Console ->  Disabled
+[sysinfo] BIOS: Virtual_Install_Disk ->  Disabled
+[sysinfo] BIOS: HP_Power_Regulator ->  HP_Static_High_Performance_Mode
+[sysinfo] BIOS: HW_Prefetch ->  Enabled
+[sysinfo] BIOS: Adjacent_Sector_Prefetch ->  Enabled
+[sysinfo] BIOS: ATA_Drive_Write_Cache ->  Disabled
+[sysinfo] BIOS: Embedded_SATA_Configuration ->  SATA_AHCI_Enabled
+[sysinfo] BIOS: No_Execute_Memory_Protection ->  Enabled
+[sysinfo] BIOS: Legacy_SERR ->
+[sysinfo] BIOS: CPU_Virtualization ->  Enabled
+[sysinfo] BIOS: Embedded_NIC ->   NIC0 01  NIC0  NIC1 00  NIC1  NIC2 01  NIC2  NIC3 00  NIC3  NIC4 00  NIC4  NIC5 00  NIC5  NIC6 00  NIC6  NIC7 00  NIC7  NIC8 00  NIC8  NIC9 00  NIC9  NIC10 00  NIC10  NIC11 00  NIC11  NIC12 00  NIC12  NIC13 00  NIC13  NIC14 00  NIC14  NIC15 00  NIC15  NIC16 00  NIC16  NIC17 00  NIC17
+[sysinfo] BIOS: Diskette_Boot ->
+[sysinfo] BIOS: NumLock ->
+[sysinfo] BIOS: POST_Speed_Up ->
+[sysinfo] BIOS: Integrated_Diskette_Controller ->
+[sysinfo] BIOS: PCI_Bus_Reset ->
+[sysinfo] BIOS: Hot_Plug_Reservation ->
+[sysinfo] BIOS: Memory_Protection ->  Advanced_ECC_Support
+[sysinfo] BIOS: Advanced_Memory_Protection_Gen8 ->  Advanced_ECC_Support
+[sysinfo] BIOS: Automatic_Poweron ->  Disabled
+[sysinfo] BIOS: Automatic_Poweron_Gen8 ->  Restore_Last_Power_State
+[sysinfo] BIOS: Power-On_Delay ->  No_Delay
+[sysinfo] BIOS: USB_Capability ->
+[sysinfo] BIOS: PCI_Enumeration_Method ->  Standard
+[sysinfo] BIOS: Shared_ILO_Port ->  Dedicated_Port
+[sysinfo] BIOS: Option_ROM_Loading_Sequence ->  Embedded_First
+[sysinfo] BIOS: Removable_Flash_Media_Boot_Sequence ->  External_Drivekeys_First
+[sysinfo] BIOS: USB_Port_Boot_Order_G5 ->  Internal
+[sysinfo] BIOS: USB_Port_Boot_Order_G6 ->  External
+[sysinfo] BIOS: USB_Boot_Support ->  Enabled
+[sysinfo] BIOS: Low_Power_Halt_state ->  Enabled
+[sysinfo] BIOS: Intel_Processor_Core_Disable ->  All_Cores_Enabled
+[sysinfo] BIOS: Intel_Processor_Turbo_Mode ->  Enabled
+[sysinfo] BIOS: Intel_VT-d2 ->  Disabled
+[sysinfo] BIOS: HP_Power_Profile ->  Maximum_Performance
+[sysinfo] BIOS: Intel_QPI_Link_Power_Management ->  Disabled
+[sysinfo] BIOS: Intel_QPI_Link_Frequency ->  Auto
+[sysinfo] BIOS: Intel_Minimum_Processor_Idle_Power_State ->  No_C-States
+[sysinfo] BIOS: Intel_Minimum_Processor_Idle_Power_Package_State ->  No_Package_State
+[sysinfo] BIOS: Maximum_Memory_Bus_Frequency ->  Auto
+[sysinfo] BIOS: Memory_Interleaving ->  Full_Interleaving
+[sysinfo] BIOS: Intel_PCI_Express_Generation_20_Support ->  Auto
+[sysinfo] BIOS: Thermal_Configuration ->  Optimal_Cooling
+[sysinfo] BIOS: Intel_TPM_Functionality ->  Enabled
+[sysinfo] BIOS: Intel_TPM_Visibility ->  Hide
+[sysinfo] BIOS: Intel_TPM_Expansion_ROM_Measuring ->  Enabled
+[sysinfo] BIOS: TPM_12_Functionality_Gen9 ->  Disabled
+[sysinfo] BIOS: TPM_12_Visibility_Gen9 ->  Visible
+[sysinfo] BIOS: TPM_Binding_Gen9 ->  Enabled
+[sysinfo] BIOS: TPM_UEFI_Option_ROM_Measurement_Gen9 ->  Disabled
+[sysinfo] BIOS: TPM_20_Functionality ->  No_Action
+[sysinfo] BIOS: TPM_20_Physical_Presence_Confirmation ->  Disabled
+[sysinfo] BIOS: TPM_20_Visibility ->  Visible
+[sysinfo] BIOS: Node_Interleaving ->  Disabled
+[sysinfo] BIOS: Intel_Hyperthreading ->  Enabled
+[sysinfo] BIOS: PCI_Bus_Padding_Option ->  Enabled
+[sysinfo] BIOS: PCI_Bus_Padding_Option_Gen8 ->  Enabled
+[sysinfo] BIOS: Power-on_Logo ->  Enabled
+[sysinfo] BIOS: Hide_Option_ROM_Messages ->  Enabled
+[sysinfo] BIOS: Redundant_Power_Supply_Mode ->  Balanced_Mode
+[sysinfo] BIOS: Dynamic_Power_Savings_Mode_Response ->  Fast
+[sysinfo] BIOS: Memory_Speed_with_2_DIMMs_per_Channel ->  1333MHz_Maximum
+[sysinfo] BIOS: Video_Options ->  Optional_Primary_Embedded_Disabled
+[sysinfo] BIOS: Power_Supply_Requirements_Override ->  Normal
+[sysinfo] BIOS: Collaborative_Power_Control ->  Disabled
+[sysinfo] BIOS: Processor_Core_Disable_Gen8 ->  All_Cores_Enabled
+[sysinfo] BIOS: DCU_Prefetcher ->  Enabled
+[sysinfo] BIOS: DCU_IP_Prefetcher ->  Enabled
+[sysinfo] BIOS: Data_Reuse ->  Enabled
+[sysinfo] BIOS: QPI_Bandwidth_Optimization_Gen8 ->  Balanced
+[sysinfo] BIOS: Intel_Turbo_Boost_Optimization ->  Optimized_for_Performance
+[sysinfo] BIOS: Intel_Turbo_Boost_Optimization_Gen8 ->  Enabled
+[sysinfo] BIOS: Intel_F11_Boot_Menu_Prompt ->  Enabled
+[sysinfo] BIOS: F11_Boot_Menu_Prompt_UEFI ->  Enabled
+[sysinfo] BIOS: Intelligent_Provisioning_F10_Prompt ->  Enabled
+[sysinfo] BIOS: Energy_Performance_Bias ->  Maximum_Performance
+[sysinfo] BIOS: Energy_Performance_Bias_Gen9 ->  Maximum_Performance
+[sysinfo] BIOS: System_Locality_Information_Table_G7 ->  Disabled
+[sysinfo] BIOS: System_Locality_Information_Table_Gen8 ->  Enabled
+[sysinfo] BIOS: Intel_DIMM_Voltage_Preference ->  Optimized_for_Performance
+[sysinfo] BIOS: Intel_Memory_Channel_Mode_Gen8 ->  Independent_Channel_Mode
+[sysinfo] BIOS: Dynamic_Power_Capping_Functionality ->  Enabled
+[sysinfo] BIOS: SR-IOV ->  Enabled
+[sysinfo] BIOS: Network_Boot_Retry_Support ->  Enabled
+[sysinfo] BIOS: Reset_on_Boot_Device_Not_Found ->  Disabled
+[sysinfo] BIOS: Intel_NIC_DMA_Channels ->  Enabled
+[sysinfo] BIOS: SATA_Secure_Erase ->  Disabled
+[sysinfo] BIOS: Consistent_Device_Naming ->  CDN_Support_for_LOMs_Only
+[sysinfo] BIOS: ROM_Selection ->  Use_Current_ROM
+[sysinfo] BIOS: Data_Direct_I O ->  Enabled
+[sysinfo] BIOS: Intel_Performance_Counter_Monitor ->  Disabled
+[sysinfo] BIOS: A7_Memory_Address_Mode ->  Enabled
+[sysinfo] BIOS: USB_Drive_Key_Enumeration ->  Enabled
+[sysinfo] BIOS: Embedded_UEFI_Shell ->  Enabled
+[sysinfo] BIOS: UEFI_Shell_Script_Auto-Start ->  Disabled
+[sysinfo] BIOS: Add_Embedded_UEFI_Shell_to_Boot_Order ->  Disabled
+[sysinfo] BIOS: Boot_Mode ->  UEFI_Mode
+[sysinfo] BIOS: UEFI_Optimized_Boot ->  Enabled
+[sysinfo] BIOS: UEFI_PXE_Boot_Policy ->  Auto
+[sysinfo] BIOS: Boot_Order_Policy ->  Retry_Indefinitely
+[sysinfo] BIOS: Processor_X2Apic_Support ->  Disabled
+[sysinfo] BIOS: ACPI_RASF_Table_Support ->  Enabled
+[sysinfo] BIOS: ACPI_Root_Bridge_PXM_Preferences ->  Enabled
+[sysinfo] BIOS: PCI_Express_64-Bit_BAR_Support ->  Enabled
+[sysinfo] BIOS: Enhanced_System_Boot_Memory_RAS ->  Disabled
+[sysinfo] BIOS: QPI_Snoop_Configuration ->  Standard
+[sysinfo] BIOS: QPI_Home_Snoop_Optimization ->  Directory_+_OSB_Enabled
+[sysinfo] BIOS: USB_3.0_Mode ->  Auto
+[sysinfo] BIOS: Video_Options_Gen9 ->  Both_Add-in_and_Embedded_Video_Enabled
+[sysinfo] BIOS: Embedded_Video_Connection ->  Auto
+[sysinfo] BIOS: Channel_Interleaving_Gen8 ->  Enabled
+[sysinfo] BIOS: Embedded_User_Partition ->  Disabled
+[sysinfo] BIOS: Memory_Proximity_Reporting_for_I O ->  Enabled
+[sysinfo] BIOS: Embedded_Diagnostics ->  Enabled
+[sysinfo] BIOS: Embedded_Diagnostics_Mode ->  Auto
+[sysinfo] BIOS: Embedded_Diagnostics_Selection ->  Default
+[sysinfo] BIOS: Memory_Fast_Training ->  Enabled
+[sysinfo] BIOS: Fan_Installation_Requirements ->  Enable_Messaging
+[sysinfo] BIOS: Fan_Failure_Policy ->  Shutdown_Halt
+[sysinfo] BIOS: Extended_Ambient_Temperature_Support ->  Disabled
+[sysinfo] BIOS: ACPI_RTC_Support ->  Disabled
+[sysinfo] BIOS: Mixed_Power_Supply_Reporting ->  Enabled
+[sysinfo] BIOS: Intel_TXT_Support_Gen9 ->  Disabled
+[sysinfo] BIOS: Intel_QPI_Link_Enablement ->  Auto
+[sysinfo] BIOS: NUMA_Group_Size_Optimization ->  Clustered
+[sysinfo] BIOS: PCI_Device_Disable_Embedded_Mezz ->  00 00
+[sysinfo] BIOS: PCI_Device_Disable_SATA_Slots ->  00 00 00 00
+[sysinfo] BIOS: Processor_AES-NI_Support ->  Enabled
+[sysinfo] BIOS: Internal_SD_Card_Slot ->  Enabled
+[sysinfo] BIOS: UEFI_Graphics_Output ->  Enabled
+[sysinfo] BIOS: I O_Non-posted_Prefetching ->  Disabled
+[sysinfo] BIOS: IPv6_DHCP_Unique_Identifier ->  Auto
+[sysinfo] BIOS: Intel_DMI_Link_Frequency ->  Auto
+[sysinfo] BIOS: PCI_Express_ECRC_Support ->  Disabled
+[sysinfo] BIOS: NVDIMM-N_Memory_Functionality ->  Disabled
+[sysinfo] BIOS: NVDIMM-N_Sanitize Erase_on_Next_Reboot_Policy ->  Disabled
+[sysinfo] BIOS: Sanitize Erase_all_NVDIMM-N_in_System ->  Disabled
+[sysinfo] BIOS: NVDIMM-N_Memory_Interleaving ->  Disabled
+[sysinfo] BIOS: NVDIMM-N_Backup_Power_Policy ->  Wait_for_Backup_Power_on_Boot
+[sysinfo] BIOS: NVDIMM-N_ACPI_Objects ->  Disabled
+[sysinfo] BIOS: Pre-Boot_Network_Interface ->  Auto
+[sysinfo] BIOS: Pre-Boot_DHCPv4 ->  Enabled
+[sysinfo] BIOS: Pre-Boot_IPv4_Address ->  0.0.0.0
+[sysinfo] BIOS: Pre-Boot_IPv4_Subnet_Mask ->  0.0.0.0
+[sysinfo] BIOS: Pre-Boot_IPv4_Gateway ->  0.0.0.0
+[sysinfo] BIOS: Pre-Boot_IPv4_Primary_DNS ->  0.0.0.0
+[sysinfo] BIOS: Pre-Boot_IPv4_Secondary_DNS ->  0.0.0.0
+[sysinfo] BIOS: Pre-Boot_Boot_from_URL ->
+[sysinfo] BIOS: Time_Format ->  UTC
+[sysinfo] BIOS: Daylight_Savings_Time ->  Enabled
+[sysinfo] BIOS: Fibre_Channel FCoE_Scan_Policy ->  Scan_Configured_Targets_Only
+[sysinfo] BIOS: PCIe_Slot_Network_Boot ->  01 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00
+[sysinfo] BIOS: UEFI_Boot_Order ->   Order0 hd  Order0  Order1 pxe  Order1  Order2 usb  Order2  Order3 cdrom  Order3  Order4 floppy  Order4
+[sysinfo] BIOS: Time_Zone ->  UTC-00:00
+[sysinfo] BIOS: Asset_Tag_UEFI ->
+[sysinfo] BIOS: Asset_Tag_Protection_UEFI ->  Unlocked
+[sysinfo] sysinfo: v3.7, /mops/linux/sysinfo, 06/08/2018 15:39:53

@@ -1,0 +1,10 @@
+Using TensorFlow backend.
+MaxAbs
+
+2018-06-08 12:58:37.275559: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-08 12:58:37.333838: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-08 12:58:37.502655: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-08 12:58:56.589230: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Best: 0.921260 using {'nb_epoch': 1, 'batch_size': 1000}
+0.921260 (0.002212) with: {'nb_epoch': 1, 'batch_size': 1000}
+Done
