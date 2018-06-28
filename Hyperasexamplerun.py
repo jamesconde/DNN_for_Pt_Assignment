@@ -7,6 +7,7 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.models import Sequential
 from keras.utils import np_utils
 from keras.utils import to_categorical
+from keras.layers import LeakyReLU
 
 from hyperas import optim
 from hyperas.distributions import choice, uniform
@@ -66,37 +67,34 @@ def create_model(x_train, y_train, x_test, y_test):
         - model: specify the model just created so that we can later use it again.
     """
     model = Sequential()
-    model.add(Dense(100, input_shape=(7,)))
-    model.add(Activation('relu'))
-    model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense({{choice([100, 150, 50])}}))
-    model.add(Activation({{choice(['relu', 'sigmoid'])}}))
-    model.add(Dropout({{uniform(0, 1)}}))
+    model.add(Dense({{choice([1699]+range(2002,3001))}}, input_dim=7))
+    model.add(LeakyReLU(alpha=0.1))
+    model.add(Dense({{choice([1001]+range(2001,3001))}}))
+    model.add(LeakyReLU(alpha=0.1))
 
     # If we choose 'four', add an additional fourth layer
-    if {{choice(['three', 'four'])}} == 'four':
-        model.add(Dense(100))
+    model.add(Dense({{choice([780]+range(2001,3001))}}))
 
         # We can also choose between complete sets of layers
+   
+    #model.add(Activation('relu'))
+    model.add(LeakyReLU(alpha=0.1))
+    model.add(Dense(1))
+    
+    model.add(Activation({{choice(['sigmoid'])}}))
 
-        model.add({{choice([Dropout(0.5), Activation('relu')])}})
-        model.add(Activation('relu'))
 
-    model.add(Dense(2))
-    model.add(Activation({{choice(['softmax','sigmoid'])}}))
-
-    model.compile(loss='sparse_categorical_crossentropy', metrics=['accuracy'],
-                  optimizer={{choice(['rmsprop', 'adam', 'sgd'])}})
+    model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+                  optimizer={{choice(['adam'])}})
 
     model.fit(x_train, y_train,
-              batch_size={{choice(range(90,110))}},
-              epochs=1,
+              batch_size={{choice([1349]+range(2002,3001))}},
+              epochs={{choice([138]+range(201,301))}},
               verbose=2,
               validation_data=(x_test, y_test))
     score, acc = model.evaluate(x_test, y_test, verbose=0)
     print('Test accuracy:', acc)
     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
-
 
 if __name__ == '__main__':
     best_run, best_model = optim.minimize(model=create_model,
