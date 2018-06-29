@@ -1,0 +1,73 @@
+Using TensorFlow backend.
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun.py", line 106, in <module>
+    trials=Trials())
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 67, in minimize
+    verbose=verbose)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 96, in base_minimizer
+    model_str = get_hyperopt_model_string(model, data, functions, notebook_name, verbose, stack)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 184, in get_hyperopt_model_string
+    parts = hyperparameter_names(model_string)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 251, in hyperparameter_names
+    parts.append(parts[-1])
+IndexError: list index out of range

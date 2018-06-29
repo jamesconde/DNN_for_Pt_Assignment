@@ -1,0 +1,1 @@
+slurmstepd: error: execve(): /var/spool/slurmd/job00054/slurm_script: Not a directory

@@ -1,0 +1,10 @@
+def makemorelayers(numlayers,neurons):
+   c=keras.layers.LeakyReLU(alpha=0.3)
+   d=model.add(Dense(neurons))
+   for val in range(0,numlayers):
+       print c
+       print d
+
+
+
+

@@ -1,0 +1,4 @@
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun.py", line 69
+    model.add({{choice([100, 150, 50])}}, input_dim=7))
+                                                      ^
+SyntaxError: invalid syntax

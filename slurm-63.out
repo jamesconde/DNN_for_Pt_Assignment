@@ -1,0 +1,344 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-06-28 17:41:54.970903: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-28 17:41:55.812150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:56.262416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:56.729465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:57.229256: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:57.746857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:58.303622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:58.863919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:59.401245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-28 17:41:59.424407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-28 17:42:02.872104: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-28 17:42:02.872431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-28 17:42:02.872447: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-28 17:42:02.872454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-28 17:42:02.872461: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-28 17:42:02.872468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-28 17:42:02.872475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-28 17:42:02.872482: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-28 17:42:02.872488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-28 17:42:02.872495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-28 17:42:02.875941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.065203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.240567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.415660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14867 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.620371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14867 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.799508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14867 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-28 17:42:03.995156: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14867 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-28 17:42:04.162285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14867 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+Seed value is 46
+MaxAbs
+
+1699
+Epoch 1/138
+ - 14s - loss: 0.2227 - acc: 0.9082
+Epoch 2/138
+ - 4s - loss: 0.1766 - acc: 0.9288
+Epoch 3/138
+ - 4s - loss: 0.1676 - acc: 0.9323
+Epoch 4/138
+ - 4s - loss: 0.1630 - acc: 0.9338
+Epoch 5/138
+ - 4s - loss: 0.1608 - acc: 0.9347
+Epoch 6/138
+ - 4s - loss: 0.1588 - acc: 0.9353
+Epoch 7/138
+ - 4s - loss: 0.1582 - acc: 0.9356
+Epoch 8/138
+ - 4s - loss: 0.1570 - acc: 0.9360
+Epoch 9/138
+ - 4s - loss: 0.1559 - acc: 0.9364
+Epoch 10/138
+ - 4s - loss: 0.1555 - acc: 0.9364
+Epoch 11/138
+ - 4s - loss: 0.1544 - acc: 0.9369
+Epoch 12/138
+ - 4s - loss: 0.1541 - acc: 0.9369
+Epoch 13/138
+ - 4s - loss: 0.1538 - acc: 0.9371
+Epoch 14/138
+ - 4s - loss: 0.1527 - acc: 0.9374
+Epoch 15/138
+ - 4s - loss: 0.1524 - acc: 0.9374
+Epoch 16/138
+ - 4s - loss: 0.1522 - acc: 0.9375
+Epoch 17/138
+ - 4s - loss: 0.1515 - acc: 0.9378
+Epoch 18/138
+ - 4s - loss: 0.1509 - acc: 0.9380
+Epoch 19/138
+ - 4s - loss: 0.1509 - acc: 0.9379
+Epoch 20/138
+ - 4s - loss: 0.1503 - acc: 0.9383
+Epoch 21/138
+ - 4s - loss: 0.1497 - acc: 0.9384
+Epoch 22/138
+ - 4s - loss: 0.1495 - acc: 0.9385
+Epoch 23/138
+ - 4s - loss: 0.1491 - acc: 0.9388
+Epoch 24/138
+ - 4s - loss: 0.1486 - acc: 0.9389
+Epoch 25/138
+ - 4s - loss: 0.1485 - acc: 0.9390
+Epoch 26/138
+ - 4s - loss: 0.1478 - acc: 0.9391
+Epoch 27/138
+ - 4s - loss: 0.1478 - acc: 0.9392
+Epoch 28/138
+ - 4s - loss: 0.1473 - acc: 0.9394
+Epoch 29/138
+ - 4s - loss: 0.1469 - acc: 0.9395
+Epoch 30/138
+ - 4s - loss: 0.1468 - acc: 0.9393
+Epoch 31/138
+ - 4s - loss: 0.1466 - acc: 0.9396
+Epoch 32/138
+ - 4s - loss: 0.1460 - acc: 0.9397
+Epoch 33/138
+ - 4s - loss: 0.1456 - acc: 0.9399
+Epoch 34/138
+ - 4s - loss: 0.1454 - acc: 0.9400
+Epoch 35/138
+ - 4s - loss: 0.1450 - acc: 0.9400
+Epoch 36/138
+ - 4s - loss: 0.1449 - acc: 0.9402
+Epoch 37/138
+ - 4s - loss: 0.1443 - acc: 0.9403
+Epoch 38/138
+ - 4s - loss: 0.1442 - acc: 0.9402
+Epoch 39/138
+ - 4s - loss: 0.1440 - acc: 0.9404
+Epoch 40/138
+ - 4s - loss: 0.1437 - acc: 0.9406
+Epoch 41/138
+ - 4s - loss: 0.1432 - acc: 0.9406
+Epoch 42/138
+ - 4s - loss: 0.1429 - acc: 0.9408
+Epoch 43/138
+ - 4s - loss: 0.1425 - acc: 0.9408
+Epoch 44/138
+ - 4s - loss: 0.1423 - acc: 0.9411
+Epoch 45/138
+ - 4s - loss: 0.1422 - acc: 0.9411
+Epoch 46/138
+ - 4s - loss: 0.1418 - acc: 0.9412
+Epoch 47/138
+ - 4s - loss: 0.1413 - acc: 0.9413
+Epoch 48/138
+ - 4s - loss: 0.1411 - acc: 0.9414
+Epoch 49/138
+ - 4s - loss: 0.1408 - acc: 0.9416
+Epoch 50/138
+ - 4s - loss: 0.1405 - acc: 0.9417
+Epoch 51/138
+ - 4s - loss: 0.1401 - acc: 0.9419
+Epoch 52/138
+ - 4s - loss: 0.1398 - acc: 0.9420
+Epoch 53/138
+ - 4s - loss: 0.1395 - acc: 0.9419
+Epoch 54/138
+ - 4s - loss: 0.1392 - acc: 0.9421
+Epoch 55/138
+ - 4s - loss: 0.1389 - acc: 0.9424
+Epoch 56/138
+ - 4s - loss: 0.1384 - acc: 0.9425
+Epoch 57/138
+ - 4s - loss: 0.1382 - acc: 0.9425
+Epoch 58/138
+ - 4s - loss: 0.1380 - acc: 0.9426
+Epoch 59/138
+ - 4s - loss: 0.1374 - acc: 0.9427
+Epoch 60/138
+ - 4s - loss: 0.1374 - acc: 0.9428
+Epoch 61/138
+ - 4s - loss: 0.1370 - acc: 0.9428
+Epoch 62/138
+ - 4s - loss: 0.1365 - acc: 0.9431
+Epoch 63/138
+ - 4s - loss: 0.1363 - acc: 0.9432
+Epoch 64/138
+ - 4s - loss: 0.1358 - acc: 0.9433
+Epoch 65/138
+ - 4s - loss: 0.1356 - acc: 0.9434
+Epoch 66/138
+ - 4s - loss: 0.1353 - acc: 0.9436
+Epoch 67/138
+ - 4s - loss: 0.1350 - acc: 0.9436
+Epoch 68/138
+ - 4s - loss: 0.1346 - acc: 0.9438
+Epoch 69/138
+ - 4s - loss: 0.1343 - acc: 0.9437
+Epoch 70/138
+ - 4s - loss: 0.1340 - acc: 0.9439
+Epoch 71/138
+ - 4s - loss: 0.1335 - acc: 0.9442
+Epoch 72/138
+ - 4s - loss: 0.1332 - acc: 0.9444
+Epoch 73/138
+ - 4s - loss: 0.1328 - acc: 0.9444
+Epoch 74/138
+ - 4s - loss: 0.1325 - acc: 0.9445
+Epoch 75/138
+ - 4s - loss: 0.1320 - acc: 0.9448
+Epoch 76/138
+ - 4s - loss: 0.1318 - acc: 0.9448
+Epoch 77/138
+ - 4s - loss: 0.1312 - acc: 0.9452
+Epoch 78/138
+ - 4s - loss: 0.1312 - acc: 0.9451
+Epoch 79/138
+ - 4s - loss: 0.1307 - acc: 0.9452
+Epoch 80/138
+ - 4s - loss: 0.1304 - acc: 0.9451
+Epoch 81/138
+ - 4s - loss: 0.1301 - acc: 0.9454
+Epoch 82/138
+ - 4s - loss: 0.1296 - acc: 0.9457
+Epoch 83/138
+ - 4s - loss: 0.1295 - acc: 0.9457
+Epoch 84/138
+ - 4s - loss: 0.1291 - acc: 0.9458
+Epoch 85/138
+ - 4s - loss: 0.1286 - acc: 0.9459
+Epoch 86/138
+ - 4s - loss: 0.1284 - acc: 0.9460
+Epoch 87/138
+ - 4s - loss: 0.1279 - acc: 0.9461
+Epoch 88/138
+ - 4s - loss: 0.1277 - acc: 0.9462
+Epoch 89/138
+ - 4s - loss: 0.1272 - acc: 0.9465
+Epoch 90/138
+ - 4s - loss: 0.1271 - acc: 0.9466
+Epoch 91/138
+ - 4s - loss: 0.1266 - acc: 0.9466
+Epoch 92/138
+ - 4s - loss: 0.1261 - acc: 0.9469
+Epoch 93/138
+ - 4s - loss: 0.1260 - acc: 0.9470
+Epoch 94/138
+ - 4s - loss: 0.1254 - acc: 0.9470
+Epoch 95/138
+ - 4s - loss: 0.1251 - acc: 0.9473
+Epoch 96/138
+ - 4s - loss: 0.1246 - acc: 0.9475
+Epoch 97/138
+ - 4s - loss: 0.1245 - acc: 0.9474
+Epoch 98/138
+ - 4s - loss: 0.1241 - acc: 0.9476
+Epoch 99/138
+ - 4s - loss: 0.1238 - acc: 0.9477
+Epoch 100/138
+ - 4s - loss: 0.1234 - acc: 0.9480
+Epoch 101/138
+ - 4s - loss: 0.1233 - acc: 0.9479
+Epoch 102/138
+ - 4s - loss: 0.1227 - acc: 0.9482
+Epoch 103/138
+ - 4s - loss: 0.1223 - acc: 0.9482
+Epoch 104/138
+ - 4s - loss: 0.1223 - acc: 0.9484
+Epoch 105/138
+ - 4s - loss: 0.1219 - acc: 0.9485
+Epoch 106/138
+ - 4s - loss: 0.1213 - acc: 0.9488
+Epoch 107/138
+ - 4s - loss: 0.1211 - acc: 0.9488
+Epoch 108/138
+ - 4s - loss: 0.1208 - acc: 0.9491
+Epoch 109/138
+ - 4s - loss: 0.1207 - acc: 0.9490
+Epoch 110/138
+ - 4s - loss: 0.1198 - acc: 0.9493
+Epoch 111/138
+ - 4s - loss: 0.1199 - acc: 0.9492
+Epoch 112/138
+ - 4s - loss: 0.1196 - acc: 0.9494
+Epoch 113/138
+ - 4s - loss: 0.1196 - acc: 0.9494
+Epoch 114/138
+ - 4s - loss: 0.1189 - acc: 0.9498
+Epoch 115/138
+ - 4s - loss: 0.1183 - acc: 0.9499
+Epoch 116/138
+ - 4s - loss: 0.1180 - acc: 0.9500
+Epoch 117/138
+ - 4s - loss: 0.1179 - acc: 0.9501
+Epoch 118/138
+ - 4s - loss: 0.1175 - acc: 0.9501
+Epoch 119/138
+ - 4s - loss: 0.1173 - acc: 0.9502
+Epoch 120/138
+ - 4s - loss: 0.1172 - acc: 0.9502
+Epoch 121/138
+ - 4s - loss: 0.1166 - acc: 0.9505
+Epoch 122/138
+ - 4s - loss: 0.1162 - acc: 0.9505
+Epoch 123/138
+ - 4s - loss: 0.1158 - acc: 0.9508
+Epoch 124/138
+ - 4s - loss: 0.1159 - acc: 0.9508
+Epoch 125/138
+ - 4s - loss: 0.1155 - acc: 0.9511
+Epoch 126/138
+ - 4s - loss: 0.1149 - acc: 0.9513
+Epoch 127/138
+ - 4s - loss: 0.1151 - acc: 0.9512
+Epoch 128/138
+ - 4s - loss: 0.1148 - acc: 0.9512
+Epoch 129/138
+ - 4s - loss: 0.1146 - acc: 0.9512
+Epoch 130/138
+ - 4s - loss: 0.1141 - acc: 0.9515
+Epoch 131/138
+ - 4s - loss: 0.1136 - acc: 0.9516
+Epoch 132/138
+ - 4s - loss: 0.1136 - acc: 0.9516
+Epoch 133/138
+ - 4s - loss: 0.1131 - acc: 0.9519
+Epoch 134/138
+ - 4s - loss: 0.1129 - acc: 0.9519
+Epoch 135/138
+ - 4s - loss: 0.1123 - acc: 0.9521
+Epoch 136/138
+ - 4s - loss: 0.1122 - acc: 0.9521
+Epoch 137/138
+ - 4s - loss: 0.1122 - acc: 0.9521
+Epoch 138/138
+ - 4s - loss: 0.1120 - acc: 0.9523
+
+
+AUC: 0.931646
+Done
+('True negative total is ', 40436, 'out of', 100000)
+('True positive total is ', 52818)
+('False negative total is ', 3444)
+('False positive total is ', 3302)
+('Any missed ones? ', 0)

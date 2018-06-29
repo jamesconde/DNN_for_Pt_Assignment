@@ -1,0 +1,375 @@
+Using TensorFlow backend.
+2018-06-26 19:44:48.333377: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-26 19:44:49.458225: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:50.115819: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:50.783507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:51.470371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:52.171708: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:52.883789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:53.625036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:54.364378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-26 19:44:54.387438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-26 19:44:57.598545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-26 19:44:57.598913: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-26 19:44:57.598935: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-26 19:44:57.598942: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-26 19:44:57.598949: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-26 19:44:57.598956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-26 19:44:57.598963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-26 19:44:57.598969: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-26 19:44:57.598976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-26 19:44:57.598982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-26 19:44:57.602378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14866 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-26 19:44:57.781466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14866 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-26 19:44:57.962315: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14866 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-26 19:44:58.129586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14866 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-26 19:44:58.299340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14866 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-26 19:44:58.476428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14866 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-26 19:44:58.656004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14866 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-26 19:44:58.823272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14866 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', range(6,100)),
+        'Dropout': hp.uniform('Dropout', 0, 1),
+        'Dense_1': hp.choice('Dense_1', range(6,100)),
+        'Dropout_1': hp.uniform('Dropout_1', 0, 1),
+        'Dropout_2': hp.choice('Dropout_2', ['three', 'four']),
+        'Dense_2': hp.choice('Dense_2', range(6,100)),
+        'add': hp.choice('add', [Dropout(.5)]),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'maxabs'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(space['Dense'], input_dim=7))
+  15:     model.add(Activation('relu'))
+  16:     #model.add(Dropout(space['Dropout']))
+  17:     #model.add(kernel_initializer='uniform')    
+  18:     model.add(Dense(space['Dense_1']))
+  19:     #model.add(kernel_initializer='uniform')
+  20:     model.add(Activation('relu'))
+  21:     #model.add(Dropout(space['Dropout_1']))
+  22: 
+  23:     # If we choose 'four', add an additional fourth layer
+  24:     #if space['Dropout_2'] == 'four':
+  25:     model.add(Dense(space['Dense_2']))
+  26:     #model.add(kernel_initializer='uniform')
+  27: 
+  28:         # We can also choose between complete sets of layers
+  29: 
+  30:     #model.add(space['add'])
+  31:     model.add(Activation('relu'))
+  32: 
+  33:     model.add(Dense(1))
+  34:     #model.add(kernel_initializer='uniform')
+  35:     model.add(Activation('sigmoid'))
+  36: 
+  37:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  38:                   optimizer='adam')
+  39: 
+  40:     model.fit(x_train, y_train,
+  41:               batch_size=100,
+  42:               epochs=5,
+  43:               verbose=2,
+  44:               validation_data=(x_test, y_test))
+  45:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  46:     print('Test accuracy:', acc)
+  47:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  48: 
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/5
+ - 43s - loss: 0.2370 - acc: 0.9049 - val_loss: 0.2170 - val_acc: 0.9104
+Epoch 2/5
+ - 32s - loss: 0.1873 - acc: 0.9238 - val_loss: 0.1831 - val_acc: 0.9260
+Epoch 3/5
+ - 32s - loss: 0.1753 - acc: 0.9294 - val_loss: 0.1784 - val_acc: 0.9279
+Epoch 4/5
+ - 32s - loss: 0.1693 - acc: 0.9318 - val_loss: 0.1860 - val_acc: 0.9253
+Epoch 5/5
+ - 32s - loss: 0.1664 - acc: 0.9329 - val_loss: 0.2007 - val_acc: 0.9183
+Test accuracy: 0.91825
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/5
+ - 32s - loss: 0.2228 - acc: 0.9094 - val_loss: 0.1950 - val_acc: 0.9192
+Epoch 2/5
+ - 32s - loss: 0.1829 - acc: 0.9257 - val_loss: 0.1860 - val_acc: 0.9248
+Epoch 3/5
+ - 32s - loss: 0.1737 - acc: 0.9296 - val_loss: 0.2038 - val_acc: 0.9166
+Epoch 4/5
+ - 31s - loss: 0.1684 - acc: 0.9317 - val_loss: 0.1915 - val_acc: 0.9214
+Epoch 5/5
+ - 31s - loss: 0.1658 - acc: 0.9331 - val_loss: 0.1841 - val_acc: 0.9248
+Test accuracy: 0.92479
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/5
+ - 32s - loss: 0.2127 - acc: 0.9134 - val_loss: 0.1893 - val_acc: 0.9216
+Epoch 2/5
+ - 32s - loss: 0.1760 - acc: 0.9288 - val_loss: 0.1924 - val_acc: 0.9213
+Epoch 3/5
+ - 32s - loss: 0.1687 - acc: 0.9319 - val_loss: 0.1742 - val_acc: 0.9296
+Epoch 4/5
+ - 32s - loss: 0.1649 - acc: 0.9334 - val_loss: 0.1824 - val_acc: 0.9259
+Epoch 5/5
+ - 32s - loss: 0.1627 - acc: 0.9341 - val_loss: 0.1751 - val_acc: 0.9289
+Test accuracy: 0.92888
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/5
+ - 32s - loss: 0.2129 - acc: 0.9134 - val_loss: 0.1805 - val_acc: 0.9266
+Epoch 2/5
+ - 32s - loss: 0.1775 - acc: 0.9284 - val_loss: 0.1864 - val_acc: 0.9236
+Epoch 3/5
+ - 32s - loss: 0.1692 - acc: 0.9320 - val_loss: 0.1798 - val_acc: 0.9275
+Epoch 4/5
+ - 32s - loss: 0.1646 - acc: 0.9335 - val_loss: 0.1789 - val_acc: 0.9265
+Epoch 5/5
+ - 31s - loss: 0.1619 - acc: 0.9342 - val_loss: 0.1691 - val_acc: 0.9310
+Test accuracy: 0.93097
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/5
+ - 32s - loss: 0.2238 - acc: 0.9086 - val_loss: 0.1879 - val_acc: 0.9246
+Epoch 2/5
+ - 32s - loss: 0.1833 - acc: 0.9254 - val_loss: 0.1949 - val_acc: 0.9206
+Epoch 3/5
+ - 32s - loss: 0.1745 - acc: 0.9295 - val_loss: 0.1818 - val_acc: 0.9261
+Epoch 4/5
+ - 31s - loss: 0.1698 - acc: 0.9315 - val_loss: 0.1832 - val_acc: 0.9258
+Epoch 5/5
+ - 32s - loss: 0.1667 - acc: 0.9324 - val_loss: 0.1784 - val_acc: 0.9278
+Test accuracy: 0.92777
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Evalutation of best performing model:
+
+    32/100000 [..............................] - ETA: 11s
+  1120/100000 [..............................] - ETA: 4s 
+  2176/100000 [..............................] - ETA: 4s
+  3232/100000 [..............................] - ETA: 4s
+  4352/100000 [>.............................] - ETA: 4s
+  5696/100000 [>.............................] - ETA: 4s
+  7072/100000 [=>............................] - ETA: 4s
+  8480/100000 [=>............................] - ETA: 3s
+  9888/100000 [=>............................] - ETA: 3s
+ 11328/100000 [==>...........................] - ETA: 3s
+ 12736/100000 [==>...........................] - ETA: 3s
+ 14112/100000 [===>..........................] - ETA: 3s
+ 15488/100000 [===>..........................] - ETA: 3s
+ 16864/100000 [====>.........................] - ETA: 3s
+ 18240/100000 [====>.........................] - ETA: 3s
+ 19648/100000 [====>.........................] - ETA: 3s
+ 21024/100000 [=====>........................] - ETA: 3s
+ 22432/100000 [=====>........................] - ETA: 2s
+ 23776/100000 [======>.......................] - ETA: 2s
+ 25120/100000 [======>.......................] - ETA: 2s
+ 26464/100000 [======>.......................] - ETA: 2s
+ 27808/100000 [=======>......................] - ETA: 2s
+ 29184/100000 [=======>......................] - ETA: 2s
+ 30592/100000 [========>.....................] - ETA: 2s
+ 32000/100000 [========>.....................] - ETA: 2s
+ 33408/100000 [=========>....................] - ETA: 2s
+ 34816/100000 [=========>....................] - ETA: 2s
+ 36128/100000 [=========>....................] - ETA: 2s
+ 37440/100000 [==========>...................] - ETA: 2s
+ 38752/100000 [==========>...................] - ETA: 2s
+ 40064/100000 [===========>..................] - ETA: 2s
+ 41344/100000 [===========>..................] - ETA: 2s
+ 42624/100000 [===========>..................] - ETA: 2s
+ 43936/100000 [============>.................] - ETA: 2s
+ 45216/100000 [============>.................] - ETA: 2s
+ 46496/100000 [============>.................] - ETA: 2s
+ 47776/100000 [=============>................] - ETA: 1s
+ 49056/100000 [=============>................] - ETA: 1s
+ 50336/100000 [==============>...............] - ETA: 1s
+ 51616/100000 [==============>...............] - ETA: 1s
+ 52864/100000 [==============>...............] - ETA: 1s
+ 54144/100000 [===============>..............] - ETA: 1s
+ 55424/100000 [===============>..............] - ETA: 1s
+ 56704/100000 [================>.............] - ETA: 1s
+ 57984/100000 [================>.............] - ETA: 1s
+ 59264/100000 [================>.............] - ETA: 1s
+ 60544/100000 [=================>............] - ETA: 1s
+ 61824/100000 [=================>............] - ETA: 1s
+ 63104/100000 [=================>............] - ETA: 1s
+ 64384/100000 [==================>...........] - ETA: 1s
+ 65664/100000 [==================>...........] - ETA: 1s
+ 66944/100000 [===================>..........] - ETA: 1s
+ 68256/100000 [===================>..........] - ETA: 1s
+ 69536/100000 [===================>..........] - ETA: 1s
+ 70848/100000 [====================>.........] - ETA: 1s
+ 72192/100000 [====================>.........] - ETA: 1s
+ 73504/100000 [=====================>........] - ETA: 1s
+ 74816/100000 [=====================>........] - ETA: 0s
+ 76128/100000 [=====================>........] - ETA: 0s
+ 77440/100000 [======================>.......] - ETA: 0s
+ 78752/100000 [======================>.......] - ETA: 0s
+ 80064/100000 [=======================>......] - ETA: 0s
+ 81376/100000 [=======================>......] - ETA: 0s
+ 82656/100000 [=======================>......] - ETA: 0s
+ 83968/100000 [========================>.....] - ETA: 0s
+ 85248/100000 [========================>.....] - ETA: 0s
+ 86528/100000 [========================>.....] - ETA: 0s
+ 87808/100000 [=========================>....] - ETA: 0s
+ 89056/100000 [=========================>....] - ETA: 0s
+ 90336/100000 [==========================>...] - ETA: 0s
+ 91616/100000 [==========================>...] - ETA: 0s
+ 92896/100000 [==========================>...] - ETA: 0s
+ 94176/100000 [===========================>..] - ETA: 0s
+ 95456/100000 [===========================>..] - ETA: 0s
+ 96736/100000 [============================>.] - ETA: 0s
+ 98016/100000 [============================>.] - ETA: 0s
+ 99296/100000 [============================>.] - ETA: 0s
+100000/100000 [==============================] - 4s 39us/step
+['0.16201300283014775', '0.93492']
+Best performing model chosen hyper-parameters:
+{'Dense_2': 58, 'Dense_1': 59, 'Dense': 84, 'Dropout': 0.5350807190884803, 'Dropout_1': 0.9203644803497606, 'add': 0, 'Dropout_2': 1}

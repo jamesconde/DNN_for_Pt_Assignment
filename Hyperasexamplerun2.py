@@ -8,13 +8,11 @@ from keras.models import Sequential
 from keras.utils import np_utils
 from keras.utils import to_categorical
 from keras.layers import LeakyReLU
-from keras.layers import PReLU
-from keras.layers import ELU
-from keras.layers import ThresholdedReLU
-
 
 from hyperas import optim
 from hyperas.distributions import choice, uniform
+
+from workingwithpython import *
 
 def data():
     """
@@ -59,6 +57,15 @@ def data():
     return x_train, y_train, x_test, y_test
 
 
+#def makemorelayers(numlayers,neurons):
+#   c=keras.layers.LeakyReLU(alpha=0.3)
+#   d=model.add(Dense(neurons))
+#   for val in range(0,numlayers):
+    #   c
+    #   d
+
+
+
 def create_model(x_train, y_train, x_test, y_test):
     """
     Model providing function:
@@ -70,30 +77,25 @@ def create_model(x_train, y_train, x_test, y_test):
     The last one is optional, though recommended, namely:
         - model: specify the model just created so that we can later use it again.
     """
+
+    def makemorelayers(numlayers,neurons):
+        c=keras.layers.LeakyReLU(alpha=0.3)
+        d=model.add(Dense(neurons))
+        for val in range(0,numlayers):
+             c
+             d
+
+
     model = Sequential()
-    model.add(Dense({{choice([3751]+range(1,5001))}}, input_dim=7))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense({{choice([3178]+range(1,5001))}}))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    # If we choose 'four', add an additional fourth layer
-    model.add(Dense({{choice([2090]+range(1,5001))}}))
-        # We can also choose between complete sets of layers
-    #model.add(Activation('relu'))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense(1))
-    
-    model.add(Activation({{choice(['sigmoid'])}}))
-
-
+    model.add(Dense(100, input_dim=7))
+    model.add(Activation('relu'))
+    makemorelayers({{choice(range(1,21))}},{{choice(range(1,101))}})
     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
                   optimizer={{choice(['adam'])}})
 
     model.fit(x_train, y_train,
-              batch_size={{choice(range(1,5001))}},
-              epochs={{choice(range(1,501))}},
+              batch_size={{choice(range(100,200))}},
+              epochs={{choice(range(1,20))}},
               verbose=2,
               validation_data=(x_test, y_test))
     score, acc = model.evaluate(x_test, y_test, verbose=0)

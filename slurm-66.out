@@ -1,0 +1,805 @@
+Using TensorFlow backend.
+2018-06-29 04:01:03.107922: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-29 04:01:03.954415: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:04.438676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:04.907637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:05.405115: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:05.916716: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:06.469459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:07.019644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:07.584559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-06-29 04:01:07.608966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-29 04:01:11.201120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-29 04:01:11.201489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-29 04:01:11.201505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-29 04:01:11.201514: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-29 04:01:11.201521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-29 04:01:11.201528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-29 04:01:11.201535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-29 04:01:11.201543: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-29 04:01:11.201550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-29 04:01:11.201557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-29 04:01:11.205081: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-29 04:01:11.389680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-29 04:01:11.564439: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-29 04:01:11.741202: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14867 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-29 04:01:11.934747: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14867 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-29 04:01:12.103918: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14867 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-29 04:01:12.288400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14867 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-29 04:01:12.455107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14867 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU
+except:
+    pass
+
+try:
+    from keras.layers import PReLU
+except:
+    pass
+
+try:
+    from keras.layers import ELU
+except:
+    pass
+
+try:
+    from keras.layers import ThresholdedReLU
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', range(1,5001)),
+        'add': hp.choice('add', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout': hp.uniform('Dropout', 0, 1),
+        'Dense_1': hp.choice('Dense_1', range(1,5001)),
+        'add_1': hp.choice('add_1', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_1': hp.uniform('Dropout_1', 0, 1),
+        'Dense_2': hp.choice('Dense_2', range(1,5001)),
+        'add_2': hp.choice('add_2', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_2': hp.uniform('Dropout_2', 0, 1),
+        'Dense_3': hp.choice('Dense_3', range(1,5001)),
+        'add_3': hp.choice('add_3', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_3': hp.uniform('Dropout_3', 0, 1),
+        'Dense_4': hp.choice('Dense_4', range(1,5001)),
+        'add_4': hp.choice('add_4', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_4': hp.uniform('Dropout_4', 0, 1),
+        'Dense_5': hp.choice('Dense_5', range(1,5001)),
+        'add_5': hp.choice('add_5', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_5': hp.uniform('Dropout_5', 0, 1),
+        'Dense_6': hp.choice('Dense_6', range(1,5001)),
+        'add_6': hp.choice('add_6', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_6': hp.uniform('Dropout_6', 0, 1),
+        'Dense_7': hp.choice('Dense_7', range(1,5001)),
+        'add_7': hp.choice('add_7', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_7': hp.uniform('Dropout_7', 0, 1),
+        'Dense_8': hp.choice('Dense_8', range(1,5001)),
+        'add_8': hp.choice('add_8', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_8': hp.uniform('Dropout_8', 0, 1),
+        'Dense_9': hp.choice('Dense_9', range(1,5001)),
+        'add_9': hp.choice('add_9', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)]),
+        'Dropout_9': hp.uniform('Dropout_9', 0, 1),
+        'Activation': hp.choice('Activation', ['sigmoid','softmax','relu']),
+        'optimizer': hp.choice('optimizer', ['adam']),
+        'batch_size': hp.choice('batch_size', range(1,3001)),
+        'epochs': hp.choice('epochs', range(1,301)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'maxabs'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14: 	#First Hidden layer and input layer
+  15:     model.add(Dense(space['Dense'], input_dim=7))
+  16:     model.add(space['add'])
+  17:     model.add(Dropout(space['Dropout']))
+  18: 	#2 Hidden layer 
+  19:     model.add(Dense(space['Dense_1']))
+  20:     model.add(space['add_1'])
+  21:     model.add(Dropout(space['Dropout_1']))
+  22: 	#3 Hidden layer 
+  23:     model.add(Dense(space['Dense_2']))
+  24:     model.add(space['add_2'])
+  25:     model.add(Dropout(space['Dropout_2']))
+  26: 	#4 Hidden layer
+  27:     model.add(Dense(space['Dense_3']))
+  28:     model.add(space['add_3'])
+  29:     model.add(Dropout(space['Dropout_3']))
+  30: 	#5 Hidden layer 
+  31:     model.add(Dense(space['Dense_4']))
+  32:     model.add(space['add_4'])
+  33:     model.add(Dropout(space['Dropout_4']))
+  34: 	#6 Hidden layer 
+  35:     model.add(Dense(space['Dense_5']))
+  36:     model.add(space['add_5'])
+  37:     model.add(Dropout(space['Dropout_5']))
+  38: 	#7 Hidden layer 
+  39:     model.add(Dense(space['Dense_6']))
+  40:     model.add(space['add_6'])
+  41:     model.add(Dropout(space['Dropout_6']))
+  42: 	#8 Hidden layer 
+  43:     model.add(Dense(space['Dense_7']))
+  44:     model.add(space['add_7'])
+  45:     model.add(Dropout(space['Dropout_7']))
+  46: 	#9 Hidden layer 
+  47:     model.add(Dense(space['Dense_8']))
+  48:     model.add(space['add_8'])
+  49:     model.add(Dropout(space['Dropout_8']))
+  50: 	#10 Hidden layer 
+  51:     model.add(Dense(space['Dense_9']))
+  52:     model.add(space['add_9'])
+  53:     model.add(Dropout(space['Dropout_9']))
+  54: 	# Output layer
+  55:     model.add(Dense(1))
+  56:     
+  57:     model.add(Activation(space['Activation']))
+  58: 
+  59: 
+  60:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  61:                   optimizer=space['optimizer'])
+  62: 
+  63:     model.fit(x_train, y_train,
+  64:               batch_size=space['batch_size'],
+  65:               epochs=space['epochs'],
+  66:               verbose=2,
+  67:               validation_data=(x_test, y_test))
+  68:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  69:     print('Test accuracy:', acc)
+  70:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  71: 
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/194
+ - 72s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 2/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 3/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 4/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 5/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 6/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 7/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 8/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 9/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 10/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 11/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 12/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 13/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 14/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 15/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 16/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 17/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 18/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 19/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 20/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 21/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 22/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 23/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 24/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 25/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 26/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 27/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 28/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 29/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 30/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 31/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 32/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 33/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 34/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 35/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 36/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 37/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 38/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 39/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 40/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 41/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 42/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 43/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 44/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 45/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 46/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 47/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 48/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 49/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 50/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 51/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 52/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 53/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 54/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 55/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 56/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 57/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 58/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 59/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 60/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 61/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 62/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 63/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 64/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 65/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 66/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 67/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 68/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 69/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 70/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 71/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 72/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 73/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 74/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 75/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 76/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 77/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 78/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 79/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 80/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 81/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 82/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 83/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 84/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 85/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 86/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 87/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 88/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 89/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 90/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 91/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 92/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 93/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 94/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 95/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 96/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 97/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 98/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 99/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 100/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 101/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 102/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 103/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 104/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 105/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 106/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 107/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 108/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 109/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 110/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 111/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 112/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 113/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 114/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 115/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 116/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 117/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 118/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 119/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 120/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 121/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 122/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 123/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 124/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 125/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 126/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 127/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 128/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 129/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 130/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 131/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 132/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 133/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 134/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 135/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 136/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 137/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 138/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 139/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 140/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 141/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 142/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 143/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 144/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 145/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 146/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 147/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 148/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 149/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 150/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 151/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 152/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 153/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 154/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 155/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 156/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 157/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 158/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 159/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 160/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 161/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 162/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 163/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 164/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 165/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 166/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 167/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 168/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 169/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 170/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 171/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 172/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 173/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 174/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 175/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 176/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 177/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 178/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 179/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 180/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 181/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 182/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 183/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 184/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 185/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 186/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 187/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 188/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 189/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 190/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 191/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 192/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 193/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Epoch 194/194
+ - 60s - loss: 6.9518 - acc: 0.5639 - val_loss: 6.9021 - val_acc: 0.5671
+Test accuracy: 0.56706
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/37
+ - 24s - loss: 0.6822 - acc: 0.5634 - val_loss: 0.6738 - val_acc: 0.5671
+Epoch 2/37
+ - 23s - loss: 0.5230 - acc: 0.7186 - val_loss: 0.5467 - val_acc: 0.8651
+Epoch 3/37
+ - 23s - loss: 0.4038 - acc: 0.8375 - val_loss: 0.5532 - val_acc: 0.8665
+Epoch 4/37
+ - 23s - loss: 0.3864 - acc: 0.8479 - val_loss: 0.4955 - val_acc: 0.9007
+Epoch 5/37
+ - 23s - loss: 0.3814 - acc: 0.8509 - val_loss: 0.5247 - val_acc: 0.8976
+Epoch 6/37
+ - 23s - loss: 0.3800 - acc: 0.8512 - val_loss: 0.5458 - val_acc: 0.4329
+Epoch 7/37
+ - 23s - loss: 0.3821 - acc: 0.8498 - val_loss: 0.4868 - val_acc: 0.8898
+Epoch 8/37
+ - 23s - loss: 0.3909 - acc: 0.8447 - val_loss: 0.5515 - val_acc: 0.4356
+Epoch 9/37
+ - 23s - loss: 0.3935 - acc: 0.8456 - val_loss: 0.6779 - val_acc: 0.5489
+Epoch 10/37
+ - 23s - loss: 0.3904 - acc: 0.8473 - val_loss: 0.5681 - val_acc: 0.4329
+Epoch 11/37
+ - 23s - loss: 0.3841 - acc: 0.8482 - val_loss: 0.7354 - val_acc: 0.4329
+Epoch 12/37
+ - 23s - loss: 0.3869 - acc: 0.8483 - val_loss: 1.0921 - val_acc: 0.4329
+Epoch 13/37
+ - 23s - loss: 0.3735 - acc: 0.8539 - val_loss: 0.4364 - val_acc: 0.9067
+Epoch 14/37
+ - 23s - loss: 0.3844 - acc: 0.8491 - val_loss: 0.5470 - val_acc: 0.5450
+Epoch 15/37
+ - 23s - loss: 0.4035 - acc: 0.8474 - val_loss: 0.9801 - val_acc: 0.4329
+Epoch 16/37
+ - 23s - loss: 0.3677 - acc: 0.8603 - val_loss: 0.7029 - val_acc: 0.4329
+Epoch 17/37
+ - 23s - loss: 0.3573 - acc: 0.8648 - val_loss: 0.6994 - val_acc: 0.4329
+Epoch 18/37
+ - 23s - loss: 0.3514 - acc: 0.8667 - val_loss: 0.6136 - val_acc: 0.4329
+Epoch 19/37
+ - 23s - loss: 0.3486 - acc: 0.8679 - val_loss: 0.5947 - val_acc: 0.4331
+Epoch 20/37
+ - 23s - loss: 0.3495 - acc: 0.8669 - val_loss: 0.5937 - val_acc: 0.4501
+Epoch 21/37
+ - 23s - loss: 0.3499 - acc: 0.8676 - val_loss: 0.5523 - val_acc: 0.4758
+Epoch 22/37
+ - 23s - loss: 0.3489 - acc: 0.8672 - val_loss: 0.6139 - val_acc: 0.4330
+Epoch 23/37
+ - 23s - loss: 0.3481 - acc: 0.8669 - val_loss: 0.5812 - val_acc: 0.4899
+Epoch 24/37
+ - 23s - loss: 0.3482 - acc: 0.8671 - val_loss: 0.7324 - val_acc: 0.4329
+Epoch 25/37
+ - 23s - loss: 0.3487 - acc: 0.8673 - val_loss: 0.6405 - val_acc: 0.4329
+Epoch 26/37
+ - 23s - loss: 0.3464 - acc: 0.8680 - val_loss: 0.7360 - val_acc: 0.4329
+Epoch 27/37
+ - 23s - loss: 0.3495 - acc: 0.8666 - val_loss: 0.5602 - val_acc: 0.5990
+Epoch 28/37
+ - 23s - loss: 0.3501 - acc: 0.8668 - val_loss: 0.5202 - val_acc: 0.8117
+Epoch 29/37
+ - 23s - loss: 0.3504 - acc: 0.8664 - val_loss: 0.6305 - val_acc: 0.4329
+Epoch 30/37
+ - 23s - loss: 0.3497 - acc: 0.8669 - val_loss: 0.6623 - val_acc: 0.4877
+Epoch 31/37
+ - 23s - loss: 0.3482 - acc: 0.8669 - val_loss: 0.6268 - val_acc: 0.4333
+Epoch 32/37
+ - 23s - loss: 0.3467 - acc: 0.8678 - val_loss: 0.5937 - val_acc: 0.4337
+Epoch 33/37
+ - 23s - loss: 0.3465 - acc: 0.8675 - val_loss: 0.4903 - val_acc: 0.8255
+Epoch 34/37
+ - 23s - loss: 0.3411 - acc: 0.8711 - val_loss: 0.4305 - val_acc: 0.8978
+Epoch 35/37
+ - 23s - loss: 0.3416 - acc: 0.8703 - val_loss: 0.5884 - val_acc: 0.4789
+Epoch 36/37
+ - 23s - loss: 0.3469 - acc: 0.8688 - val_loss: 1.0438 - val_acc: 0.4329
+Epoch 37/37
+ - 23s - loss: 0.3411 - acc: 0.8711 - val_loss: 0.4776 - val_acc: 0.7771
+Test accuracy: 0.77709
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun3.py", line 137, in <module>
+    trials=Trials())
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 67, in minimize
+    verbose=verbose)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 133, in base_minimizer
+    return_argmin=True),
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 307, in fmin
+    return_argmin=return_argmin,
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 635, in fmin
+    return_argmin=return_argmin)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 320, in fmin
+    rval.exhaust()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 199, in exhaust
+    self.run(self.max_evals - n_done, block_until_done=self.async)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 173, in run
+    self.serial_evaluate()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 92, in serial_evaluate
+    result = self.domain.evaluate(spec, ctrl)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 840, in evaluate
+    rval = self.fn(pyll_rval)
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/temp_model.py", line 150, in keras_fmin_fnct
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 522, in add
+    output_tensor = layer(self.outputs[0])
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/layers/advanced_activations.py", line 135, in call
+    neg = -self.alpha * K.relu(-inputs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py", line 979, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py", line 1211, in _mul_dispatch
+    return gen_math_ops.mul(x, y, name=name)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/ops/gen_math_ops.py", line 4759, in mul
+    "Mul", x=x, y=y, name=name)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 3392, in create_op
+    op_def=op_def)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1734, in __init__
+    control_input_ops)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1570, in _create_c_op
+    raise ValueError(str(e))
+ValueError: Dimensions must be equal, but are 3296 and 117 for 'p_re_lu_14_1/mul' (op: 'Mul') with input shapes: [3296], [?,117].

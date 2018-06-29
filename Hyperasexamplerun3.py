@@ -71,21 +71,61 @@ def create_model(x_train, y_train, x_test, y_test):
         - model: specify the model just created so that we can later use it again.
     """
     model = Sequential()
-    model.add(Dense({{choice([3751]+range(1,5001))}}, input_dim=7))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
+    x={{choice(range(1,11))}}
+	#First Hidden layer and input layer
+    model.add(Dense({{choice(range(1,5001))}}, input_dim=7))
+    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
     model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense({{choice([3178]+range(1,5001))}}))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    # If we choose 'four', add an additional fourth layer
-    model.add(Dense({{choice([2090]+range(1,5001))}}))
-        # We can also choose between complete sets of layers
-    #model.add(Activation('relu'))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
+    if x>= 2:
+	#2 Hidden layer 
+   	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#3 Hidden layer 
+    if x>= 3:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#4 Hidden layer
+    if x>= 4:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#5 Hidden layer 
+    if x>= 5:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#6 Hidden layer 
+    if x>= 6:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#7 Hidden layer 
+    if x>= 7:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#8 Hidden layer 
+    if x>= 8:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+	#9 Hidden layer 
+    if x>= 9:
+        model.add(Dense({{choice(range(1,5001))}}))
+        model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+        model.add(Dropout({{uniform(0, 1)}}))
+	#10 Hidden layer 
+    if x>= 10:
+    	model.add(Dense({{choice(range(1,5001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    	model.add(Dropout({{uniform(0, 1)}}))
+
+	# Output layer
     model.add(Dense(1))
     
-    model.add(Activation({{choice(['sigmoid'])}}))
+    model.add(Activation({{choice(['sigmoid','softmax','relu'])}}))
 
 
     model.compile(loss='binary_crossentropy', metrics=['accuracy'],

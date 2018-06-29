@@ -7,11 +7,6 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.models import Sequential
 from keras.utils import np_utils
 from keras.utils import to_categorical
-from keras.layers import LeakyReLU
-from keras.layers import PReLU
-from keras.layers import ELU
-from keras.layers import ThresholdedReLU
-
 
 from hyperas import optim
 from hyperas.distributions import choice, uniform
@@ -71,29 +66,31 @@ def create_model(x_train, y_train, x_test, y_test):
         - model: specify the model just created so that we can later use it again.
     """
     model = Sequential()
-    model.add(Dense({{choice([3751]+range(1,5001))}}, input_dim=7))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
+    model.add(Dense({{choice([100, 150, 50, 6])}}, input_dim=7))
+    model.add(Activation('relu'))
+    model.add(Dropout({{uniform(0, 1)}}))    
+    model.add(Dense({{choice([100,150,50,6])}}))
+    model.add(Activation({{choice(['relu', 'sigmoid'])}}))
     model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense({{choice([3178]+range(1,5001))}}))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
+
     # If we choose 'four', add an additional fourth layer
-    model.add(Dense({{choice([2090]+range(1,5001))}}))
+    if {{choice(['three', 'four'])}} == 'four':
+        model.add(Dense(100))
+
         # We can also choose between complete sets of layers
-    #model.add(Activation('relu'))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
+
+        model.add({{choice([Dropout(.5)])}})
+        model.add(Activation('relu'))
+
     model.add(Dense(1))
-    
-    model.add(Activation({{choice(['sigmoid'])}}))
+    model.add(Activation({{choice(['softmax','sigmoid'])}}))
 
-
-    model.compile(loss='binary_crossentropy', metrics=['accuracy'],
-                  optimizer={{choice(['adam'])}})
+    model.compile(loss='sparse_categorical_crossentropy', metrics=['accuracy'],
+                  optimizer={{choice(['rmsprop','adam','sgd'])}})
 
     model.fit(x_train, y_train,
-              batch_size={{choice(range(1,5001))}},
-              epochs={{choice(range(1,501))}},
+              batch_size={{choice(range(50,200,10))}},
+              epochs={{choice(range(1,50))}},
               verbose=2,
               validation_data=(x_test, y_test))
     score, acc = model.evaluate(x_test, y_test, verbose=0)

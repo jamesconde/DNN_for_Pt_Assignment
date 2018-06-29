@@ -1,0 +1,311 @@
+Using TensorFlow backend.
+2018-06-29 15:20:40.791900: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-29 15:20:41.896760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:42.564317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:43.256454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:43.961800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:44.670528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:45.425545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:46.163525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:46.940685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-29 15:20:46.964025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-29 15:20:50.440274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-29 15:20:50.440341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-29 15:20:50.440353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-29 15:20:50.440360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-29 15:20:50.440368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-29 15:20:50.440375: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-29 15:20:50.440382: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-29 15:20:50.440388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-29 15:20:50.440395: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-29 15:20:50.440402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-29 15:20:50.443880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14866 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-29 15:20:50.635150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14866 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-29 15:20:50.817603: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14866 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-29 15:20:51.003638: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14866 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-29 15:20:51.180555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14866 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-29 15:20:51.355861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14866 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-29 15:20:51.523840: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14866 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-29 15:20:51.692892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14866 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU
+except:
+    pass
+
+try:
+    from keras.layers import PReLU
+except:
+    pass
+
+try:
+    from keras.layers import ELU
+except:
+    pass
+
+try:
+    from keras.layers import ThresholdedReLU
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'x': hp.choice('x', range(1,11)),
+        'Dense': hp.choice('Dense', range(1,5001)),
+        'add': hp.choice('add', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout': hp.uniform('Dropout', 0, 1),
+        'Dense_1': hp.choice('Dense_1', range(1,5001)),
+        'add_1': hp.choice('add_1', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_1': hp.uniform('Dropout_1', 0, 1),
+        'Dense_2': hp.choice('Dense_2', range(1,5001)),
+        'add_2': hp.choice('add_2', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_2': hp.uniform('Dropout_2', 0, 1),
+        'Dense_3': hp.choice('Dense_3', range(1,5001)),
+        'add_3': hp.choice('add_3', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_3': hp.uniform('Dropout_3', 0, 1),
+        'Dense_4': hp.choice('Dense_4', range(1,5001)),
+        'add_4': hp.choice('add_4', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_4': hp.uniform('Dropout_4', 0, 1),
+        'Dense_5': hp.choice('Dense_5', range(1,5001)),
+        'add_5': hp.choice('add_5', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_5': hp.uniform('Dropout_5', 0, 1),
+        'Dense_6': hp.choice('Dense_6', range(1,5001)),
+        'add_6': hp.choice('add_6', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_6': hp.uniform('Dropout_6', 0, 1),
+        'Dense_7': hp.choice('Dense_7', range(1,5001)),
+        'add_7': hp.choice('add_7', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_7': hp.uniform('Dropout_7', 0, 1),
+        'Dense_8': hp.choice('Dense_8', range(1,5001)),
+        'add_8': hp.choice('add_8', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_8': hp.uniform('Dropout_8', 0, 1),
+        'Dense_9': hp.choice('Dense_9', range(1,5001)),
+        'add_9': hp.choice('add_9', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')]),
+        'Dropout_9': hp.uniform('Dropout_9', 0, 1),
+        'Activation': hp.choice('Activation', ['sigmoid','softmax','relu']),
+        'optimizer': hp.choice('optimizer', ['adam']),
+        'Dense_10': hp.choice('Dense_10', range(1,5001)),
+        'epochs': hp.choice('epochs', range(1,501)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'maxabs'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     x=space['x']
+  15: 	#First Hidden layer and input layer
+  16:     model.add(Dense(space['Dense'], input_dim=7))
+  17:     model.add(space['add'])
+  18:     model.add(Dropout(space['Dropout']))
+  19:     if x>= 2:
+  20: 	#2 Hidden layer 
+  21:    	model.add(Dense(space['Dense_1']))
+  22:     	model.add(space['add_1'])
+  23:     	model.add(Dropout(space['Dropout_1']))
+  24: 	#3 Hidden layer 
+  25:     if x>= 3:
+  26:     	model.add(Dense(space['Dense_2']))
+  27:     	model.add(space['add_2'])
+  28:     	model.add(Dropout(space['Dropout_2']))
+  29: 	#4 Hidden layer
+  30:     if x>= 4:
+  31:     	model.add(Dense(space['Dense_3']))
+  32:     	model.add(space['add_3'])
+  33:     	model.add(Dropout(space['Dropout_3']))
+  34: 	#5 Hidden layer 
+  35:     if x>= 5:
+  36:     	model.add(Dense(space['Dense_4']))
+  37:     	model.add(space['add_4'])
+  38:     	model.add(Dropout(space['Dropout_4']))
+  39: 	#6 Hidden layer 
+  40:     if x>= 6:
+  41:     	model.add(Dense(space['Dense_5']))
+  42:     	model.add(space['add_5'])
+  43:     	model.add(Dropout(space['Dropout_5']))
+  44: 	#7 Hidden layer 
+  45:     if x>= 7:
+  46:     	model.add(Dense(space['Dense_6']))
+  47:     	model.add(space['add_6'])
+  48:     	model.add(Dropout(space['Dropout_6']))
+  49: 	#8 Hidden layer 
+  50:     if x>= 8:
+  51:     	model.add(Dense(space['Dense_7']))
+  52:     	model.add(space['add_7'])
+  53:     	model.add(Dropout(space['Dropout_7']))
+  54: 	#9 Hidden layer 
+  55:     if x>= 9:
+  56:         model.add(Dense(space['Dense_8']))
+  57:         model.add(space['add_8'])
+  58:         model.add(Dropout(space['Dropout_8']))
+  59: 	#10 Hidden layer 
+  60:     if x>= 10:
+  61:     	model.add(Dense(space['Dense_9']))
+  62:     	model.add(space['add_9'])
+  63:     	model.add(Dropout(space['Dropout_9']))
+  64: 
+  65: 	# Output layer
+  66:     model.add(Dense(1))
+  67:     
+  68:     model.add(Activation(space['Activation']))
+  69: 
+  70: 
+  71:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  72:                   optimizer=space['optimizer'])
+  73: 
+  74:     model.fit(x_train, y_train,
+  75:               batch_size=space['Dense_10'],
+  76:               epochs=space['epochs'],
+  77:               verbose=2,
+  78:               validation_data=(x_test, y_test))
+  79:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  80:     print('Test accuracy:', acc)
+  81:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  82: 
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/194
+ - 42s - loss: 0.5770 - acc: 0.7070 - val_loss: 0.2578 - val_acc: 0.9055

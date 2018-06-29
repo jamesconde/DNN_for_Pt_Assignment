@@ -1,0 +1,637 @@
+Using TensorFlow backend.
+2018-06-27 20:40:23.394020: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-27 20:40:24.428046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:25.100820: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:25.767247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:26.461281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:27.158427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:27.868219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:28.599361: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:29.354725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-06-27 20:40:29.377730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-06-27 20:40:32.570619: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-27 20:40:32.570916: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-06-27 20:40:32.570938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-06-27 20:40:32.570946: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-06-27 20:40:32.570952: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-06-27 20:40:32.570959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-06-27 20:40:32.570966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-06-27 20:40:32.570972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-06-27 20:40:32.570979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-06-27 20:40:32.570985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-06-27 20:40:32.574570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14866 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-06-27 20:40:32.764620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14866 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-06-27 20:40:32.938871: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14866 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-06-27 20:40:33.106600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14866 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-06-27 20:40:33.289223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14866 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-06-27 20:40:33.460689: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14866 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-06-27 20:40:33.627714: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14866 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-06-27 20:40:33.798811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14866 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', range(100,201)),
+        'Dense_1': hp.choice('Dense_1', range(65,201)),
+        'Dense_2': hp.choice('Dense_2', range(64,201)),
+        'Activation': hp.choice('Activation', ['softmax','sigmoid']),
+        'optimizer': hp.choice('optimizer', ['adam','adamax']),
+        'batch_size': hp.choice('batch_size', range(50,200,10)),
+        'epochs': hp.choice('epochs', range(1,50)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'maxabs'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(space['Dense'], input_dim=7))
+  15:     model.add(Activation('relu')) 
+  16:     model.add(Dense(space['Dense_1']))
+  17:     model.add(Activation('relu'))
+  18: 
+  19:     # If we choose 'four', add an additional fourth layer
+  20:     model.add(Dense(space['Dense_2']))
+  21: 
+  22:         # We can also choose between complete sets of layers
+  23:    
+  24:     model.add(Activation('relu'))
+  25: 
+  26:     model.add(Dense(1))
+  27:     
+  28:     model.add(Activation(space['Activation']))
+  29: 
+  30: 
+  31:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  32:                   optimizer=space['optimizer'])
+  33: 
+  34:     model.fit(x_train, y_train,
+  35:               batch_size=space['batch_size'],
+  36:               epochs=space['epochs'],
+  37:               verbose=2,
+  38:               validation_data=(x_test, y_test))
+  39:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  40:     print('Test accuracy:', acc)
+  41:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  42: 
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/2
+ - 77s - loss: 0.1947 - acc: 0.9209 - val_loss: 0.1696 - val_acc: 0.9313
+Epoch 2/2
+ - 65s - loss: 0.1681 - acc: 0.9321 - val_loss: 0.1656 - val_acc: 0.9315
+Test accuracy: 0.93147
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 2/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 3/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 4/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 5/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 6/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 7/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 8/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 9/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 10/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 11/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 12/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 13/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 14/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 15/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 16/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 17/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 18/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 19/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 20/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 21/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 22/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 23/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 24/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 25/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 26/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 27/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 28/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 29/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 30/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 31/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 32/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 33/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 34/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 35/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 36/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 37/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 38/39
+ - 23s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 39/39
+ - 24s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Test accuracy: 0.56577
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 2/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 3/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 4/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 5/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 6/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 7/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 8/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 9/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 10/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 11/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 12/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 13/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 14/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 15/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 16/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 17/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 18/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 19/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 20/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 21/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 22/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 23/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 24/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 25/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 26/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 27/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 28/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 29/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 30/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 31/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 32/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 33/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 34/35
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 35/35
+ - 16s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Test accuracy: 0.56577
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/38
+ - 18s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 2/38
+ - 18s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 3/38
+ - 18s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 4/38
+ - 18s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 5/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 6/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 7/38
+ - 18s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 8/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 9/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 10/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 11/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 12/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 13/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 14/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 15/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 16/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 17/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 18/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 19/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 20/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 21/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 22/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 23/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 24/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 25/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 26/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 27/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 28/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 29/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 30/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 31/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 32/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 33/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 34/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 35/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 36/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 37/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 38/38
+ - 17s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Test accuracy: 0.56577
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/45
+ - 20s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 2/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 3/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 4/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 5/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 6/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 7/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 8/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 9/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 10/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 11/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 12/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 13/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 14/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 15/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 16/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 17/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 18/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 19/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 20/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 21/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 22/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 23/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 24/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 25/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 26/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 27/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 28/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 29/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 30/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 31/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 32/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 33/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 34/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 35/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 36/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 37/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 38/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 39/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 40/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 41/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 42/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 43/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 44/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Epoch 45/45
+ - 19s - loss: 6.9495 - acc: 0.5641 - val_loss: 6.9227 - val_acc: 0.5658
+Test accuracy: 0.56577
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Evalutation of best performing model:
+
+    32/100000 [..............................] - ETA: 9s
+  1408/100000 [..............................] - ETA: 3s
+  2752/100000 [..............................] - ETA: 3s
+  4096/100000 [>.............................] - ETA: 3s
+  5440/100000 [>.............................] - ETA: 3s
+  6848/100000 [=>............................] - ETA: 3s
+  8256/100000 [=>............................] - ETA: 3s
+  9664/100000 [=>............................] - ETA: 3s
+ 11072/100000 [==>...........................] - ETA: 3s
+ 12480/100000 [==>...........................] - ETA: 3s
+ 13888/100000 [===>..........................] - ETA: 3s
+ 15296/100000 [===>..........................] - ETA: 3s
+ 16704/100000 [====>.........................] - ETA: 3s
+ 18080/100000 [====>.........................] - ETA: 3s
+ 19456/100000 [====>.........................] - ETA: 2s
+ 20832/100000 [=====>........................] - ETA: 2s
+ 22208/100000 [=====>........................] - ETA: 2s
+ 23584/100000 [======>.......................] - ETA: 2s
+ 24928/100000 [======>.......................] - ETA: 2s
+ 26304/100000 [======>.......................] - ETA: 2s
+ 27680/100000 [=======>......................] - ETA: 2s
+ 29056/100000 [=======>......................] - ETA: 2s
+ 30400/100000 [========>.....................] - ETA: 2s
+ 31712/100000 [========>.....................] - ETA: 2s
+ 33056/100000 [========>.....................] - ETA: 2s
+ 34336/100000 [=========>....................] - ETA: 2s
+ 35616/100000 [=========>....................] - ETA: 2s
+ 36896/100000 [==========>...................] - ETA: 2s
+ 38176/100000 [==========>...................] - ETA: 2s
+ 39488/100000 [==========>...................] - ETA: 2s
+ 40768/100000 [===========>..................] - ETA: 2s
+ 42016/100000 [===========>..................] - ETA: 2s
+ 43264/100000 [===========>..................] - ETA: 2s
+ 44544/100000 [============>.................] - ETA: 2s
+ 45824/100000 [============>.................] - ETA: 2s
+ 47104/100000 [=============>................] - ETA: 1s
+ 48384/100000 [=============>................] - ETA: 1s
+ 49664/100000 [=============>................] - ETA: 1s
+ 50944/100000 [==============>...............] - ETA: 1s
+ 52224/100000 [==============>...............] - ETA: 1s
+ 53504/100000 [===============>..............] - ETA: 1s
+ 54784/100000 [===============>..............] - ETA: 1s
+ 56064/100000 [===============>..............] - ETA: 1s
+ 57344/100000 [================>.............] - ETA: 1s
+ 58624/100000 [================>.............] - ETA: 1s
+ 59904/100000 [================>.............] - ETA: 1s
+ 61184/100000 [=================>............] - ETA: 1s
+ 62464/100000 [=================>............] - ETA: 1s
+ 63744/100000 [==================>...........] - ETA: 1s
+ 65024/100000 [==================>...........] - ETA: 1s
+ 66272/100000 [==================>...........] - ETA: 1s
+ 67552/100000 [===================>..........] - ETA: 1s
+ 68832/100000 [===================>..........] - ETA: 1s
+ 70112/100000 [====================>.........] - ETA: 1s
+ 71392/100000 [====================>.........] - ETA: 1s
+ 72640/100000 [====================>.........] - ETA: 1s
+ 73920/100000 [=====================>........] - ETA: 1s
+ 75200/100000 [=====================>........] - ETA: 0s
+ 76480/100000 [=====================>........] - ETA: 0s
+ 77760/100000 [======================>.......] - ETA: 0s
+ 79040/100000 [======================>.......] - ETA: 0s
+ 80320/100000 [=======================>......] - ETA: 0s
+ 81600/100000 [=======================>......] - ETA: 0s
+ 82848/100000 [=======================>......] - ETA: 0s
+ 84096/100000 [========================>.....] - ETA: 0s
+ 85344/100000 [========================>.....] - ETA: 0s
+ 86624/100000 [========================>.....] - ETA: 0s
+ 87904/100000 [=========================>....] - ETA: 0s
+ 89184/100000 [=========================>....] - ETA: 0s
+ 90464/100000 [==========================>...] - ETA: 0s
+ 91712/100000 [==========================>...] - ETA: 0s
+ 92992/100000 [==========================>...] - ETA: 0s
+ 94272/100000 [===========================>..] - ETA: 0s
+ 95552/100000 [===========================>..] - ETA: 0s
+ 96832/100000 [============================>.] - ETA: 0s
+ 98112/100000 [============================>.] - ETA: 0s
+ 99392/100000 [============================>.] - ETA: 0s
+100000/100000 [==============================] - 4s 39us/step
+['0.1600357589790225', '0.93484']
+Best performing model chosen hyper-parameters:
+{'Dense_2': 131, 'Dense_1': 126, 'Dense': 70, 'Activation': 1, 'batch_size': 0, 'epochs': 1, 'optimizer': 0}

@@ -1,0 +1,4 @@
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun.py", line 75
+    model.add(Activation({{choice(['relu')}}))
+                                         ^
+SyntaxError: invalid syntax

@@ -1,0 +1,198 @@
+Using TensorFlow backend.
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', [100, 150, 50]),
+        'Dropout': hp.uniform('Dropout', 0, 1),
+        'Dense_1': hp.choice('Dense_1', [100,150,50]),
+        'Activation': hp.choice('Activation', ['relu','sigmoid']),
+        'Dropout_1': hp.uniform('Dropout_1', 0, 1),
+        'Dropout_2': hp.choice('Dropout_2', ['three', 'four']),
+        'add': hp.choice('add', [Dropout(.5)]),
+        'Activation_1': hp.choice('Activation_1', ['softmax','sigmoid']),
+        'optimizer': hp.choice('optimizer', ['rmsprop','adam','sgd']),
+        'batch_size': hp.choice('batch_size', range(50,200,10)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'maxabs'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(space['Dense'], input_dim=7))
+  15:     model.add(Activation('relu'))
+  16:     model.add(Dropout(space['Dropout']))
+  17:     model.add(Dense(space['Dense_1']))
+  18:     model.add(Activation(space['Activation']))
+  19:     model.add(Dropout(space['Dropout_1']))
+  20: 
+  21:     # If we choose 'four', add an additional fourth layer
+  22:     if space['Dropout_2'] == 'four':
+  23:         model.add(Dense(100))
+  24: 
+  25:         # We can also choose between complete sets of layers
+  26: 
+  27:         model.add(space['add'])
+  28:         model.add(Activation('relu'))
+  29: 
+  30:     model.add(Dense(2))
+  31:     model.add(Activation(space['Activation_1']))
+  32: 
+  33:     model.compile(loss='sparse_categorical_crossentropy', metrics=['accuracy'],
+  34:                   optimizer=space['optimizer'])
+  35: 
+  36:     model.fit(x_train, y_train,
+  37:               batch_size=space['batch_size'],
+  38:               epoch=1,
+  39:               verbose=2,
+  40:               validation_data=(x_test, y_test))
+  41:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  42:     print('Test accuracy:', acc)
+  43:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  44: 
+(900000,)
+(100000,)
+MaxAbs
+
+(900000, 7)
+(100000, 7)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun.py", line 105, in <module>
+    trials=Trials())
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 67, in minimize
+    verbose=verbose)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 133, in base_minimizer
+    return_argmin=True),
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 307, in fmin
+    return_argmin=return_argmin,
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 635, in fmin
+    return_argmin=return_argmin)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 320, in fmin
+    rval.exhaust()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 199, in exhaust
+    self.run(self.max_evals - n_done, block_until_done=self.async)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 173, in run
+    self.serial_evaluate()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 92, in serial_evaluate
+    result = self.domain.evaluate(spec, ctrl)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 840, in evaluate
+    rval = self.fn(pyll_rval)
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/temp_model.py", line 142, in keras_fmin_fnct
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 985, in fit
+    raise TypeError('Unrecognized keyword arguments: ' + str(kwargs))
+TypeError: Unrecognized keyword arguments: {'epoch': 1}

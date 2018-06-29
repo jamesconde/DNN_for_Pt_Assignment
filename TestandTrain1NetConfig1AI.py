@@ -64,8 +64,8 @@ data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
 scaler = 'maxabs'
 feature = 7
 number_of_loops = 1							#Total number of loops, is incremented later for functions who's index start at 0
-number_of_epochs = 5							#Just what it says, number of epochs never re-indexed
-set_batch_size = 100							#Select batch size
+number_of_epochs =138						#Just what it says, number of epochs never re-indexed
+set_batch_size = 1349							#Select batch size
 
 # Fix random seed for reproducibility
 seed = 46
@@ -110,7 +110,7 @@ globals.input_scale = x_train.shape[1]
 loop_start_time = time.time()
 
 #!!! Use this to modify which model you are testing
-model = KerasClassifier(build_fn=create_model, nb_epoch=5, batch_size=100, verbose=0)
+model = KerasClassifier(build_fn=create_model, nb_epoch=138, batch_size=1349, verbose=2)
 
 history = model.fit(x_train,y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
 
