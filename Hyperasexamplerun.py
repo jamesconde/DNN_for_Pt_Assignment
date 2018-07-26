@@ -11,7 +11,7 @@ from keras.layers import LeakyReLU
 from keras.layers import PReLU
 from keras.layers import ELU
 from keras.layers import ThresholdedReLU
-
+from keras import optimizers
 
 from hyperas import optim
 from hyperas.distributions import choice, uniform
@@ -37,7 +37,7 @@ def data():
     from macros_AWS import scale_x
     data_directory = '/home/rice/jmc32/Gridsearch_Data/'
     data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
-    scaler = 'maxabs'
+    scaler = 'none'
     totalset = numpy.load(data_directory + data_sample)
     dataset, testset = train_test_split(totalset, test_size = 0.1)
     # Split into input (X) and output (Y) variables
@@ -63,7 +63,7 @@ def create_model(x_train, y_train, x_test, y_test):
     """
     Model providing function:
 
-    Create Keras model with double curly brackets dropped-in as needed.
+    n=range(4000,5001)Create Keras model with double curly brackets dropped-in as needed.
     Return value has to be a valid python dictionary with two customary keys:
         - loss: Specify a numeric evaluation metric to be minimized
         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
@@ -71,29 +71,28 @@ def create_model(x_train, y_train, x_test, y_test):
         - model: specify the model just created so that we can later use it again.
     """
     model = Sequential()
-    model.add(Dense({{choice([3751]+range(1,5001))}}, input_dim=7))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    model.add(Dense({{choice([3178]+range(1,5001))}}))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
-    # If we choose 'four', add an additional fourth layer
-    model.add(Dense({{choice([2090]+range(1,5001))}}))
-        # We can also choose between complete sets of layers
-    #model.add(Activation('relu'))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),PReLU(alpha_initializer='zeros', alpha_regularizer=None, alpha_constraint=None, shared_axes=None)])}})
-    model.add(Dropout({{uniform(0, 1)}}))
+    model.add(Dense({{choice(range(2500,3001))}}, input_dim=7))
+    model.add({{choice([LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
+    model.add(Dense({{choice(range(2000,2501))}}))
+    model.add({{choice([ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
+    model.add(Dense({{choice(range(1500,2001))}}))
+    model.add({{choice([ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
+    model.add(Dense({{choice(range(1000,1501))}}))
+    model.add({{choice([ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
+    model.add(Dense({{choice(range(500,1001))}}))
+    model.add({{choice([ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
+    model.add(Dense({{choice(range(1,501))}}))
+    model.add({{choice([ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)])}})
     model.add(Dense(1))
-    
-    model.add(Activation({{choice(['sigmoid'])}}))
-
+    model.add(Activation('sigmoid'))
+    adam= optimizers.Adam(lr=.001, beta_1=.99, beta_2=.999, epsilon=.0000001, decay=.0001)
 
     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
-                  optimizer={{choice(['adam'])}})
+                  optimizer='adam')
 
     model.fit(x_train, y_train,
-              batch_size={{choice(range(1,5001))}},
-              epochs={{choice(range(1,501))}},
+              batch_size={{choice(range(5000,6001))}},
+              epochs={{choice(range(100,301))}},
               verbose=2,
               validation_data=(x_test, y_test))
     score, acc = model.evaluate(x_test, y_test, verbose=0)
@@ -104,9 +103,15 @@ if __name__ == '__main__':
     best_run, best_model = optim.minimize(model=create_model,
                                           data=data,
                                           algo=tpe.suggest,
-                                          max_evals=5,
+                                          max_evals=10,
                                           trials=Trials())
+    #model_predictions = best_model.predict(Y_test)
+    #outfile_predict = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt', 'w')
+    #outfile_truth = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt', 'w')
+    #numpy.savetxt(outfile_predict, model_predictions)
+    #numpy.savetxt(outfile_truth, Y_test)
     X_train, Y_train, X_test, Y_test = data()
+    best_model.save('/scratch/rice/datatest0.h5') 
     print("Evalutation of best performing model:")
     print(best_model.evaluate(X_test, Y_test))
     print("Best performing model chosen hyper-parameters:")

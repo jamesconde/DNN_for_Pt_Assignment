@@ -1,0 +1,268 @@
+Using TensorFlow backend.
+2018-07-12 13:52:42.745641: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-12 13:52:43.295591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:52:43.597662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:52:43.863156: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0e:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:52:44.142745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:11:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:52:44.433318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:52:44.730595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-12 13:53:17.048902: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 6: Internal: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_ECC_UNCORRECTABLE
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import h5py
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU, ELU
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from workingwithpython import *
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from sklearn import preprocessing
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', range(3501,4001)),
+        'add': hp.choice('add', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'Dense_1': hp.choice('Dense_1', range(3001,35001)),
+        'add_1': hp.choice('add_1', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'Dense_2': hp.choice('Dense_2', range(3501,4001)),
+        'add_2': hp.choice('add_2', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'Dense_3': hp.choice('Dense_3', range(2501,3001)),
+        'add_3': hp.choice('add_3', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'Dense_4': hp.choice('Dense_4', range(1501,2001)),
+        'add_4': hp.choice('add_4', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'optimizer': hp.choice('optimizer', ['adam','nadam','adamax']),
+        'batch_size': hp.choice('batch_size', range(4001,5001)),
+        'epochs': hp.choice('epochs', range(300,501)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from sklearn import preprocessing
+  20: from macros_AWS import scale_x
+  21: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  22: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  23: scaler = 'robust'
+  24: totalset = np.load(data_directory + data_sample)
+  25: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  26: # Split into input (X) and output (Y) variables
+  27: x_train_prescale = dataset[:,1:]
+  28: y_train = dataset[:,0]
+  29: x_test_prescale = testset[:,1:]
+  30: y_test = testset[:,0]
+  31: # Scale
+  32: print(y_train.shape)
+  33: print(y_test.shape)
+  34: #print(numpy.matrix(y_train))
+  35: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  36: #min_max_scaler = preprocessing.MinMaxScaler()
+  37: #x_test = min_max_scaler.fit_transform(x_train)
+  38: #y_test = min_max_scaler.fit_transform(y_train)
+  39: #x_train = min_max_scaler.fit_transform(x_train)
+  40: #y_train = min_max_scaler.fit_transform(y_train)
+  41: #x_test=x_test.reshape((900000, 7))
+  42: #y_test=y_test.reshape((y_test.shape[0], 7))
+  43: #x_train=x_train.reshape((x_train.shape[0], 7))
+  44: #y_train=y_train.reshape((y_train.shape[0],  7))
+  45: 
+  46: print(x_train.shape)
+  47: print(x_test.shape)
+  48: #y_train= to_categorical(y_train)
+  49: #y_test= to_categorical(y_test)
+  50: #x_train= to_categorical(x_train)
+  51: #x_test= to_categorical(x_test)
+  52: 
+  53: 
+  54: 
+  55: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(space['Dense'], input_dim=7))
+  15:     model.add(space['add'])
+  16:     model.add(Dense(space['Dense_1']))
+  17:     model.add(space['add_1'])
+  18:     model.add(Dense(space['Dense_2']))
+  19:     model.add(space['add_2'])
+  20:     model.add(Dense(space['Dense_3']))
+  21:     model.add(space['add_3'])
+  22:     model.add(Dense(space['Dense_4']))
+  23:     model.add(space['add_4'])
+  24:     model.add(Dense(1))
+  25:   
+  26:     model.add(Activation('sigmoid'))
+  27:   
+  28:   
+  29:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  30:                      optimizer=space['optimizer'])
+  31: 
+  32:     
+  33:     model.fit(x_train, y_train,
+  34:               batch_size=space['batch_size'],
+  35:               epochs=space['epochs'],
+  36:               verbose=2,
+  37:               validation_data=(x_test, y_test))
+  38:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  39:     print('Test accuracy:', acc)
+  40:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  41: 
+(900000,)
+(100000,)
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/493
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun2.py", line 128, in <module>
+    trials=Trials())
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 67, in minimize
+    verbose=verbose)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 133, in base_minimizer
+    return_argmin=True),
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 307, in fmin
+    return_argmin=return_argmin,
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 635, in fmin
+    return_argmin=return_argmin)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 320, in fmin
+    rval.exhaust()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 199, in exhaust
+    self.run(self.max_evals - n_done, block_until_done=self.async)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 173, in run
+    self.serial_evaluate()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 92, in serial_evaluate
+    result = self.domain.evaluate(spec, ctrl)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 840, in evaluate
+    rval = self.fn(pyll_rval)
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/temp_model.py", line 171, in keras_fmin_fnct
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 1002, in fit
+    validation_steps=validation_steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1705, in fit
+    validation_steps=validation_steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1236, in _fit_loop
+    outs = f(ins_batch)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 2480, in __call__
+    session = get_session()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 180, in get_session
+    _SESSION = tf.Session(config=config)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1560, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 633, in __init__
+    self._session = tf_session.TF_NewSession(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InternalError: Failed to create session.

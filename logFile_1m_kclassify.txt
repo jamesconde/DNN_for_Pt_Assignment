@@ -1,8 +1,8 @@
-True negative total is 40436 out of 100000 
-True positive total is 52818 
-False negative total is 3444 
-False positive total is 3302 
+True negative total is 4022 out of 9999 
+True positive total is 5551 
+False negative total is 82 
+False positive total is 344 
 Any missed ones? 0 
-Efficiency = 0.938786 
-Rate = 0.438800 
-Accuracy = 0.932540 
+Efficiency = 0.985443 
+Rate = 0.410441 
+Accuracy = 0.957396 

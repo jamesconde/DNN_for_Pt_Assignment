@@ -1,0 +1,40 @@
+Using TensorFlow backend.
+2018-07-09 11:44:59.879984: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-09 11:45:00.349209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:45:00.582068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:45:00.836965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0e:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:45:01.105559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:11:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:45:01.389180: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:45:01.668115: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+/var/spool/slurmd/job00163/slurm_script: line 3:  4910 Segmentation fault      (core dumped) python /home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun2.py
+/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py:3: UserWarning: loadtxt: Empty input file: "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt"
+  predicts = np.loadtxt('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt')
+/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py:6: UserWarning: loadtxt: Empty input file: "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt"
+  truth = np.loadtxt('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt')
+('True negative total is ', 0, 'out of', 0)
+('True positive total is ', 0)
+('False negative total is ', 0)
+('False positive total is ', 0)
+('Any missed ones? ', 0)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py", line 41, in <module>
+    file.write('Efficiency = %f \n' %(float(true_pos)/float(true_pos+false_neg)))
+ZeroDivisionError: float division by zero

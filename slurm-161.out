@@ -1,0 +1,56 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-07-09 11:19:37.641951: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-09 11:19:38.189939: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:19:38.458139: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:19:38.768134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0e:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:19:39.037585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:11:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:19:39.323200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:19:39.605669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 11:20:09.924852: E tensorflow/core/common_runtime/direct_session.cc:154] Internal: failed initializing StreamExecutor for CUDA device ordinal 6: Internal: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_ECC_UNCORRECTABLE
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 119, in <module>
+    history = model.fit(x_train,y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 209, in fit
+    return super(KerasClassifier, self).fit(x, y, **kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 151, in fit
+    history = self.model.fit(x, y, **fit_args)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 1002, in fit
+    validation_steps=validation_steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1705, in fit
+    validation_steps=validation_steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1236, in _fit_loop
+    outs = f(ins_batch)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 2480, in __call__
+    session = get_session()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 180, in get_session
+    _SESSION = tf.Session(config=config)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1560, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 633, in __init__
+    self._session = tf_session.TF_NewSession(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InternalError: Failed to create session.
+('True negative total is ', 43613, 'out of', 100000)
+('True positive total is ', 29252)
+('False negative total is ', 26946)
+('False positive total is ', 189)
+('Any missed ones? ', 0)

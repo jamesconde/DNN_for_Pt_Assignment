@@ -1,0 +1,218 @@
+Using TensorFlow backend.
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU
+except:
+    pass
+
+try:
+    from keras.layers import PReLU
+except:
+    pass
+
+try:
+    from keras.layers import ELU
+except:
+    pass
+
+try:
+    from keras.layers import ThresholdedReLU
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'Dense': hp.choice('Dense', range(2500,3001)),
+        'add': hp.choice('add', [LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'Dense_1': hp.choice('Dense_1', range(2000,2501)),
+        'add_1': hp.choice('add_1', [ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'Dense_2': hp.choice('Dense_2', range(1500,2001)),
+        'add_2': hp.choice('add_2', [ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'Dense_3': hp.choice('Dense_3', range(1000,1501)),
+        'add_3': hp.choice('add_3', [ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'Dense_4': hp.choice('Dense_4', range(500,1001)),
+        'add_4': hp.choice('add_4', [ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'Dense_5': hp.choice('Dense_5', range(1,501)),
+        'add_5': hp.choice('add_5', [ LeakyReLU(alpha=.01),Activation('relu'),ELU(alpha=1)]),
+        'batch_size': hp.choice('batch_size', range(5000,6001)),
+        'epochs': hp.choice('epochs', range(100,301)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from macros_AWS import scale_x
+  20: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  21: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  22: scaler = 'none'
+  23: totalset = numpy.load(data_directory + data_sample)
+  24: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  25: # Split into input (X) and output (Y) variables
+  26: x_train_prescale = dataset[:,1:]
+  27: y_train = dataset[:,0]
+  28: x_test_prescale = testset[:,1:]
+  29: y_test = testset[:,0]
+  30: # Scale
+  31: print(y_train.shape)
+  32: print(y_test.shape)
+  33: #print(numpy.matrix(y_train))
+  34: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  35: print(x_train.shape)
+  36: print(x_test.shape)
+  37: #y_train= to_categorical(y_train)
+  38: #y_test= to_categorical(y_test)
+  39: #x_train= to_categorical(x_train)
+  40: #x_test= to_categorical(x_test)
+  41: 
+  42: 
+  43: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     n=range(4000,5001)Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(space['Dense'], input_dim=7))
+  15:     model.add(space['add'])
+  16:     model.add(Dense(space['Dense_1']))
+  17:     model.add(space['add_1'])
+  18:     model.add(Dense(space['Dense_2']))
+  19:     model.add(space['add_2'])
+  20:     model.add(Dense(space['Dense_3']))
+  21:     model.add(space['add_3'])
+  22:     model.add(Dense(space['Dense_4']))
+  23:     model.add(space['add_4'])
+  24:     model.add(Dense(space['Dense_5']))
+  25:     model.add(space['add_5'])
+  26:     model.add(Dense(1))
+  27:     model.add(Activation('sigmoid'))
+  28:     adam= optimizers.Adam(lr=.001, beta_1=.99, beta_2=.999, epsilon=.0000001, decay=.0001)
+  29: 
+  30:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  31:                   optimizer='adam')
+  32: 
+  33:     model.fit(x_train, y_train,
+  34:               batch_size=space['batch_size'],
+  35:               epochs=space['epochs'],
+  36:               verbose=2,
+  37:               validation_data=(x_test, y_test))
+  38:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  39:     print('Test accuracy:', acc)
+  40:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  41: 
+(900000,)
+(100000,)
+No prescale
+
+(900000, 7)
+(100000, 7)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/Hyperasexamplerun.py", line 107, in <module>
+    trials=Trials())
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 67, in minimize
+    verbose=verbose)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperas/optim.py", line 133, in base_minimizer
+    return_argmin=True),
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 307, in fmin
+    return_argmin=return_argmin,
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 635, in fmin
+    return_argmin=return_argmin)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 320, in fmin
+    rval.exhaust()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 199, in exhaust
+    self.run(self.max_evals - n_done, block_until_done=self.async)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 173, in run
+    self.serial_evaluate()
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/fmin.py", line 92, in serial_evaluate
+    result = self.domain.evaluate(spec, ctrl)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/hyperopt/base.py", line 840, in evaluate
+    rval = self.fn(pyll_rval)
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/temp_model.py", line 150, in keras_fmin_fnct
+    - model: specify the model just created so that we can later use it again.
+NameError: global name 'optimizers' is not defined

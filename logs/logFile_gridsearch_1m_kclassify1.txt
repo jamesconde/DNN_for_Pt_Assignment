@@ -1,0 +1,12 @@
+--------------------------------
+    Definitions of Constants    
+--------------------------------
+Directory: /home/rice/jmc32/Gridsearch_Data/
+Data: PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy
+Seed value: 43
+Feature number: 7
+Number of loops: 1
+Number of epochs: 168
+Batch Size: 5366
+********************************
+********************************

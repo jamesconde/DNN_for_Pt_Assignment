@@ -1,0 +1,44 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-07-09 10:34:21.204178: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-09 10:34:21.620452: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 10:34:21.861973: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-09 10:34:21.864975: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-09 10:34:26.399356: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-09 10:34:26.399413: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-09 10:34:26.399422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-07-09 10:34:26.399427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-07-09 10:34:26.400259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15135 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:16:00.0, compute capability: 6.0)
+2018-07-09 10:34:26.581688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15135 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:19:00.0, compute capability: 6.0)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 121, in <module>
+    model_predictions = model.predict(y_test)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 228, in predict
+    proba = self.model.predict(x, **kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 1064, in predict
+    steps=steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1817, in predict
+    check_batch_axis=False)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 123, in _standardize_input_data
+    str(data_shape))
+ValueError: Error when checking : expected dense_1_input to have shape (7,) but got array with shape (1,)
+/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py:3: UserWarning: loadtxt: Empty input file: "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt"
+  predicts = np.loadtxt('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt')
+/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py:6: UserWarning: loadtxt: Empty input file: "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt"
+  truth = np.loadtxt('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt')
+('True negative total is ', 0, 'out of', 0)
+('True positive total is ', 0)
+('False negative total is ', 0)
+('False positive total is ', 0)
+('Any missed ones? ', 0)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/compare_truth.py", line 41, in <module>
+    file.write('Efficiency = %f \n' %(float(true_pos)/float(true_pos+false_neg)))
+ZeroDivisionError: float division by zero

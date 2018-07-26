@@ -12,7 +12,7 @@ from keras.models import Sequential
 #from keras.initializers import RandomNomral
 #from keras import initializers
 #from keras.initializers import Zeros
-from keras.layers import Dense, Dropout
+from keras.layers import Dense, Dropout, Activation
 #from keras.utils.visualize_util import plot
 from keras.utils.vis_utils import plot_model as plot
 from keras.optimizers import SGD
@@ -20,8 +20,9 @@ from keras.layers.normalization import BatchNormalization
 from keras.callbacks import EarlyStopping,LearningRateScheduler
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.constraints import maxnorm
+from keras.layers import LeakyReLU, ELU
 
-from sklearn.preprocessing import RobustScaler
+from sklearn.preprocessing import *
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
@@ -35,6 +36,10 @@ import globals
 
 
 def scale_x(X_train_prescale, X_test_prescale, scaler):
+	#X_train_prescale=numpy.ones((900000,7), dtype=numpy.int)
+	#X_test_prescale=numpy.ones((100000,7), dtype=numpy.int)
+	#scaler='robust'
+	
 	if scaler=='none':
 		X_train = X_train_prescale
 		X_test  = X_test_prescale
@@ -49,8 +54,43 @@ def scale_x(X_train_prescale, X_test_prescale, scaler):
 		print 'Robust Scale\n'
 	elif scaler == 'minmax':
                 X_train = minmax_scale(X_train_prescale)
-                X_test  = minmax_scale(X_test_prescale)				
-	return X_train, X_test
+                X_test  = minmax_scale(X_test_prescale)
+	elif scaler == 'robust':
+		X_train= robust_scale(X_train_prescale, axis=0, with_centering=True, with_scaling=True, quantile_range=(1, 99), copy=True)
+                X_test = robust_scale(X_test_prescale, axis=0, with_centering=True, with_scaling=True, quantile_range=(1, 99), copy=True)
+	return  X_train, X_test
+
+#	'elif scaler == 'robustailor':
+#	X_train= robust_scale(X_train_prescale[:,1:4], axis=0, with_centering=True, with_scaling=True, quantile_range=(25, 75), copy=True)	
+#		X_test = robust_scale(X_test_prescale[:,1:4], axis=0, with_centering=True, with_scaling=True, quantile_range=(25, 75), copy=True)	
+#		x1=X_train_prescale[:,4:8] 
+		#print X_test_prescale.shape
+		#print x1.shape
+		#print X_train.shape
+		#print X_test_prescale[:,0]
+#		xn1=  (X_test_prescale[:,0]).reshape(100000,1)
+#		qt = QuantileTransformer(output_distribution='normal')
+ #               x00=qt.fit_transform(x1)
+
+		#print x00.shape
+#		x2=X_test_prescale[:,4:8]
+		#print x2.shape
+		#print X_test.shape
+#		xn2=  (X_train_prescale[:,0]).reshape(900000,1)
+#                qt = QuantileTransformer(output_distribution='normal')
+#                x11=qt.fit_transform(x2)
+		#print x00.shape
+		#print x11.shape
+		#print xn1.shape
+		#print xn2.shape
+#		X_test=numpy.concatenate((xn1,X_test,x11), axis=1)
+#		X_train=numpy.concatenate((xn2,X_train,x00), axis=1)
+#		print X_test.shape
+#		print X_train.shape
+#	return X_train, X_test'
+
+
+#cale_X(x_train_prescale,X_test_prescale,scaler)
 
 #from TestandTrain1NetConfig1AI.py import x_train_prescale, y_train,x_test_prescale,y_test
 
@@ -123,17 +163,42 @@ def scale_x(X_train_prescale, X_test_prescale, scaler):
         #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
 #	return input_model
 
-def create_model():
+def create_model1():
         input_model = Sequential()
-        input_model.add(Dense(1699, input_dim=globals.input_scale, activation='relu')) #Input layer
-        print 1699
-	input_model.add(Dense(1001, activation='relu'))		  		      #Hidden Layer 02
-        input_model.add(Dense(780,  activation='relu'))               		      #Hidden Layer 03
-	input_model.add(Dense(1, activation='sigmoid'))              		      #Output Layer
+        input_model.add(Dense(100, input_dim=globals.input_scale, kernel_initializer='uniform', activation='relu')) #Input layer
+        input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))		  		      #Hidden Layer 02
+        input_model.add(Dense(100, kernel_initializer='uniform', activation='relu'))               		      #Hidden Layer 03
+        input_model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))              		      #Output Layer
         # Compile model
         input_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
         #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
 	return input_model
+
+
+def create_model():
+#For this model recommeded batch size 5434 and epochs 168
+        model = Sequential()
+        model.add(Dense(2865, input_dim=globals.input_scale))
+	model.add(LeakyReLU(alpha=0.1)) #Input layer
+        
+	model.add(Dense(2075))
+	model.add(Activation('relu'))		  		      #Hidden Layer 02
+        model.add(Dense(1905)) 
+	model.add(ELU(alpha=1.0))               		      #Hidden Layer 03
+	model.add(Dense(1500))
+        model.add(ELU(alpha=1.0))
+
+	model.add(Dense(761))
+        model.add(ELU(alpha=1.0))
+
+	model.add(Dense(75))
+        model.add(Activation('relu'))
+
+	model.add(Dense(1, activation='sigmoid'))              		      #Output Layer
+        # Compile model
+        model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+        #input_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+	return model
 
 def create_model_UCI_27D_default():
 	#random_normal = RandomNormal(mean=0.0, stddev=0.1, seed=8675309)
@@ -221,7 +286,7 @@ def plot_loss(history_arg, x, show_toggle, save_toggle):
         plt.close()
         return
 
-def plot_predictions(feature_arg, x_test_data, predictions, x, show_toggle, save_toggle):
+def plot_ppredictredictions(feature_arg, x_test_data, predictions, x, show_toggle, save_toggle):
         # Setup plot
         bins_array = numpy.arange(-5,5,0.1)
         plt.xlabel('Feature %d' % feature_arg)

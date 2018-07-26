@@ -1,0 +1,12 @@
+Using TensorFlow backend.
+MaxAbs
+
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 115, in <module>
+    model.save('/scratch/rice/save_test.5h')
+AttributeError: 'KerasClassifier' object has no attribute 'save'
+('True negative total is ', 40016, 'out of', 100000)
+('True positive total is ', 52580)
+('False negative total is ', 3797)
+('False positive total is ', 3607)
+('Any missed ones? ', 0)

@@ -1,0 +1,283 @@
+Using TensorFlow backend.
+2018-07-06 14:22:14.215553: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-06 14:22:15.307638: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:15.996983: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:16.675252: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:17.367872: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:18.091007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:18.831940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:19.581006: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:20.331620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-06 14:22:20.354896: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-07-06 14:22:24.064801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-06 14:22:24.065074: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-07-06 14:22:24.065090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-07-06 14:22:24.065097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-07-06 14:22:24.065104: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-07-06 14:22:24.065111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-07-06 14:22:24.065118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-07-06 14:22:24.065124: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-07-06 14:22:24.065131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-07-06 14:22:24.065138: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-07-06 14:22:24.068626: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14866 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-07-06 14:22:24.232912: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14866 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-07-06 14:22:24.400386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14866 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-07-06 14:22:24.579499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14866 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-07-06 14:22:24.762288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14866 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-07-06 14:22:24.945320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14866 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-07-06 14:22:25.131440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14866 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-07-06 14:22:25.311158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14866 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import h5py
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU, ELU
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from workingwithpython import *
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from sklearn import preprocessing
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'add': hp.choice('add', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'add_1': hp.choice('add_1', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'add_2': hp.choice('add_2', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'optimizer': hp.choice('optimizer', ['adam','nadam','adamax']),
+        'batch_size': hp.choice('batch_size', range(100)),
+        'epochs': hp.choice('epochs', range(2)),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from sklearn import preprocessing
+  20: from macros_AWS import scale_x
+  21: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  22: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  23: scaler = 'robust'
+  24: totalset = np.load(data_directory + data_sample)
+  25: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  26: # Split into input (X) and output (Y) variables
+  27: x_train_prescale = dataset[:,1:]
+  28: y_train = dataset[:,0]
+  29: x_test_prescale = testset[:,1:]
+  30: y_test = testset[:,0]
+  31: # Scale
+  32: print(y_train.shape)
+  33: print(y_test.shape)
+  34: #print(numpy.matrix(y_train))
+  35: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  36: #min_max_scaler = preprocessing.MinMaxScaler()
+  37: #x_test = min_max_scaler.fit_transform(x_train)
+  38: #y_test = min_max_scaler.fit_transform(y_train)
+  39: #x_train = min_max_scaler.fit_transform(x_train)
+  40: #y_train = min_max_scaler.fit_transform(y_train)
+  41: #x_test=x_test.reshape((900000, 7))
+  42: #y_test=y_test.reshape((y_test.shape[0], 7))
+  43: #x_train=x_train.reshape((x_train.shape[0], 7))
+  44: #y_train=y_train.reshape((y_train.shape[0],  7))
+  45: 
+  46: print(x_train.shape)
+  47: print(x_test.shape)
+  48: #y_train= to_categorical(y_train)
+  49: #y_test= to_categorical(y_test)
+  50: #x_train= to_categorical(x_train)
+  51: #x_test= to_categorical(x_test)
+  52: 
+  53: 
+  54: 
+  55: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(100, input_dim=7))
+  15:     model.add(space['add'])
+  16:     model.add(Dense(100))
+  17:     model.add(space['add_1'])
+  18:     model.add(Dense(100))
+  19:     model.add(space['add_2'])
+  20: 
+  21:     model.add(Dense(1))  
+  22:     model.add(Activation('sigmoid'))
+  23:   
+  24:   
+  25:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  26:                      optimizer=space['optimizer'])
+  27: 
+  28:     
+  29:     model.fit(x_train, y_train,
+  30:               batch_size=space['batch_size'],
+  31:               epochs=space['epochs'],
+  32:               verbose=2,
+  33:               validation_data=(x_test, y_test))
+  34:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  35:     print('Test accuracy:', acc)
+  36:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  37: 
+(900000,)
+(100000,)
+(100000, 7)
+(900000, 7)
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/1
+ - 971s - loss: 0.1923 - acc: 0.9240 - val_loss: 0.1923 - val_acc: 0.9250
+Test accuracy: 0.92501
+Train on 900000 samples, validate on 100000 samples
+Test accuracy: 0.43617
+Train on 900000 samples, validate on 100000 samples
+Test accuracy: 0.56701
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/1
+ - 52s - loss: 0.1962 - acc: 0.9214 - val_loss: 0.1805 - val_acc: 0.9273
+Test accuracy: 0.92728
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/1
+ - 142s - loss: 0.1903 - acc: 0.9235 - val_loss: 0.1758 - val_acc: 0.9277
+Test accuracy: 0.92771
+(900000,)
+(100000,)
+(100000, 7)
+(900000, 7)
+(900000, 7)
+(100000, 7)
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/DUMMYHyperasexamplerun.py", line 126, in <module>
+    model_predictions = best_model.predict(Y_test)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py", line 1064, in predict
+    steps=steps)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 1817, in predict
+    check_batch_axis=False)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/engine/training.py", line 123, in _standardize_input_data
+    str(data_shape))
+ValueError: Error when checking : expected dense_17_input to have shape (7,) but got array with shape (1,)
+('True negative total is ', 43613, 'out of', 100000)
+('True positive total is ', 29252)
+('False negative total is ', 26946)
+('False positive total is ', 189)
+('Any missed ones? ', 0)

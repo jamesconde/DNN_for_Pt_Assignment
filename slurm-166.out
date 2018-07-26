@@ -1,0 +1,5 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow/lib/python2.7/site-packages/keras/models.py:942: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-07-09 14:11:19.029277: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+slurmstepd: error: *** JOB 166 ON ainode06 CANCELLED AT 2018-07-09T16:10:42 DUE TO TIME LIMIT ***

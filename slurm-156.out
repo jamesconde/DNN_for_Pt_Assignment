@@ -1,0 +1,16 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 119, in <module>
+    history = model.fit(x_train,y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 209, in fit
+    return super(KerasClassifier, self).fit(x, y, **kwargs)
+  File "/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py", line 140, in fit
+    self.model = self.build_fn(**self.filter_sk_params(self.build_fn))
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 169, in create_model
+    model.add(ELU(alpha=1.0)) #Input layer
+NameError: global name 'ELU' is not defined
+('True negative total is ', 43613, 'out of', 100000)
+('True positive total is ', 29252)
+('False negative total is ', 26946)
+('False positive total is ', 189)
+('Any missed ones? ', 0)

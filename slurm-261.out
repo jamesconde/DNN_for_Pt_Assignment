@@ -1,0 +1,306 @@
+Using TensorFlow backend.
+2018-07-12 10:50:59.177269: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-07-12 10:51:00.330932: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:37:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-07-12 10:51:01.198660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:86:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-07-12 10:51:02.084315: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:d8:00.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2018-07-12 10:51:02.090496: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2
+2018-07-12 10:51:03.730798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-12 10:51:03.731073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 
+2018-07-12 10:51:03.731086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y 
+2018-07-12 10:51:03.731093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y 
+2018-07-12 10:51:03.731099: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N 
+2018-07-12 10:51:03.731967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14867 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:37:00.0, compute capability: 7.0)
+2018-07-12 10:51:03.898226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14867 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 7.0)
+2018-07-12 10:51:04.063384: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14867 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+>>> Imports:
+#coding=utf-8
+
+from __future__ import print_function
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import h5py
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from keras.datasets import mnist
+except:
+    pass
+
+try:
+    from keras.layers.core import Dense, Dropout, Activation
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.utils import np_utils
+except:
+    pass
+
+try:
+    from keras.utils import to_categorical
+except:
+    pass
+
+try:
+    from keras.layers import LeakyReLU, ELU
+except:
+    pass
+
+try:
+    from macros_AWS import *
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    from workingwithpython import *
+except:
+    pass
+
+try:
+    from sklearn.model_selection import train_test_split
+except:
+    pass
+
+try:
+    from sklearn import preprocessing
+except:
+    pass
+
+try:
+    from macros_AWS import scale_x
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'add': hp.choice('add', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'add_1': hp.choice('add_1', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'add_2': hp.choice('add_2', [LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)]),
+        'optimizer': hp.choice('optimizer', ['adam','nadam','adamax']),
+    }
+
+>>> Data
+   1: 
+   2: """
+   3: Data providing function:
+   4: 
+   5: This function is separated from create_model() so that hyperopt
+   6: won't reload data for each evaluation run.
+   7: """
+   8: #(x_train, y_train), (x_test, y_test) = mnist.load_data()
+   9: #x_train = x_train.reshape(60000, 784)
+  10: #x_test = x_test.reshape(10000, 784)
+  11: #x_train = x_train.astype('float32')
+  12: #x_test = x_test.astype('float32')
+  13: #x_train /= 255
+  14: #x_test /= 255
+  15: #nb_classes = 10
+  16: #y_train = np_utils.to_categorical(y_train, nb_classes)
+  17: #y_test = np_utils.to_categorical(y_test, nb_classes)
+  18: from sklearn.model_selection import train_test_split
+  19: from sklearn import preprocessing
+  20: from macros_AWS import scale_x
+  21: data_directory = '/home/rice/jmc32/Gridsearch_Data/'
+  22: data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
+  23: scaler = 'robust'
+  24: totalset = np.load(data_directory + data_sample)
+  25: dataset, testset = train_test_split(totalset, test_size = 0.1)
+  26: # Split into input (X) and output (Y) variables
+  27: x_train_prescale = dataset[:,1:]
+  28: y_train = dataset[:,0]
+  29: x_test_prescale = testset[:,1:]
+  30: y_test = testset[:,0]
+  31: # Scale
+  32: print(y_train.shape)
+  33: print(y_test.shape)
+  34: #print(numpy.matrix(y_train))
+  35: x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  36: #min_max_scaler = preprocessing.MinMaxScaler()
+  37: #x_test = min_max_scaler.fit_transform(x_train)
+  38: #y_test = min_max_scaler.fit_transform(y_train)
+  39: #x_train = min_max_scaler.fit_transform(x_train)
+  40: #y_train = min_max_scaler.fit_transform(y_train)
+  41: #x_test=x_test.reshape((900000, 7))
+  42: #y_test=y_test.reshape((y_test.shape[0], 7))
+  43: #x_train=x_train.reshape((x_train.shape[0], 7))
+  44: #y_train=y_train.reshape((y_train.shape[0],  7))
+  45: 
+  46: print(x_train.shape)
+  47: print(x_test.shape)
+  48: #y_train= to_categorical(y_train)
+  49: #y_test= to_categorical(y_test)
+  50: #x_train= to_categorical(x_train)
+  51: #x_test= to_categorical(x_test)
+  52: 
+  53: 
+  54: 
+  55: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     """
+   4:     Model providing function:
+   5: 
+   6:     Create Keras model with double curly brackets dropped-in as needed.
+   7:     Return value has to be a valid python dictionary with two customary keys:
+   8:         - loss: Specify a numeric evaluation metric to be minimized
+   9:         - status: Just use STATUS_OK and see hyperopt documentation if not feasible
+  10:     The last one is optional, though recommended, namely:
+  11:         - model: specify the model just created so that we can later use it again.
+  12:     """
+  13:     model = Sequential()
+  14:     model.add(Dense(100, input_dim=7))
+  15:     model.add(space['add'])
+  16:     model.add(Dense(100))
+  17:     model.add(space['add_1'])
+  18:     model.add(Dense(100))
+  19:     model.add(space['add_2'])
+  20: 
+  21:     model.add(Dense(1))  
+  22:     model.add(Activation('sigmoid'))
+  23:   
+  24:   
+  25:     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
+  26:                      optimizer=space['optimizer'])
+  27: 
+  28:     
+  29:     model.fit(x_train, y_train,
+  30:               batch_size=100,
+  31:               epochs=2,
+  32:               verbose=2,
+  33:               validation_data=(x_test, y_test))
+  34:     score, acc = model.evaluate(x_test, y_test, verbose=0)
+  35:     print('Test accuracy:', acc)
+  36:     return {'loss': -acc, 'status': STATUS_OK, 'model': model}
+  37: 
+(900000,)
+(100000,)
+(900000, 7)
+(100000, 7)
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/2
+ - 37s - loss: 0.1826 - acc: 0.9267 - val_loss: 0.1683 - val_acc: 0.9330
+Epoch 2/2
+ - 31s - loss: 0.1641 - acc: 0.9339 - val_loss: 0.1614 - val_acc: 0.9355
+Test accuracy: 0.9355
+Train on 900000 samples, validate on 100000 samples
+Epoch 1/2
+ - 34s - loss: 0.1813 - acc: 0.9269 - val_loss: 0.1654 - val_acc: 0.9337
+Epoch 2/2
+ - 34s - loss: 0.1628 - acc: 0.9339 - val_loss: 0.1647 - val_acc: 0.9336
+Test accuracy: 0.93361
+(900000,)
+(100000,)
+(900000, 7)
+(100000, 7)
+Saved model to disk
+Evalutation of best performing model:
+
+    32/100000 [..............................] - ETA: 8s
+  1664/100000 [..............................] - ETA: 3s
+  3328/100000 [..............................] - ETA: 3s
+  4992/100000 [>.............................] - ETA: 2s
+  6656/100000 [>.............................] - ETA: 2s
+  8320/100000 [=>............................] - ETA: 2s
+  9984/100000 [=>............................] - ETA: 2s
+ 11648/100000 [==>...........................] - ETA: 2s
+ 13312/100000 [==>...........................] - ETA: 2s
+ 14976/100000 [===>..........................] - ETA: 2s
+ 16640/100000 [===>..........................] - ETA: 2s
+ 18304/100000 [====>.........................] - ETA: 2s
+ 19968/100000 [====>.........................] - ETA: 2s
+ 21632/100000 [=====>........................] - ETA: 2s
+ 23296/100000 [=====>........................] - ETA: 2s
+ 24960/100000 [======>.......................] - ETA: 2s
+ 26624/100000 [======>.......................] - ETA: 2s
+ 28288/100000 [=======>......................] - ETA: 2s
+ 29952/100000 [=======>......................] - ETA: 2s
+ 31616/100000 [========>.....................] - ETA: 2s
+ 33280/100000 [========>.....................] - ETA: 2s
+ 34944/100000 [=========>....................] - ETA: 1s
+ 36608/100000 [=========>....................] - ETA: 1s
+ 38240/100000 [==========>...................] - ETA: 1s
+ 39904/100000 [==========>...................] - ETA: 1s
+ 41568/100000 [===========>..................] - ETA: 1s
+ 43232/100000 [===========>..................] - ETA: 1s
+ 44896/100000 [============>.................] - ETA: 1s
+ 46560/100000 [============>.................] - ETA: 1s
+ 48224/100000 [=============>................] - ETA: 1s
+ 49888/100000 [=============>................] - ETA: 1s
+ 51552/100000 [==============>...............] - ETA: 1s
+ 53184/100000 [==============>...............] - ETA: 1s
+ 54848/100000 [===============>..............] - ETA: 1s
+ 56512/100000 [===============>..............] - ETA: 1s
+ 58176/100000 [================>.............] - ETA: 1s
+ 59840/100000 [================>.............] - ETA: 1s
+ 61472/100000 [=================>............] - ETA: 1s
+ 63136/100000 [=================>............] - ETA: 1s
+ 64800/100000 [==================>...........] - ETA: 1s
+ 66432/100000 [==================>...........] - ETA: 1s
+ 68096/100000 [===================>..........] - ETA: 0s
+ 69760/100000 [===================>..........] - ETA: 0s
+ 71424/100000 [====================>.........] - ETA: 0s
+ 73088/100000 [====================>.........] - ETA: 0s
+ 74752/100000 [=====================>........] - ETA: 0s
+ 76416/100000 [=====================>........] - ETA: 0s
+ 78080/100000 [======================>.......] - ETA: 0s
+ 79744/100000 [======================>.......] - ETA: 0s
+ 81408/100000 [=======================>......] - ETA: 0s
+ 83072/100000 [=======================>......] - ETA: 0s
+ 84704/100000 [========================>.....] - ETA: 0s
+ 86368/100000 [========================>.....] - ETA: 0s
+ 88032/100000 [=========================>....] - ETA: 0s
+ 89696/100000 [=========================>....] - ETA: 0s
+ 91360/100000 [==========================>...] - ETA: 0s
+ 93024/100000 [==========================>...] - ETA: 0s
+ 94688/100000 [===========================>..] - ETA: 0s
+ 96352/100000 [===========================>..] - ETA: 0s
+ 98016/100000 [============================>.] - ETA: 0s
+ 99680/100000 [============================>.] - ETA: 0s
+100000/100000 [==============================] - 3s 30us/step
+['0.16131484703481197', '0.9355']
+Best performing model chosen hyper-parameters:
+{'add_1': 0, 'add': 2, 'add_2': 1, 'optimizer': 2}
+('True negative total is ', 43879, 'out of', 100000)
+('True positive total is ', 5)
+('False negative total is ', 56114)
+('False positive total is ', 2)
+('Any missed ones? ', 0)

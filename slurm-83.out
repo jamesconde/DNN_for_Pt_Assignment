@@ -1,0 +1,9 @@
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 115
+    model.save('/scratch/rice/save_test.5h)
+                                          ^
+SyntaxError: EOL while scanning string literal
+('True negative total is ', 40711, 'out of', 100000)
+('True positive total is ', 52398)
+('False negative total is ', 4091)
+('False positive total is ', 2800)
+('Any missed ones? ', 0)

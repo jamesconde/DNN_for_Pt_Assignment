@@ -37,7 +37,7 @@ def data():
     from macros_AWS import scale_x
     data_directory = '/home/rice/jmc32/Gridsearch_Data/'
     data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
-    scaler = 'maxabs'
+    scaler = 'robust'
     totalset = numpy.load(data_directory + data_sample)
     dataset, testset = train_test_split(totalset, test_size = 0.1)
     # Split into input (X) and output (Y) variables
@@ -73,54 +73,54 @@ def create_model(x_train, y_train, x_test, y_test):
     model = Sequential()
     x={{choice(range(1,11))}}
 	#First Hidden layer and input layer
-    model.add(Dense({{choice(range(1,5001))}}, input_dim=7))
-    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
+    model.add(Dense({{choice(range(100,1001))}}, input_dim=7))
+    model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
     model.add(Dropout({{uniform(0, 1)}}))
     if x>= 2:
 	#2 Hidden layer 
-   	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+   	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#3 Hidden layer 
     if x>= 3:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#4 Hidden layer
     if x>= 4:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#5 Hidden layer 
     if x>= 5:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+         
 	#6 Hidden layer 
     if x>= 6:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#7 Hidden layer 
     if x>= 7:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#8 Hidden layer 
     if x>= 8:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(100,1001))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 	#9 Hidden layer 
     if x>= 9:
-        model.add(Dense({{choice(range(1,5001))}}))
-        model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-        model.add(Dropout({{uniform(0, 1)}}))
+        model.add(Dense({{choice(range(100,1001))}}))
+        model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+        
 	#10 Hidden layer 
     if x>= 10:
-    	model.add(Dense({{choice(range(1,5001))}}))
-    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0),Activation('softmax')])}})
-    	model.add(Dropout({{uniform(0, 1)}}))
+    	model.add(Dense({{choice(range(1,100))}}))
+    	model.add({{choice([LeakyReLU(alpha=0.1),Activation('relu'),ELU(alpha=1.0)])}})
+    	
 
 	# Output layer
     model.add(Dense(1))
@@ -129,11 +129,11 @@ def create_model(x_train, y_train, x_test, y_test):
 
 
     model.compile(loss='binary_crossentropy', metrics=['accuracy'],
-                  optimizer={{choice(['adam'])}})
+                  optimizer={{choice(['adam','nadam','adamax'])}})
 
     model.fit(x_train, y_train,
-              batch_size={{choice(range(1,5001))}},
-              epochs={{choice(range(1,501))}},
+              batch_size={{choice(range(2000,5001))}},
+              epochs={{choice(range(200,501))}},
               verbose=2,
               validation_data=(x_test, y_test))
     score, acc = model.evaluate(x_test, y_test, verbose=0)
@@ -147,6 +147,13 @@ if __name__ == '__main__':
                                           max_evals=5,
                                           trials=Trials())
     X_train, Y_train, X_test, Y_test = data()
+    #model_predictions = best_model.model.predict(Y_test)
+    #outfile_predict = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_predictions_1m_kclassify.txt', 'w')
+    #outfile_truth = open('/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions/model_class_true_1m_kclassify.txt', 'w')
+    #numpy.savetxt(outfile_predict, model_predictions)
+    #numpy.savetxt(outfile_truth, y_test)
+    #plot_ROC(y_test,model_predictions,1,show_toggle = True, save_toggle=True)
+    best_model.model.save('/scratch/rice/bestonesofar2.h5')
     print("Evalutation of best performing model:")
     print(best_model.evaluate(X_test, Y_test))
     print("Best performing model chosen hyper-parameters:")

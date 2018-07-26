@@ -1,0 +1,35 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-07-19 14:33:10.081112: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-19 14:33:10.500435: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:16:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-19 14:33:10.739791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:19:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-19 14:33:10.742344: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-19 14:33:15.270722: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-19 14:33:15.271072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-19 14:33:15.271085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-07-19 14:33:15.271090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-07-19 14:33:15.271880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15135 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:16:00.0, compute capability: 6.0)
+2018-07-19 14:33:15.451218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15135 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:19:00.0, compute capability: 6.0)
+Using New network
+
+
+AUC: 0.926194
+Done
+('True negative total is ', 3854, 'out of', 10000)
+('True positive total is ', 5467)
+('False negative total is ', 142)
+('False positive total is ', 537)
+('Any missed ones? ', 0)
+Efficiency = 0.974684 
+
+Rate = 0.399600 
+
+Accuracy = 0.932100 
+

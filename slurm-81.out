@@ -1,0 +1,850 @@
+Using TensorFlow backend.
+/home/rice/jmc32/anaconda2/envs/tensorflow-gpu/lib/python2.7/site-packages/keras/models.py:981: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`.
+  warnings.warn('The `nb_epoch` argument in `fit` '
+2018-07-02 08:56:27.731569: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-02 08:56:28.838680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:05:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:29.496736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:08:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:30.181858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:0d:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:30.864322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:13:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:31.581622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 4 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:83:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:32.289034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 5 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:89:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:33.028345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 6 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:8e:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:33.771145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 7 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:91:00.0
+totalMemory: 15.77GiB freeMemory: 15.35GiB
+2018-07-02 08:56:33.795035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2018-07-02 08:56:37.204641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-02 08:56:37.205001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 4 5 6 7 
+2018-07-02 08:56:37.205018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y N N N N 
+2018-07-02 08:56:37.205026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y N N N N 
+2018-07-02 08:56:37.205033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y N N N N 
+2018-07-02 08:56:37.205040: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N N N N N 
+2018-07-02 08:56:37.205047: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 4:   N N N N N Y Y Y 
+2018-07-02 08:56:37.205054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 5:   N N N N Y N Y Y 
+2018-07-02 08:56:37.205061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 6:   N N N N Y Y N Y 
+2018-07-02 08:56:37.205068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 7:   N N N N Y Y Y N 
+2018-07-02 08:56:37.208481: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14866 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:05:00.0, compute capability: 7.0)
+2018-07-02 08:56:37.378431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14866 MB memory) -> physical GPU (device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:08:00.0, compute capability: 7.0)
+2018-07-02 08:56:37.549866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14866 MB memory) -> physical GPU (device: 2, name: Tesla V100-PCIE-16GB, pci bus id: 0000:0d:00.0, compute capability: 7.0)
+2018-07-02 08:56:37.727106: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14866 MB memory) -> physical GPU (device: 3, name: Tesla V100-PCIE-16GB, pci bus id: 0000:13:00.0, compute capability: 7.0)
+2018-07-02 08:56:37.909409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 14866 MB memory) -> physical GPU (device: 4, name: Tesla V100-PCIE-16GB, pci bus id: 0000:83:00.0, compute capability: 7.0)
+2018-07-02 08:56:38.081297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 14866 MB memory) -> physical GPU (device: 5, name: Tesla V100-PCIE-16GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2018-07-02 08:56:38.256850: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 14866 MB memory) -> physical GPU (device: 6, name: Tesla V100-PCIE-16GB, pci bus id: 0000:8e:00.0, compute capability: 7.0)
+2018-07-02 08:56:38.441753: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 14866 MB memory) -> physical GPU (device: 7, name: Tesla V100-PCIE-16GB, pci bus id: 0000:91:00.0, compute capability: 7.0)
+MaxAbs
+
+Epoch 1/392
+ - 25s - loss: 0.2403 - acc: 0.8997
+Epoch 2/392
+ - 13s - loss: 0.1786 - acc: 0.9283
+Epoch 3/392
+ - 13s - loss: 0.1680 - acc: 0.9322
+Epoch 4/392
+ - 13s - loss: 0.1643 - acc: 0.9335
+Epoch 5/392
+ - 13s - loss: 0.1593 - acc: 0.9353
+Epoch 6/392
+ - 13s - loss: 0.1587 - acc: 0.9353
+Epoch 7/392
+ - 13s - loss: 0.1577 - acc: 0.9357
+Epoch 8/392
+ - 13s - loss: 0.1562 - acc: 0.9363
+Epoch 9/392
+ - 13s - loss: 0.1555 - acc: 0.9365
+Epoch 10/392
+ - 13s - loss: 0.1561 - acc: 0.9365
+Epoch 11/392
+ - 13s - loss: 0.1550 - acc: 0.9366
+Epoch 12/392
+ - 13s - loss: 0.1547 - acc: 0.9369
+Epoch 13/392
+ - 13s - loss: 0.1533 - acc: 0.9372
+Epoch 14/392
+ - 13s - loss: 0.1531 - acc: 0.9372
+Epoch 15/392
+ - 13s - loss: 0.1532 - acc: 0.9371
+Epoch 16/392
+ - 13s - loss: 0.1524 - acc: 0.9375
+Epoch 17/392
+ - 13s - loss: 0.1523 - acc: 0.9375
+Epoch 18/392
+ - 13s - loss: 0.1515 - acc: 0.9378
+Epoch 19/392
+ - 13s - loss: 0.1514 - acc: 0.9378
+Epoch 20/392
+ - 13s - loss: 0.1517 - acc: 0.9377
+Epoch 21/392
+ - 13s - loss: 0.1516 - acc: 0.9379
+Epoch 22/392
+ - 13s - loss: 0.1503 - acc: 0.9382
+Epoch 23/392
+ - 13s - loss: 0.1504 - acc: 0.9382
+Epoch 24/392
+ - 13s - loss: 0.1496 - acc: 0.9385
+Epoch 25/392
+ - 13s - loss: 0.1496 - acc: 0.9383
+Epoch 26/392
+ - 13s - loss: 0.1490 - acc: 0.9387
+Epoch 27/392
+ - 13s - loss: 0.1489 - acc: 0.9386
+Epoch 28/392
+ - 13s - loss: 0.1485 - acc: 0.9388
+Epoch 29/392
+ - 13s - loss: 0.1481 - acc: 0.9389
+Epoch 30/392
+ - 13s - loss: 0.1482 - acc: 0.9390
+Epoch 31/392
+ - 13s - loss: 0.1475 - acc: 0.9392
+Epoch 32/392
+ - 13s - loss: 0.1477 - acc: 0.9391
+Epoch 33/392
+ - 13s - loss: 0.1467 - acc: 0.9395
+Epoch 34/392
+ - 13s - loss: 0.1469 - acc: 0.9394
+Epoch 35/392
+ - 13s - loss: 0.1464 - acc: 0.9395
+Epoch 36/392
+ - 13s - loss: 0.1464 - acc: 0.9397
+Epoch 37/392
+ - 13s - loss: 0.1458 - acc: 0.9399
+Epoch 38/392
+ - 13s - loss: 0.1458 - acc: 0.9399
+Epoch 39/392
+ - 13s - loss: 0.1452 - acc: 0.9401
+Epoch 40/392
+ - 13s - loss: 0.1450 - acc: 0.9403
+Epoch 41/392
+ - 13s - loss: 0.1445 - acc: 0.9403
+Epoch 42/392
+ - 13s - loss: 0.1444 - acc: 0.9404
+Epoch 43/392
+ - 13s - loss: 0.1441 - acc: 0.9404
+Epoch 44/392
+ - 13s - loss: 0.1442 - acc: 0.9405
+Epoch 45/392
+ - 13s - loss: 0.1433 - acc: 0.9407
+Epoch 46/392
+ - 13s - loss: 0.1433 - acc: 0.9406
+Epoch 47/392
+ - 13s - loss: 0.1429 - acc: 0.9407
+Epoch 48/392
+ - 13s - loss: 0.1425 - acc: 0.9410
+Epoch 49/392
+ - 13s - loss: 0.1424 - acc: 0.9410
+Epoch 50/392
+ - 13s - loss: 0.1418 - acc: 0.9414
+Epoch 51/392
+ - 13s - loss: 0.1414 - acc: 0.9415
+Epoch 52/392
+ - 13s - loss: 0.1416 - acc: 0.9412
+Epoch 53/392
+ - 13s - loss: 0.1409 - acc: 0.9416
+Epoch 54/392
+ - 13s - loss: 0.1405 - acc: 0.9417
+Epoch 55/392
+ - 13s - loss: 0.1405 - acc: 0.9418
+Epoch 56/392
+ - 13s - loss: 0.1400 - acc: 0.9418
+Epoch 57/392
+ - 13s - loss: 0.1395 - acc: 0.9421
+Epoch 58/392
+ - 13s - loss: 0.1388 - acc: 0.9423
+Epoch 59/392
+ - 13s - loss: 0.1386 - acc: 0.9425
+Epoch 60/392
+ - 13s - loss: 0.1382 - acc: 0.9426
+Epoch 61/392
+ - 13s - loss: 0.1380 - acc: 0.9426
+Epoch 62/392
+ - 13s - loss: 0.1377 - acc: 0.9428
+Epoch 63/392
+ - 13s - loss: 0.1372 - acc: 0.9428
+Epoch 64/392
+ - 13s - loss: 0.1368 - acc: 0.9431
+Epoch 65/392
+ - 13s - loss: 0.1365 - acc: 0.9430
+Epoch 66/392
+ - 13s - loss: 0.1361 - acc: 0.9434
+Epoch 67/392
+ - 13s - loss: 0.1360 - acc: 0.9433
+Epoch 68/392
+ - 13s - loss: 0.1357 - acc: 0.9434
+Epoch 69/392
+ - 13s - loss: 0.1350 - acc: 0.9436
+Epoch 70/392
+ - 13s - loss: 0.1345 - acc: 0.9438
+Epoch 71/392
+ - 13s - loss: 0.1341 - acc: 0.9442
+Epoch 72/392
+ - 13s - loss: 0.1339 - acc: 0.9441
+Epoch 73/392
+ - 13s - loss: 0.1328 - acc: 0.9445
+Epoch 74/392
+ - 13s - loss: 0.1329 - acc: 0.9444
+Epoch 75/392
+ - 13s - loss: 0.1322 - acc: 0.9447
+Epoch 76/392
+ - 13s - loss: 0.1322 - acc: 0.9448
+Epoch 77/392
+ - 13s - loss: 0.1319 - acc: 0.9448
+Epoch 78/392
+ - 13s - loss: 0.1311 - acc: 0.9451
+Epoch 79/392
+ - 13s - loss: 0.1307 - acc: 0.9452
+Epoch 80/392
+ - 13s - loss: 0.1302 - acc: 0.9455
+Epoch 81/392
+ - 13s - loss: 0.1298 - acc: 0.9455
+Epoch 82/392
+ - 13s - loss: 0.1295 - acc: 0.9457
+Epoch 83/392
+ - 13s - loss: 0.1288 - acc: 0.9459
+Epoch 84/392
+ - 13s - loss: 0.1283 - acc: 0.9461
+Epoch 85/392
+ - 13s - loss: 0.1284 - acc: 0.9461
+Epoch 86/392
+ - 13s - loss: 0.1274 - acc: 0.9465
+Epoch 87/392
+ - 13s - loss: 0.1272 - acc: 0.9465
+Epoch 88/392
+ - 13s - loss: 0.1266 - acc: 0.9468
+Epoch 89/392
+ - 13s - loss: 0.1262 - acc: 0.9468
+Epoch 90/392
+ - 13s - loss: 0.1256 - acc: 0.9470
+Epoch 91/392
+ - 13s - loss: 0.1254 - acc: 0.9473
+Epoch 92/392
+ - 13s - loss: 0.1251 - acc: 0.9474
+Epoch 93/392
+ - 13s - loss: 0.1246 - acc: 0.9474
+Epoch 94/392
+ - 13s - loss: 0.1247 - acc: 0.9475
+Epoch 95/392
+ - 13s - loss: 0.1238 - acc: 0.9478
+Epoch 96/392
+ - 13s - loss: 0.1231 - acc: 0.9483
+Epoch 97/392
+ - 13s - loss: 0.1231 - acc: 0.9481
+Epoch 98/392
+ - 13s - loss: 0.1225 - acc: 0.9483
+Epoch 99/392
+ - 13s - loss: 0.1221 - acc: 0.9485
+Epoch 100/392
+ - 13s - loss: 0.1212 - acc: 0.9489
+Epoch 101/392
+ - 13s - loss: 0.1209 - acc: 0.9490
+Epoch 102/392
+ - 13s - loss: 0.1208 - acc: 0.9491
+Epoch 103/392
+ - 13s - loss: 0.1203 - acc: 0.9492
+Epoch 104/392
+ - 13s - loss: 0.1197 - acc: 0.9493
+Epoch 105/392
+ - 13s - loss: 0.1193 - acc: 0.9494
+Epoch 106/392
+ - 13s - loss: 0.1190 - acc: 0.9497
+Epoch 107/392
+ - 13s - loss: 0.1189 - acc: 0.9499
+Epoch 108/392
+ - 13s - loss: 0.1181 - acc: 0.9502
+Epoch 109/392
+ - 13s - loss: 0.1181 - acc: 0.9499
+Epoch 110/392
+ - 13s - loss: 0.1175 - acc: 0.9502
+Epoch 111/392
+ - 13s - loss: 0.1169 - acc: 0.9504
+Epoch 112/392
+ - 13s - loss: 0.1165 - acc: 0.9506
+Epoch 113/392
+ - 13s - loss: 0.1160 - acc: 0.9508
+Epoch 114/392
+ - 13s - loss: 0.1157 - acc: 0.9510
+Epoch 115/392
+ - 13s - loss: 0.1154 - acc: 0.9510
+Epoch 116/392
+ - 13s - loss: 0.1149 - acc: 0.9512
+Epoch 117/392
+ - 13s - loss: 0.1149 - acc: 0.9512
+Epoch 118/392
+ - 13s - loss: 0.1143 - acc: 0.9516
+Epoch 119/392
+ - 13s - loss: 0.1142 - acc: 0.9516
+Epoch 120/392
+ - 13s - loss: 0.1134 - acc: 0.9517
+Epoch 121/392
+ - 13s - loss: 0.1132 - acc: 0.9519
+Epoch 122/392
+ - 13s - loss: 0.1127 - acc: 0.9519
+Epoch 123/392
+ - 13s - loss: 0.1125 - acc: 0.9522
+Epoch 124/392
+ - 13s - loss: 0.1116 - acc: 0.9524
+Epoch 125/392
+ - 13s - loss: 0.1117 - acc: 0.9524
+Epoch 126/392
+ - 13s - loss: 0.1116 - acc: 0.9525
+Epoch 127/392
+ - 13s - loss: 0.1108 - acc: 0.9528
+Epoch 128/392
+ - 13s - loss: 0.1104 - acc: 0.9530
+Epoch 129/392
+ - 13s - loss: 0.1102 - acc: 0.9532
+Epoch 130/392
+ - 13s - loss: 0.1095 - acc: 0.9534
+Epoch 131/392
+ - 13s - loss: 0.1092 - acc: 0.9536
+Epoch 132/392
+ - 13s - loss: 0.1092 - acc: 0.9536
+Epoch 133/392
+ - 13s - loss: 0.1095 - acc: 0.9534
+Epoch 134/392
+ - 13s - loss: 0.1088 - acc: 0.9536
+Epoch 135/392
+ - 13s - loss: 0.1082 - acc: 0.9539
+Epoch 136/392
+ - 13s - loss: 0.1080 - acc: 0.9540
+Epoch 137/392
+ - 13s - loss: 0.1073 - acc: 0.9543
+Epoch 138/392
+ - 13s - loss: 0.1076 - acc: 0.9542
+Epoch 139/392
+ - 13s - loss: 0.1073 - acc: 0.9543
+Epoch 140/392
+ - 13s - loss: 0.1062 - acc: 0.9546
+Epoch 141/392
+ - 13s - loss: 0.1062 - acc: 0.9546
+Epoch 142/392
+ - 13s - loss: 0.1063 - acc: 0.9546
+Epoch 143/392
+ - 13s - loss: 0.1056 - acc: 0.9548
+Epoch 144/392
+ - 13s - loss: 0.1055 - acc: 0.9549
+Epoch 145/392
+ - 13s - loss: 0.1052 - acc: 0.9550
+Epoch 146/392
+ - 13s - loss: 0.1050 - acc: 0.9552
+Epoch 147/392
+ - 13s - loss: 0.1046 - acc: 0.9553
+Epoch 148/392
+ - 13s - loss: 0.1048 - acc: 0.9552
+Epoch 149/392
+ - 13s - loss: 0.1037 - acc: 0.9556
+Epoch 150/392
+ - 13s - loss: 0.1035 - acc: 0.9556
+Epoch 151/392
+ - 13s - loss: 0.1031 - acc: 0.9558
+Epoch 152/392
+ - 13s - loss: 0.1031 - acc: 0.9558
+Epoch 153/392
+ - 13s - loss: 0.1027 - acc: 0.9560
+Epoch 154/392
+ - 13s - loss: 0.1026 - acc: 0.9559
+Epoch 155/392
+ - 13s - loss: 0.1026 - acc: 0.9560
+Epoch 156/392
+ - 13s - loss: 0.1024 - acc: 0.9565
+Epoch 157/392
+ - 13s - loss: 0.1015 - acc: 0.9566
+Epoch 158/392
+ - 13s - loss: 0.1011 - acc: 0.9567
+Epoch 159/392
+ - 13s - loss: 0.1014 - acc: 0.9566
+Epoch 160/392
+ - 13s - loss: 0.1010 - acc: 0.9568
+Epoch 161/392
+ - 13s - loss: 0.1010 - acc: 0.9565
+Epoch 162/392
+ - 13s - loss: 0.1003 - acc: 0.9570
+Epoch 163/392
+ - 13s - loss: 0.1005 - acc: 0.9570
+Epoch 164/392
+ - 13s - loss: 0.1001 - acc: 0.9570
+Epoch 165/392
+ - 13s - loss: 0.1005 - acc: 0.9571
+Epoch 166/392
+ - 13s - loss: 0.0997 - acc: 0.9576
+Epoch 167/392
+ - 13s - loss: 0.0995 - acc: 0.9574
+Epoch 168/392
+ - 13s - loss: 0.0990 - acc: 0.9576
+Epoch 169/392
+ - 13s - loss: 0.0981 - acc: 0.9580
+Epoch 170/392
+ - 13s - loss: 0.0989 - acc: 0.9577
+Epoch 171/392
+ - 13s - loss: 0.0992 - acc: 0.9577
+Epoch 172/392
+ - 13s - loss: 0.0989 - acc: 0.9575
+Epoch 173/392
+ - 13s - loss: 0.0982 - acc: 0.9579
+Epoch 174/392
+ - 13s - loss: 0.0980 - acc: 0.9580
+Epoch 175/392
+ - 13s - loss: 0.0970 - acc: 0.9583
+Epoch 176/392
+ - 13s - loss: 0.0967 - acc: 0.9584
+Epoch 177/392
+ - 13s - loss: 0.0969 - acc: 0.9585
+Epoch 178/392
+ - 13s - loss: 0.0969 - acc: 0.9583
+Epoch 179/392
+ - 13s - loss: 0.0963 - acc: 0.9587
+Epoch 180/392
+ - 13s - loss: 0.0963 - acc: 0.9586
+Epoch 181/392
+ - 13s - loss: 0.0963 - acc: 0.9587
+Epoch 182/392
+ - 13s - loss: 0.0962 - acc: 0.9589
+Epoch 183/392
+ - 13s - loss: 0.0959 - acc: 0.9590
+Epoch 184/392
+ - 13s - loss: 0.0956 - acc: 0.9590
+Epoch 185/392
+ - 13s - loss: 0.0951 - acc: 0.9592
+Epoch 186/392
+ - 13s - loss: 0.0949 - acc: 0.9591
+Epoch 187/392
+ - 13s - loss: 0.0945 - acc: 0.9594
+Epoch 188/392
+ - 13s - loss: 0.0946 - acc: 0.9593
+Epoch 189/392
+ - 13s - loss: 0.0945 - acc: 0.9597
+Epoch 190/392
+ - 13s - loss: 0.0944 - acc: 0.9595
+Epoch 191/392
+ - 13s - loss: 0.0946 - acc: 0.9593
+Epoch 192/392
+ - 13s - loss: 0.0940 - acc: 0.9597
+Epoch 193/392
+ - 13s - loss: 0.0942 - acc: 0.9596
+Epoch 194/392
+ - 13s - loss: 0.0931 - acc: 0.9600
+Epoch 195/392
+ - 13s - loss: 0.0927 - acc: 0.9601
+Epoch 196/392
+ - 13s - loss: 0.0926 - acc: 0.9600
+Epoch 197/392
+ - 13s - loss: 0.0932 - acc: 0.9600
+Epoch 198/392
+ - 13s - loss: 0.0932 - acc: 0.9601
+Epoch 199/392
+ - 13s - loss: 0.0929 - acc: 0.9601
+Epoch 200/392
+ - 13s - loss: 0.0927 - acc: 0.9602
+Epoch 201/392
+ - 13s - loss: 0.0926 - acc: 0.9601
+Epoch 202/392
+ - 13s - loss: 0.0926 - acc: 0.9603
+Epoch 203/392
+ - 13s - loss: 0.0919 - acc: 0.9606
+Epoch 204/392
+ - 13s - loss: 0.0915 - acc: 0.9607
+Epoch 205/392
+ - 13s - loss: 0.0915 - acc: 0.9607
+Epoch 206/392
+ - 13s - loss: 0.0913 - acc: 0.9607
+Epoch 207/392
+ - 13s - loss: 0.0906 - acc: 0.9610
+Epoch 208/392
+ - 13s - loss: 0.0910 - acc: 0.9609
+Epoch 209/392
+ - 13s - loss: 0.0916 - acc: 0.9606
+Epoch 210/392
+ - 13s - loss: 0.0908 - acc: 0.9611
+Epoch 211/392
+ - 13s - loss: 0.0907 - acc: 0.9611
+Epoch 212/392
+ - 13s - loss: 0.0902 - acc: 0.9614
+Epoch 213/392
+ - 13s - loss: 0.0903 - acc: 0.9611
+Epoch 214/392
+ - 13s - loss: 0.0895 - acc: 0.9616
+Epoch 215/392
+ - 13s - loss: 0.0899 - acc: 0.9614
+Epoch 216/392
+ - 13s - loss: 0.0893 - acc: 0.9616
+Epoch 217/392
+ - 13s - loss: 0.0893 - acc: 0.9617
+Epoch 218/392
+ - 13s - loss: 0.0900 - acc: 0.9615
+Epoch 219/392
+ - 13s - loss: 0.0890 - acc: 0.9618
+Epoch 220/392
+ - 13s - loss: 0.0891 - acc: 0.9617
+Epoch 221/392
+ - 13s - loss: 0.0895 - acc: 0.9616
+Epoch 222/392
+ - 13s - loss: 0.0887 - acc: 0.9618
+Epoch 223/392
+ - 13s - loss: 0.0883 - acc: 0.9620
+Epoch 224/392
+ - 13s - loss: 0.0881 - acc: 0.9621
+Epoch 225/392
+ - 13s - loss: 0.0881 - acc: 0.9622
+Epoch 226/392
+ - 13s - loss: 0.0882 - acc: 0.9620
+Epoch 227/392
+ - 13s - loss: 0.0883 - acc: 0.9622
+Epoch 228/392
+ - 13s - loss: 0.0888 - acc: 0.9620
+Epoch 229/392
+ - 13s - loss: 0.0871 - acc: 0.9626
+Epoch 230/392
+ - 13s - loss: 0.0874 - acc: 0.9625
+Epoch 231/392
+ - 13s - loss: 0.0876 - acc: 0.9622
+Epoch 232/392
+ - 13s - loss: 0.0879 - acc: 0.9623
+Epoch 233/392
+ - 13s - loss: 0.0868 - acc: 0.9628
+Epoch 234/392
+ - 13s - loss: 0.0872 - acc: 0.9626
+Epoch 235/392
+ - 13s - loss: 0.0870 - acc: 0.9627
+Epoch 236/392
+ - 13s - loss: 0.0876 - acc: 0.9623
+Epoch 237/392
+ - 13s - loss: 0.0864 - acc: 0.9629
+Epoch 238/392
+ - 13s - loss: 0.0877 - acc: 0.9624
+Epoch 239/392
+ - 13s - loss: 0.0866 - acc: 0.9629
+Epoch 240/392
+ - 13s - loss: 0.0860 - acc: 0.9630
+Epoch 241/392
+ - 13s - loss: 0.0854 - acc: 0.9633
+Epoch 242/392
+ - 13s - loss: 0.0851 - acc: 0.9636
+Epoch 243/392
+ - 13s - loss: 0.0857 - acc: 0.9632
+Epoch 244/392
+ - 13s - loss: 0.0867 - acc: 0.9629
+Epoch 245/392
+ - 13s - loss: 0.0856 - acc: 0.9633
+Epoch 246/392
+ - 13s - loss: 0.0850 - acc: 0.9634
+Epoch 247/392
+ - 13s - loss: 0.0855 - acc: 0.9632
+Epoch 248/392
+ - 13s - loss: 0.0853 - acc: 0.9633
+Epoch 249/392
+ - 13s - loss: 0.0844 - acc: 0.9638
+Epoch 250/392
+ - 13s - loss: 0.0847 - acc: 0.9635
+Epoch 251/392
+ - 13s - loss: 0.0848 - acc: 0.9635
+Epoch 252/392
+ - 13s - loss: 0.0849 - acc: 0.9637
+Epoch 253/392
+ - 13s - loss: 0.0846 - acc: 0.9637
+Epoch 254/392
+ - 13s - loss: 0.0853 - acc: 0.9635
+Epoch 255/392
+ - 13s - loss: 0.0843 - acc: 0.9639
+Epoch 256/392
+ - 13s - loss: 0.0848 - acc: 0.9636
+Epoch 257/392
+ - 13s - loss: 0.0840 - acc: 0.9639
+Epoch 258/392
+ - 13s - loss: 0.0837 - acc: 0.9641
+Epoch 259/392
+ - 13s - loss: 0.0838 - acc: 0.9640
+Epoch 260/392
+ - 13s - loss: 0.0840 - acc: 0.9639
+Epoch 261/392
+ - 13s - loss: 0.0838 - acc: 0.9640
+Epoch 262/392
+ - 13s - loss: 0.0843 - acc: 0.9640
+Epoch 263/392
+ - 13s - loss: 0.0833 - acc: 0.9643
+Epoch 264/392
+ - 13s - loss: 0.0826 - acc: 0.9645
+Epoch 265/392
+ - 13s - loss: 0.0831 - acc: 0.9643
+Epoch 266/392
+ - 13s - loss: 0.0831 - acc: 0.9644
+Epoch 267/392
+ - 13s - loss: 0.0830 - acc: 0.9643
+Epoch 268/392
+ - 13s - loss: 0.0823 - acc: 0.9646
+Epoch 269/392
+ - 13s - loss: 0.0821 - acc: 0.9646
+Epoch 270/392
+ - 13s - loss: 0.0837 - acc: 0.9642
+Epoch 271/392
+ - 13s - loss: 0.0833 - acc: 0.9643
+Epoch 272/392
+ - 13s - loss: 0.0825 - acc: 0.9647
+Epoch 273/392
+ - 13s - loss: 0.0819 - acc: 0.9648
+Epoch 274/392
+ - 13s - loss: 0.0817 - acc: 0.9648
+Epoch 275/392
+ - 13s - loss: 0.0823 - acc: 0.9647
+Epoch 276/392
+ - 13s - loss: 0.0822 - acc: 0.9648
+Epoch 277/392
+ - 13s - loss: 0.0829 - acc: 0.9644
+Epoch 278/392
+ - 13s - loss: 0.0813 - acc: 0.9653
+Epoch 279/392
+ - 13s - loss: 0.0818 - acc: 0.9649
+Epoch 280/392
+ - 13s - loss: 0.0816 - acc: 0.9651
+Epoch 281/392
+ - 13s - loss: 0.0810 - acc: 0.9652
+Epoch 282/392
+ - 13s - loss: 0.0811 - acc: 0.9651
+Epoch 283/392
+ - 13s - loss: 0.0807 - acc: 0.9653
+Epoch 284/392
+ - 13s - loss: 0.0808 - acc: 0.9652
+Epoch 285/392
+ - 13s - loss: 0.0805 - acc: 0.9653
+Epoch 286/392
+ - 13s - loss: 0.0809 - acc: 0.9651
+Epoch 287/392
+ - 13s - loss: 0.0815 - acc: 0.9653
+Epoch 288/392
+ - 13s - loss: 0.0817 - acc: 0.9652
+Epoch 289/392
+ - 13s - loss: 0.0818 - acc: 0.9652
+Epoch 290/392
+ - 13s - loss: 0.0812 - acc: 0.9653
+Epoch 291/392
+ - 13s - loss: 0.0809 - acc: 0.9652
+Epoch 292/392
+ - 13s - loss: 0.0801 - acc: 0.9656
+Epoch 293/392
+ - 13s - loss: 0.0795 - acc: 0.9659
+Epoch 294/392
+ - 13s - loss: 0.0797 - acc: 0.9658
+Epoch 295/392
+ - 13s - loss: 0.0809 - acc: 0.9653
+Epoch 296/392
+ - 13s - loss: 0.0803 - acc: 0.9657
+Epoch 297/392
+ - 13s - loss: 0.0800 - acc: 0.9658
+Epoch 298/392
+ - 13s - loss: 0.0796 - acc: 0.9659
+Epoch 299/392
+ - 13s - loss: 0.0798 - acc: 0.9658
+Epoch 300/392
+ - 13s - loss: 0.0794 - acc: 0.9661
+Epoch 301/392
+ - 13s - loss: 0.0808 - acc: 0.9655
+Epoch 302/392
+ - 13s - loss: 0.0796 - acc: 0.9660
+Epoch 303/392
+ - 13s - loss: 0.0799 - acc: 0.9659
+Epoch 304/392
+ - 13s - loss: 0.0792 - acc: 0.9660
+Epoch 305/392
+ - 13s - loss: 0.0794 - acc: 0.9661
+Epoch 306/392
+ - 13s - loss: 0.0787 - acc: 0.9663
+Epoch 307/392
+ - 13s - loss: 0.0792 - acc: 0.9660
+Epoch 308/392
+ - 13s - loss: 0.0789 - acc: 0.9661
+Epoch 309/392
+ - 13s - loss: 0.0790 - acc: 0.9662
+Epoch 310/392
+ - 13s - loss: 0.0786 - acc: 0.9663
+Epoch 311/392
+ - 13s - loss: 0.0809 - acc: 0.9657
+Epoch 312/392
+ - 13s - loss: 0.0794 - acc: 0.9662
+Epoch 313/392
+ - 13s - loss: 0.0791 - acc: 0.9664
+Epoch 314/392
+ - 13s - loss: 0.0800 - acc: 0.9662
+Epoch 315/392
+ - 13s - loss: 0.0800 - acc: 0.9660
+Epoch 316/392
+ - 13s - loss: 0.0788 - acc: 0.9664
+Epoch 317/392
+ - 13s - loss: 0.0779 - acc: 0.9666
+Epoch 318/392
+ - 13s - loss: 0.0778 - acc: 0.9667
+Epoch 319/392
+ - 13s - loss: 0.0782 - acc: 0.9667
+Epoch 320/392
+ - 13s - loss: 0.0769 - acc: 0.9670
+Epoch 321/392
+ - 13s - loss: 0.0782 - acc: 0.9666
+Epoch 322/392
+ - 13s - loss: 0.0780 - acc: 0.9669
+Epoch 323/392
+ - 13s - loss: 0.0791 - acc: 0.9663
+Epoch 324/392
+ - 13s - loss: 0.0783 - acc: 0.9665
+Epoch 325/392
+ - 13s - loss: 0.0780 - acc: 0.9666
+Epoch 326/392
+ - 13s - loss: 0.0780 - acc: 0.9669
+Epoch 327/392
+ - 13s - loss: 0.0777 - acc: 0.9669
+Epoch 328/392
+ - 13s - loss: 0.0782 - acc: 0.9666
+Epoch 329/392
+ - 13s - loss: 0.0773 - acc: 0.9670
+Epoch 330/392
+ - 13s - loss: 0.0764 - acc: 0.9673
+Epoch 331/392
+ - 13s - loss: 0.0777 - acc: 0.9667
+Epoch 332/392
+ - 13s - loss: 0.0771 - acc: 0.9672
+Epoch 333/392
+ - 13s - loss: 0.0775 - acc: 0.9670
+Epoch 334/392
+ - 13s - loss: 0.0776 - acc: 0.9670
+Epoch 335/392
+ - 13s - loss: 0.0764 - acc: 0.9675
+Epoch 336/392
+ - 13s - loss: 0.0772 - acc: 0.9672
+Epoch 337/392
+ - 13s - loss: 0.0766 - acc: 0.9674
+Epoch 338/392
+ - 13s - loss: 0.0762 - acc: 0.9673
+Epoch 339/392
+ - 13s - loss: 0.0763 - acc: 0.9675
+Epoch 340/392
+ - 13s - loss: 0.0762 - acc: 0.9674
+Epoch 341/392
+ - 13s - loss: 0.0758 - acc: 0.9676
+Epoch 342/392
+ - 13s - loss: 0.0769 - acc: 0.9671
+Epoch 343/392
+ - 13s - loss: 0.0761 - acc: 0.9675
+Epoch 344/392
+ - 13s - loss: 0.0769 - acc: 0.9672
+Epoch 345/392
+ - 13s - loss: 0.0767 - acc: 0.9674
+Epoch 346/392
+ - 13s - loss: 0.0764 - acc: 0.9673
+Epoch 347/392
+ - 13s - loss: 0.0769 - acc: 0.9673
+Epoch 348/392
+ - 13s - loss: 0.0769 - acc: 0.9674
+Epoch 349/392
+ - 13s - loss: 0.0764 - acc: 0.9677
+Epoch 350/392
+ - 13s - loss: 0.0758 - acc: 0.9676
+Epoch 351/392
+ - 13s - loss: 0.0748 - acc: 0.9681
+Epoch 352/392
+ - 13s - loss: 0.0752 - acc: 0.9681
+Epoch 353/392
+ - 13s - loss: 0.0749 - acc: 0.9680
+Epoch 354/392
+ - 13s - loss: 0.0758 - acc: 0.9678
+Epoch 355/392
+ - 13s - loss: 0.0747 - acc: 0.9681
+Epoch 356/392
+ - 13s - loss: 0.0754 - acc: 0.9677
+Epoch 357/392
+ - 13s - loss: 0.0780 - acc: 0.9670
+Epoch 358/392
+ - 13s - loss: 0.0754 - acc: 0.9677
+Epoch 359/392
+ - 13s - loss: 0.0753 - acc: 0.9679
+Epoch 360/392
+ - 13s - loss: 0.0751 - acc: 0.9679
+Epoch 361/392
+ - 13s - loss: 0.0741 - acc: 0.9684
+Epoch 362/392
+ - 13s - loss: 0.0743 - acc: 0.9682
+Epoch 363/392
+ - 13s - loss: 0.0758 - acc: 0.9677
+Epoch 364/392
+ - 13s - loss: 0.0751 - acc: 0.9679
+Epoch 365/392
+ - 13s - loss: 0.0749 - acc: 0.9681
+Epoch 366/392
+ - 13s - loss: 0.0758 - acc: 0.9679
+Epoch 367/392
+ - 13s - loss: 0.0750 - acc: 0.9681
+Epoch 368/392
+ - 13s - loss: 0.0746 - acc: 0.9683
+Epoch 369/392
+ - 13s - loss: 0.0750 - acc: 0.9681
+Epoch 370/392
+ - 13s - loss: 0.0746 - acc: 0.9681
+Epoch 371/392
+ - 13s - loss: 0.0745 - acc: 0.9683
+Epoch 372/392
+ - 13s - loss: 0.0741 - acc: 0.9685
+Epoch 373/392
+ - 13s - loss: 0.0736 - acc: 0.9685
+Epoch 374/392
+ - 13s - loss: 0.0737 - acc: 0.9683
+Epoch 375/392
+ - 13s - loss: 0.0740 - acc: 0.9683
+Epoch 376/392
+ - 13s - loss: 0.0738 - acc: 0.9685
+Epoch 377/392
+ - 13s - loss: 0.0733 - acc: 0.9686
+Epoch 378/392
+ - 13s - loss: 0.0738 - acc: 0.9685
+Epoch 379/392
+ - 13s - loss: 0.0745 - acc: 0.9682
+Epoch 380/392
+ - 13s - loss: 0.0758 - acc: 0.9678
+Epoch 381/392
+ - 13s - loss: 0.0747 - acc: 0.9683
+Epoch 382/392
+ - 13s - loss: 0.0738 - acc: 0.9685
+Epoch 383/392
+ - 13s - loss: 0.0736 - acc: 0.9685
+Epoch 384/392
+ - 13s - loss: 0.0736 - acc: 0.9685
+Epoch 385/392
+ - 13s - loss: 0.0735 - acc: 0.9688
+Epoch 386/392
+ - 13s - loss: 0.0733 - acc: 0.9687
+Epoch 387/392
+ - 13s - loss: 0.0747 - acc: 0.9686
+Epoch 388/392
+ - 13s - loss: 0.0734 - acc: 0.9686
+Epoch 389/392
+ - 13s - loss: 0.0730 - acc: 0.9689
+Epoch 390/392
+ - 13s - loss: 0.0732 - acc: 0.9689
+Epoch 391/392
+ - 13s - loss: 0.0733 - acc: 0.9688
+Epoch 392/392
+ - 13s - loss: 0.0729 - acc: 0.9690
+
+
+AUC: 0.924982
+Done
+('True negative total is ', 40016, 'out of', 100000)
+('True positive total is ', 52580)
+('False negative total is ', 3797)
+('False positive total is ', 3607)
+('Any missed ones? ', 0)

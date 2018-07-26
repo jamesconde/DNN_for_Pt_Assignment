@@ -1,0 +1,10 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 89, in <module>
+    file.write('Number of epochs: %d\n' % number_of_epochs)
+NameError: name 'number_of_epochs' is not defined
+('True negative total is ', 40181, 'out of', 100000)
+('True positive total is ', 53183)
+('False negative total is ', 3422)
+('False positive total is ', 3214)
+('Any missed ones? ', 0)

@@ -12,3 +12,52 @@ Key lines to modify in this program are marked with comments containing !!!.
 
 UCI_ROC_curves.py lets you test one DNN classifier, and examine the individual results using compare_truth.py. It was developed from 1D_UCI_model_default.py in https://github.com/jrorie/UCI_Paper_Studies/tree/master/templates .
 Key lines to modying are marked with comments containing !!!. 
+
+James Conde
+July 26 2018
+
+This folder contrains all of the code and log files I used during the summer of 2018 to develop my network.  
+
+The data that used to test and train the network is stored in /home/rice/jmc32/Gridsearch_Data/ under the file PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy.
+
+Preprocesing occurs in macros_AWS.py under the scale_x function where the robust scales causes all features in the data to be scaled using robusting scaling from sklearn. In the commented code right after scale_x I tried to scale Theta and all the Dphis with robust scaling and then use quartile tranform to scale the DThetas.  However, that preprocessing technquie seemed to backfire and generate wore networks.
+
+TestandTrain1NetConfigAI.py and TestandTrain1NetConfig1AI.cp.py are rips offs of Elena's UCI_ROCcurves.  These files do the same function of taking one network configuration from either a saved model or a model created in macros_AWS.py, trains and tests the model and then save the results. The slurm file that executed TestandTrain1NetConfigAI.py is execute1Net.sh and execute1NetCPU.sh runs TestandTrain1NetConfig1AI.cp.py.
+
+testingsavedmodels.py is the file I created to be dedicated to running and testing saved model.  It is also in the this file that I wrote code that outputs whatdata was used to to train and test and network in csvs named taggedtestset.csv and beforetraining.csv.  
+
+Testingsavedmodels.py has the same format as TestandTrain1NetConfigAI.py. 
+
+Testingsavedmodels.py, TestandTrain1NetConfigAI.py, TestandTrain1NetConfigAI.cp.py all call the plot_ROC function in macros_AWS.py and doing so will show an Area Uncer Curve number to appear.
+
+The Network outputs and outputs truths from TestandTrain1NetConfig1AI.cp.py, TestandTrain1NetConfig1AI.py, and testingsavedmodels.py are all saved to the same two files of in /home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/predictions under the files of model_class_predictions_1m_kclassify.txt where the Network outputs are stored and in model_class_true_1m_kclassify.txt where the true classification of each pT in the test set is stored.  It should be noted that it is from the two files previously mentioned that compare_truth.py generates it consulusions. Also, be careful as eat network tested will save their results and truth to the same files, overwritting the results of previous networks, so be carefule when running many networks at the same time if you want to save the outputs from one of them.
+
+compare_truth.py simply goes through the files described in the last paragraph and computes the True Positive,False Positive, True Netgative, False Negative, Rate, Accuracy, and effiency.  A cut of whatever activation is wanted can be introduced here and compare_truth.py will output results based on that cut.  
+
+All the files that run hyperas have the word Hyperas in it.  
+
+All Hyperas files have the same structure and ultility of:
+The data function is where the data that will be used to test and train the network is improted and where the scale_x function is called from macros_AWS.py to preprocess the data.
+Under creat_model is where the actual network details go.  x_train,y_train,x_test,y_test are referming to the parsed data into the test and training sets.
+In create_model, in order to get hyperopt to run over a set of number one needs to put in curly brackets and choice command the range of numbers. For example, to have hyperopt to find which number in the array [0 1 2 3 4 5] is best write {{choice([0 1 2 3 4 5])}}
+Using the choice command in the method above can be used to test over type of activation, number of neurons, loss function, optimizer, metric, batch size, and ehpochs.  I was not able to get hyperopt to run over the alpha metric in LeakyReLU or ELU or get hyperas to test over learning rate in the optimizer.  The the reason for this is that {{}} causes the code within to be transalted into something hyperopt will understand but no always what keras or python will understand causing errors. 
+
+DUMMYHyperasexamplerun.py was created to run a simple model within Hyperas so that one could error bug new features in Hyperas without also running a large network.  DUMMYHyperasexamplerun.py can be submitted for a slurm job using runDUMMY_hyperas_gpu.sh
+
+Hyperasexamplerun.py, Hyperasexamplerun2.py, and Hyperasexamplerun3.py are all basically the same Hyperas file that has the same structure and function.  The major difference between them is that Hyperasexamplerun3.py has the network where it tests over number of layers.
+
+To submit Hyperasexamplerun.py as slurm job use:run_hyperas_gpu.sh
+To submit Hyperasexamplerun2.py as slurm job use:run_hyperas2_gpu.sh
+To submit Hyperasexamplerun3.py as slurm job use:run_hyperas3_gpu.sh
+
+HyperasexamplerunWORKING.py is an early version of Hyperas I was working with that I just wanted to save so that if I made change in another Hyperas file and it caused an error I could refer to this file so that I could compare the two better debug the error.
+
+All saved models are in the scratch space in /scratch/rice/
+
+The most recent model I like and I believe is the best saved model is bestonesofar12222.h5
+
+Slurm Job with best Reported accuracy: slurm-358.out
+
+The Saved Model bestonsofar123.h5 is trash.
+
+The newest slurm log files should have in them the results of using the tested and trained model results with compare truth, i.e. there should accuracy, True and False Positive, and True and False negative stored in the slurm log.

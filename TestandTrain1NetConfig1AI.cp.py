@@ -10,7 +10,7 @@ import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
 
 
-from keras.models import Sequential
+from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout
 #from keras.utils.visualize_util import plot
 from keras.utils.vis_utils import plot_model as plot
@@ -55,18 +55,18 @@ overall_start_time = time.time()
 
 #Open the log file
 #!!! Always check your log file name and location
-file = open('./logs/logFile_gridsearch_1m_kclassify.txt', 'w')
+file = open('./logs/logFile_gridsearch_1m_kclassify1.txt', 'w')
 
 # Define Constants
 #!!! Always double check which data you are using
 data_directory = '/home/rice/jmc32/Gridsearch_Data/'
 data_sample = 'PtRegression_for_DNN_Vars_MODE_15_noBitCompr_RPC_1m_redo.npy'
 #test_data_sample = 'not1000_test.npy'
-scaler = 'maxabs'
+scaler = 'robust'
 feature = 7
 number_of_loops = 1							#Total number of loops, is incremented later for functions who's index start at 0
-number_of_epochs = 138							#Just what it says, number of epochs never re-indexed
-set_batch_size = 1349							#Select batch size
+number_of_epochs = 168							#Just what it says, number of epochs never re-indexed
+set_batch_size = 5366							#Select batch size
 
 # Fix random seed for reproducibility
 seed = 43
@@ -93,7 +93,7 @@ file.write('********************************\n')
 totalset = numpy.load(data_directory + data_sample) 
 #Load data from numpy array
 #testset = numpy.load(data_directory + test_data_sample)                      	#Load data from numpy array
-dataset, testset = train_test_split(totalset, test_size = 0.1)
+dataset, testset = train_test_split(totalset, test_size = 0.05)
 
 # Split into input (X) and output (Y) variables
 X_train_prescale = dataset[:,1:]
@@ -116,19 +116,22 @@ loop_start_time = time.time()
 #model = KerasClassifier(build_fn=create_model_neurons, nb_epoch=5, batch_size=100, verbose=0)
 
 #!!! Use this to modify which model you are testing
-model = KerasClassifier(build_fn=create_model, nb_epoch=138, batch_size=1349, verbose=0)
+#model = KerasClassifier(build_fn=create_model, nb_epoch=number_of_epochs, batch_size=set_batch_size, verbose=0)
+model=load_model('/scratch/rice/bestonesofar1.h5')
 
 history = model.fit(X_train,Y_train, nb_epoch=number_of_epochs, batch_size = set_batch_size)
 #plot_accuracy(history,1,show_toggle=True, save_toggle=False )
 #estimator = KerasRegressor(build_fn=create_model, epochs = 5, batch_size = 100, verbose = 0)
+
+model.save('/scratch/rice/bestonesofar1.h5')
 
 model_predictions = model.predict(X_test)
 #model_class_predictions = model.predict_classes(X_test)
 
 #outfile_predict = open('./predictions/model_predictions_not1000_%02d.txt' % 1, 'w')
 #!!! Always check where your model results are being saved
-outfile_predict = open('./predictions/model_class_predictions_1m_kclassify.txt', 'w')
-outfile_truth = open('./predictions/model_class_true_1m_kclassify.txt', 'w')
+outfile_predict = open('./predictions/model_class_predictions_12m_kclassify.txt', 'w')
+outfile_truth = open('./predictions/model_class_true_1m_kclassify1.txt', 'w')
 #numpy.savetxt(outfile_predict, model_predictions)
 numpy.savetxt(outfile_predict, model_predictions)
 numpy.savetxt(outfile_truth, Y_test)

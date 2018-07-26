@@ -1,0 +1,12 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 108, in <module>
+    x_train, x_test = scale_x(x_train_prescale, x_test_prescale, scaler)
+  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/macros_AWS.py", line 90, in scale_x
+    return X_train, X_test
+UnboundLocalError: local variable 'X_train' referenced before assignment
+('True negative total is ', 40009, 'out of', 100000)
+('True positive total is ', 52429)
+('False negative total is ', 4148)
+('False positive total is ', 3414)
+('Any missed ones? ', 0)
