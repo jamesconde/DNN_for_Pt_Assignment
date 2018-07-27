@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/home/rice/jmc32/DNN_for_Pt_Assignment-master/DNN_Hyperparameters/TestandTrain1NetConfig1AI.py", line 2, in <module>
-    matplotlib.use('Agg')
-NameError: name 'matplotlib' is not defined
